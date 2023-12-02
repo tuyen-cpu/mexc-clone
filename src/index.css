@@ -1,0 +1,21 @@
+@import "antd/dist/reset.css";
+ li{
+     list-style: none;
+
+ }
+ul{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+:root{
+    --text-primary: #f2f4f6;
+    --text-tertiary: #6e7583;
+    --divider-primary: #222429;
+    --primary-blue: #357aff;
+   --border-width-base: 1px;
+    --primary-base: #357aff
+}
