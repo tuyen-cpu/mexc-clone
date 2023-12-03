@@ -5,14 +5,7 @@ import Header from "./components/header/Header.jsx";
 const {  Header: AntdHeader, Footer, Sider, Content } = Layout;
 
 
-const headerStyle  = {
-    textAlign: 'center',
-    color: '#fff',
-    height: 64,
-    paddingInline: 50,
-    lineHeight: '64px',
-    backgroundColor: '#7dbcea',
-};
+
 const contentStyle = {
     textAlign: 'center',
     minHeight: 120,

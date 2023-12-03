@@ -17,5 +17,12 @@ a{
     --divider-primary: #222429;
     --primary-blue: #357aff;
    --border-width-base: 1px;
-    --primary-base: #357aff
+    --primary-base: #357aff;
+    --bg-modal: #18191c;
+    --fill-page-button-default: #222429;
+    --divider-secondary: #2b2e33;
+    --bg-secondary: #111214;
+    --primary-text: #959da4;
+    --down-red: #ff4761;
 }
+

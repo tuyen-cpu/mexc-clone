@@ -1,4 +1,15 @@
-
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height: 60px;
+    padding-inline-start: 16px;
+    line-height: 60px;
+    background-color: #111214;
+    z-index: 999;
+    border-bottom: 1px solid var(--divider-primary)
+}
 .ant-layout-header{
     padding-right: 0;
 }
@@ -12,6 +23,75 @@
 .navbar-list .navbar-list-item {
     position: relative;
 }
+.navbar-list-item:hover .dropdown-wrapper-lv1 {
+    transform: translateY(-2px) scaleY(1) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.dropdown-wrapper{
+    line-height: 1.5;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-modal);
+    transform: translateY(-10px) scaleY(.9);
+    transform-origin: top;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 101;
+    transition: transform .2s ease-in, opacity .15s ease-in;
+    cursor: default;
+    border-radius: 2px;
+}
+.submenu::-webkit-scrollbar {
+    width: 4px;
+    height: 8px
+}
+
+.submenu::-webkit-scrollbar-thumb {
+    background: var(--divider-secondary);
+    border-radius: 10px
+}
+
+.submenu::-webkit-scrollbar-thumb:hover {
+    background-color: var(--divider-secondary)
+}
+.submenu{
+    width: 320px;
+    max-height: calc(min(588px,100vh - 92px) - 52px);
+    padding: 0 8px;
+    margin: 16px 0;
+    max-width: 320px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.submenu-item:hover{
+    background: var(--fill-page-button-default)!important;
+    border-radius: 4px;
+}
+.submenu-item .dropdown-wrapper{
+    top: 0;
+    left: calc(100% - 1px);
+    transform: translateY(-10px) scaleY(.9);
+    transform-origin: top;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 101;
+    transition: transform .2s ease-in, opacity .15s ease-in;
+}
+.submenu-item:hover .dropdown-wrapper-lv2{
+    transform: translate(0) scaleY(1);
+    visibility: visible !important;
+    opacity: 1;
+}
+.submenu-item__icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 2px 0 10px;
+}
+.navbar-list-item .dropdown-wrapper{
+    position: absolute;
+}
 .navbar-list .navbar-list-item:hover .navbar-list-item__link{
     color: var(--primary-base);
 }
@@ -19,6 +99,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 20px;
+    font-weight: 500
 }
 .navbar-list .navbar-list-item .hot-tag{
     position: absolute;
@@ -53,6 +135,76 @@
     overflow: hidden;
 
 }
+.dot-icon{
+    width: 8px;
+    height: 8px;
+    -webkit-margin-start: 2px;
+    margin-inline-start: 2px;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--down-red);
+    position: relative;
+    top: -4px;
+}
+.status-new{
+    display: flex;
+    align-items: center;
+}
+.new-icon{
+    font-size: 12px;
+    font-weight: 900;
+    color: rgb(250, 173, 20);
+    margin-inline-end: 4px;
+    margin-inline-start: 8px;
+}
+.submenu-item__link{
+    display: flex;
+    align-items: center;
+}
+.submenu-item-content{
+    margin-inline-start: 16px;
+    min-width: 150px;
+    flex-grow: 1;
+    padding: 12px 0;
+    -webkit-padding-end: 30px;
+    padding-inline-end: 30px;
+    position: relative;
+    font-weight: 500;
+}
+.dropdown-wrapper-lv2{
+    padding: 16px 8px;
+    height: 100%;
+    border-bottom-left-radius: 0;
+    width: 336px;
+}
+.dropdown-wrapper-site-lv2{
+    background-color: var(--bg-secondary);
+    height: 100%;
+    border-radius: 2px;
+}
+.dropdown-wrapper-site-lv2 .submenu {
+    padding: 12px 16px;
+    margin: 0;
+    width: 100%;
+}
+.submenu-item-content__title{
+    font-weight: 500;
+}
+.submenu-item-content__desc{
+    font-size: 12px;
+    margin-top: 2px;
+    color: var(--text-tertiary);
+    white-space: normal;
+}
+.dropdown-wrapper-lv1 .submenu-item:hover .submenu-item-content__icon{
+    color: var(--primary-base);
+}
+.submenu-item-content__icon{
+    font-size: 18px;
+    color: var(--primary-text);
+    right: 20px;
+    pointer-events: none;
+}
 .ant-input,.ant-input-affix-wrapper,.ant-input-number-affix-wrapper,.ant-input-number-wrapper,.ant-input-search,.ant-mentions,.ant-pagination,.ant-picker,.ant-select-selector {
     --input-icon-hover-color: var(--text-primary);
 
@@ -78,6 +230,10 @@
 .search-wrapper{
     margin-right: 16px;
     width: 132px;
+    position: relative;
+}
+.search-dropdown-wrapper{
+    position: absolute;
 }
 .search-wrapper .search-input-header{
     border-radius: 43px;
