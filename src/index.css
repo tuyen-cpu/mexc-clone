@@ -24,5 +24,18 @@ a{
     --bg-secondary: #111214;
     --primary-text: #959da4;
     --down-red: #ff4761;
+    --border-style-base: 1px;
+    --text-secondary: #87909f;
+    --tabs-title-height-sm:40px;
+    --tabs-title-font-size-sm: 14px;
+    --bg-primary: #0d0e0f;
+    --up-rate: #0aa869;
+    --down-rate: #fe445c;
+    --bg-1:#4b4e52;
+    --text-tooltip-secondary: #505152;
+    --scrollbar-track: #35383f
+
+
+
 }
 
