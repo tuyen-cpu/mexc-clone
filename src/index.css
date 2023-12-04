@@ -33,7 +33,11 @@ a{
     --down-rate: #fe445c;
     --bg-1:#4b4e52;
     --text-tooltip-secondary: #505152;
-    --scrollbar-track: #35383f
+    --scrollbar-track: #35383f;
+    --fill-menu-selected:#222429;
+    --divider:#1e1f20
+
+
 
 
 

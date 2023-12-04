@@ -301,7 +301,118 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+}
+.setting-item .download-dropdown{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 101;
+    transition: transform .2s ease-in,opacity .15s ease-in;
+    cursor: default;
+    top: 100%;
+    right: 100%;
+    transform: translateY(-10px) scaleY(.9);
+    transform-origin: top;
+    color: #fff;
+}
+.download-dropdown__body{
+    display: flex;
+}
+.download-dropdown__img{
+    width: 110px;
+    height: 110px;
+    padding: 4px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    -webkit-margin-end: 16px;
+    margin-inline-end: 16px;
+}
+.download-dropdown__img img{
+    width: 100%;
+    height: 100%;
+}
+.download-dropdown__info{
+    flex: 1;
 
+}
+.download-dropdown__title{
+    height: 50px;
+    display: flex;
+    padding: 4px 0 10px;
+    margin-top: 4px;
+    align-items: center;
+    font-size: 18px;
+}
+.download-dropdown__title .download-dropdown__icon-phone{
+    height: 36px;
+    width: 36px;
+    border-radius: 6px;
+    background-color: var(--fill-menu-selected);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-margin-end: 12px;
+    margin-inline-end: 12px;
+}
+.download-dropdown__desc{
+    line-height: 1.5;
+    font-size: 14px;
+}
+.download-dropdown__link {
+    font-size: 12px;
+    line-height: 14px;
+    background-color: var(--fill-menu-selected);
+    border-radius: 26px;
+    padding: 6px 10px;
+    color: var(--text-secondary);
+    display: inline-block;
+
+}
+.download-dropdown__link-wrapper{
+    margin-top: 8px;
+    line-height: normal;
+}
+.download-dropdown__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--divider);
+    padding: 12px 0 4px;
+    margin-top: 15px;
+    color: var(--primary-text);
+    line-height: normal;
+}
+.download-dropdown__more{
+    color: var(--primary-base);
+    display: flex;
+    align-items: center;
+}
+.download-dropdown__more:hover{
+    color: var(--primary-base);
+}
+.download-dropdown__more:hover .download-dropdown__more-icon{
+    transform: translateX(5px);
+}
+.download-dropdown__more-icon {
+    margin-inline-start: 2px;
+    font-size: 20px;
+    transition: all .2s ease-in;
+}
+.download-dropdown__link:hover{
+    color: var(--text-secondary);
+}
+.download-dropdown__title .download-dropdown__icon-phone svg{
+    font-size: 24px !important;
+}
+.download-dropdown-wrapper {
+    background-color: var(--bg-modal);
+    font-weight: 500;
+    padding: 16px;
+    border-radius: 4px;
+    width: 360px;
+    -webkit-margin-end: -50px;
+    margin-inline-end: -50px;
 }
 .setting-item-wrapper .header_divider{
     width: 1px;
@@ -319,10 +430,19 @@
 }
 .setting-item-wrapper .setting-item-list .setting-item {
     margin-inline-end: 16px;
+    cursor: pointer;
 }
-.setting-item-wrapper .setting-item-list .setting-item svg{
+.setting-item-wrapper .setting-item-list .setting-item .mx-icon{
     vertical-align: -0.25rem;
     font-size: 20px;
+}
+.setting-item:hover {
+    color: var(--primary-base);
+}
+.setting-item:hover .download-dropdown{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0) scaleY(1);
 }
 .hot-search__item{
     flex: 1 1;
@@ -448,6 +568,18 @@
     cursor: pointer;
     position: relative;
 }
+.hot-event-link:hover .hot-event__icon{
+    display: block;
+}
+.hot-event__icon{
+    position: absolute;
+    right: 12px;
+    color: var(--primary-base);
+    font-size: 20px;
+    display: none;}
+.hot-event-link:hover{
+    background-color: var(--bg-secondary);
+}
 .hot-event__img img{
     height: 20px;
     width: 20px;
@@ -455,4 +587,25 @@
     -webkit-margin-end: 8px;
     margin-inline-end: 8px;
     border-radius: 50%;
+}
+.hot-event__title{
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.hot-event__info{
+    flex: 1 1;
+    overflow: hidden;
+    -webkit-padding-end: 18px;
+    padding-inline-end: 18px;
+}
+.hot-event__desc{
+    color: var(--text-secondary);
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
