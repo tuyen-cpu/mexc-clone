@@ -8,9 +8,11 @@ const MenuItems = ({items, depthLevel}) => {
     return (
         <li
             className="submenu-item">
-            {items.url && items.submenu ? (
+
+            {items.submenu ? (
                 <>
-                    <a className='submenu-item__link'>
+                    {console.log(items.submenu)}
+                    <a className='submenu-item__link' href={items.url}>
                         {depthLevel === 1 && items.icon ?
                             <img className='submenu-item__icon' src={`./${items.icon}`} alt=""/> : ''}
                         <div className='submenu-item-content'>
@@ -18,6 +20,7 @@ const MenuItems = ({items, depthLevel}) => {
                                 <i className='dot-icon'></i>}
                                 {items.status === 'new' &&
                                     <i className='new-icon'></i>}
+                                {items.status === 'hot' &&  <span className='icon-hot'>HOT</span>}
                             </div>
                             <span className='submenu-item-content__desc'>{items.content}</span>
                         </div>
@@ -36,7 +39,7 @@ const MenuItems = ({items, depthLevel}) => {
 
                 </>
             ) : (
-                <a className='submenu-item__link'>
+                <a className='submenu-item__link' href={items.url}>
                     {depthLevel === 1 && items.icon ?
                         <img className='submenu-item__icon' src={`./${items.icon}`} alt=""/> : ''}
                     <div className='submenu-item-content'>
@@ -44,6 +47,7 @@ const MenuItems = ({items, depthLevel}) => {
                             <i className='dot-icon'></i>}
                             {items.status === 'new' &&
                                 <i className='new-icon'>NEW</i>}
+                            {items.status === 'hot' &&  <span className='icon-hot'>HOT</span>}
                         </div>
                         <span className='submenu-item-content__desc'>{items.content}</span>
                     </div>

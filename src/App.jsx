@@ -2,17 +2,12 @@ import { useState } from 'react'
 import './App.css'
 import {Layout, Space} from "antd";
 import Header from "./components/header/Header.jsx";
+import Homepage from "./components/header/Homepage.jsx";
 const {  Header: AntdHeader, Footer, Sider, Content } = Layout;
 
 
 
-const contentStyle = {
-    textAlign: 'center',
-    minHeight: 120,
-    lineHeight: '120px',
-    color: '#fff',
-    backgroundColor: '#108ee9',
-};
+
 const footerStyle = {
     textAlign: 'center',
     color: '#fff',
@@ -26,7 +21,7 @@ function App() {
         <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
             <Layout>
                <Header/>
-                <Content style={contentStyle}>Content</Content>
+                <Content ><Homepage/></Content>
                 <Footer style={footerStyle}>Footer</Footer>
             </Layout>
 

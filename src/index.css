@@ -35,7 +35,13 @@ a{
     --text-tooltip-secondary: #505152;
     --scrollbar-track: #35383f;
     --fill-menu-selected:#222429;
-    --divider:#1e1f20
+    --divider:#1e1f20;
+    --modal-content-bg:#fff;
+    --modal-border-radius:8px;
+    --modal-header-close-size:60px;
+    --font-size-lg:16px;
+    --modal-close-color:#87909f;
+    --bg-tertiary: #111421
 
 
 
