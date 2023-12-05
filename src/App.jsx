@@ -3,7 +3,8 @@ import './App.css'
 import {Layout, Space} from "antd";
 import Header from "./components/header/Header.jsx";
 import Homepage from "./components/header/Homepage.jsx";
-const {  Header: AntdHeader, Footer, Sider, Content } = Layout;
+import FooterPage from "./components/header/footer/footer.jsx";
+const {  Header: AntdHeader, Content } = Layout;
 
 
 
@@ -22,7 +23,7 @@ function App() {
             <Layout>
                <Header/>
                 <Content ><Homepage/></Content>
-                <Footer style={footerStyle}>Footer</Footer>
+                <FooterPage/>
             </Layout>
 
         </Space>

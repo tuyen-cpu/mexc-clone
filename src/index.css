@@ -41,7 +41,10 @@ a{
     --modal-header-close-size:60px;
     --font-size-lg:16px;
     --modal-close-color:#87909f;
-    --bg-tertiary: #111421
+    --bg-tertiary: #111421;
+    --title:#151617;
+    --bg-2:#edeff1;
+    --border-card:#e2e5e7
 
 
 

@@ -20,6 +20,9 @@
     line-height: inherit;
     background-color: transparent
 }
+.navbar-list{
+    display: flex;
+}
 .navbar-list .navbar-list-item {
     position: relative;
 }
@@ -725,4 +728,19 @@
 }
 .language-item.active{
     color: #357aff;
+}
+@media screen and (max-width: 910px) {
+    .navbar-list.menus{
+        display: none;
+    }
+}
+@media screen and (max-width: 1058px) {
+   .search-wrapper{
+            display: none;
+        }
+}
+@media screen and (max-width: 1145px) {
+    .setting-item-wrapper{
+        display: none;
+    }
 }
