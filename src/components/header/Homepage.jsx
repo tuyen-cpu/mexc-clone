@@ -449,6 +449,24 @@ export default function Homepage() {
                     <h2>Tiền mã hoá phổ biến</h2>
                 </div>
             </div>
+
+            <div className='new-list_home-new-list '>
+                <h2>Niêm yết mới</h2>
+                <div className="new-list_home-new-view-markets home-container">
+                    <a href="https://www.mexc.com/vi-VN/markets">Xem Thị Trường
+                        <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
+                             fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
+                             data-icon="ArrowRightOutlined">
+                            <path
+                                d="M128 469.333333h604.586667l-152.746667-153.173333L640 256l256 256-256 256-60.16-60.16L732.586667 554.666667H128z"></path>
+                        </svg>
+                    </a><
+                /div>
+                <div>
+
+                </div>
+            </div>
+
             <div className="why-choose-mexc_why-choose-wrapper__ud1w8">
                 <div className="why-choose-mexc_why-choose__SUZms home-container"><h2>Vì sao lại lựa chọn
                     MEXC?</h2>

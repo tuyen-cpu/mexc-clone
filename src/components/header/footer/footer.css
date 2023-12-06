@@ -73,6 +73,9 @@
 .footer_toggleBtn__3F0ol{
     display: none;
 }
+.footer_copyRight__Axy8j{
+    display: none;
+}
 @media (max-width: 760px){
     .footer_toggleBtn__3F0ol {
         display: inline-flex;

@@ -19,7 +19,7 @@ const MenuItems = ({items, depthLevel}) => {
                             <div className='submenu-item-content__title'>{items.title} {items.status === 'uncheck' &&
                                 <i className='dot-icon'></i>}
                                 {items.status === 'new' &&
-                                    <i className='new-icon'></i>}
+                                    <i className='new-icon'>NEW</i>}
                                 {items.status === 'hot' &&  <span className='icon-hot'>HOT</span>}
                             </div>
                             <span className='submenu-item-content__desc'>{items.content}</span>

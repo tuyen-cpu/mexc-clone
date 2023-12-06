@@ -560,14 +560,14 @@ const moneyData = [
         link: ''
     },
 ]
-const addClass = (element,className) => {
+const addClass = (element, className) => {
     // Sử dụng classList để thêm lớp vào phần tử DOM
     if (element.current) {
         element.current.classList.add(className);
     }
 };
 
-const removeClass = (element,className) => {
+const removeClass = (element, className) => {
     // Sử dụng classList để xóa lớp khỏi phần tử DOM
     if (element.current) {
         element.current.classList.remove(className);
@@ -585,6 +585,15 @@ export default function Header() {
         link: ''
     });
     const sideBarRef = useRef(null);
+    const [showMenuSide, setShowMenuSide] = useState([false,false,false,false,false,false]);
+    const handleShowMenuSideBar =(index)=>{
+        setShowMenuSide((prevState) => {
+            console.log(prevState)
+            const newState = [...prevState];
+            newState[index] = !newState[index];
+            return newState;
+        })
+    }
     const showModal = () => {
         setIsModalOpen(true);
     };
@@ -604,19 +613,19 @@ export default function Header() {
             setShowDropdown(false);
         }
     };
-   const handleSetActiveTabLanguage = () => {
+    const handleSetActiveTabLanguage = () => {
 
         setActiveTabLanguage('1')
-       showModal()
+        showModal()
     }
 
-    const handleSetActiveTabMoney= () => {
+    const handleSetActiveTabMoney = () => {
         setActiveTabLanguage('2')
         showModal()
     }
-const handleShowSideBar = () => {
-    setIShowSideBar(!isShowSideBar);
-}
+    const handleShowSideBar = () => {
+        setIShowSideBar(!isShowSideBar);
+    }
     useEffect(() => {
         document.addEventListener('mousedown', handleClick);
         return () => {
@@ -667,10 +676,11 @@ const handleShowSideBar = () => {
                 </div>
             </Modal>
             <AntdHeader className='header-nav'>
-                <div className={`mobile-header-nav ${isShowSideBar?'showSidebar':''}`} ref={sideBarRef}>
+                <div className={`mobile-header-nav ${isShowSideBar ? 'showSidebar' : ''}`} ref={sideBarRef}>
                     <div className="header_mobileMenuWrapper__tHt0l">
                         <div className="header_header__rBp6t">
-                            <svg onClick={handleShowSideBar} className="sc-aXZVg ktFCMi mx-icon iconfont iconclose header_closeBtn__vbFT_"
+                            <svg onClick={handleShowSideBar}
+                                 className="sc-aXZVg ktFCMi mx-icon iconfont iconclose header_closeBtn__vbFT_"
                                  focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true"
                                  viewBox="0 0 1024 1024" data-icon="CloseOutlined">
                                 <path
@@ -679,10 +689,63 @@ const handleShowSideBar = () => {
                         </div>
                         <div>
                             <div className="header_headerLeft__RZb3I">
-                                <div className="header_navItem__dEqAQ header_authBtn__Gch60 header_navItem__dEqAQ"><a
-                                    className="header_registerBtn__fsUiv header_authBtn__Gch60">Đăng nhập/Đăng ký</a>
+                                <div className="header_navItem__dEqAQ header_authBtn__Gch60 header_navItem__dEqAQ">
+                                    <a href='https://www.mexc.com/vi-VN/login?previous=%2F'
+                                       className="header_registerBtn__fsUiv header_authBtn__Gch60">Đăng nhập/Đăng ký</a>
                                 </div>
                             </div>
+
+                            <div className="header_settingWrapper__T55KR">
+                                {menuItemsData.map((item, index) => {
+                                    if(item.submenu){
+                                        return ( <div key={index} className="header_innerMenu__SAvVj">
+                                            <div className="header_innerMenuBtn__gCP9O header_mobileMenuBtn__KBVfi" onClick={()=>handleShowMenuSideBar(index)}>
+                                                <span>{item.title} {item.status === 'hot' &&  <span className='icon-hot'>HOT</span>}</span>
+                                                <svg
+                                                    className={`ktFCMi mx-icon iconfont icondown header_icondown__wv4cC ${showMenuSide[index]?'active':''}`}
+                                                    focusable="false" width="1em" height="1em" fill="currentColor"
+                                                    aria-hidden="true" viewBox="0 0 1462 1024" data-icon="BottomOutlined">
+                                                    <path
+                                                        d="M330.86212049 261.09139564a65.46865059 65.46865059 0 0 1 92.47446924 0L704.44260896 542.11557945 985.54862877 261.09139564a65.46865059 65.46865059 0 0 1 92.47446924 92.47446925L704.44260896 727.39186127 330.86212049 353.64770085a65.46865059 65.46865059 0 0 1-1e-8-92.55630521z"></path>
+                                                </svg>
+                                            </div>
+                                            <div className={`header_innerDrop__7dsea ${showMenuSide[index]?'active':''}`}>
+                                                <div
+                                                    className="header_popNavMenuContainer__dn3Q1 header_treeIndex0__ly3lg shadow-s1-down">
+                                                    <ul className="header_menu__SBibF header_addArrow__0_Wfk"
+                                                    >
+                                                        {item.submenu.map((item, index) => {
+                                                            return(<li key={index} className="menu-item" >
+                                                                <a className=""
+                                                                   href={item.url}>
+                                                                    {/*<img src={`./${item.icon}`} alt="" className="header_sunImg__uJbyS"/>*/}
+                                                                    <div className="header_itemBody__U65v7">
+                                                                        <div className="header_itemTitle__jicUg">
+                                                                            <span>{item.title}{item.status}
+                                                                                {item.status === 'new' &&
+                                                                                    <i className='new-icon'>NEW</i>}
+                                                                                {item.status === 'hot' &&  <span className='icon-hot'>HOT</span>}</span>
+                                                                        </div>
+                                                                        {/*<div className="header_itemDesc__WfPVv">Mua*/}
+                                                                        {/*    Crypto với thẻ*/}
+                                                                        {/*</div>*/}
+                                                                    </div>
+                                                                </a></li>)
+                                                            })}
+
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>)
+                                    }else{
+                                        return ( <a key={index} className="header_mobileMenuBtn__KBVfi" href={item.url}>
+                                            <span>{item.title}</span>
+                                        </a>)
+                                    }
+                                    })}
+                            </div>
+
                             <div><a className="header_mobileMenuBtn__KBVfi" href="https://www.mexc.com/download"><span>Tải xuống APP</span>
                                 <svg className="sc-aXZVg ktFCMi mx-icon" focusable="false" width="1em" height="1em"
                                      fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
@@ -699,7 +762,8 @@ const handleShowSideBar = () => {
                                             d="M350.08 801.92a48 48 0 0 1 0-67.84L572.16 512 350.08 289.92a48 48 0 0 1 67.84-67.84l256 256a48 48 0 0 1 0 67.84l-256 256a48 48 0 0 1-67.84 0z"></path>
                                     </svg>
                                 </div>
-                                <div className="header_mobileMenuBtn__KBVfi" onClick={handleSetActiveTabMoney}><span>IDR</span>
+                                <div className="header_mobileMenuBtn__KBVfi" onClick={handleSetActiveTabMoney}>
+                                    <span>IDR</span>
                                     <svg className="sc-aXZVg ktFCMi mx-icon" focusable="false" width="1em" height="1em"
                                          fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                                          data-icon="RightOutlined">
@@ -709,7 +773,7 @@ const handleShowSideBar = () => {
                                 </div>
                                 <div className="header_hostComponent__gMit0">
                                     <div className="header_mobileMenuBtn__KBVfi"><span>Chế độ tối</span>
-                                       <div> <Switch   /></div>
+                                        <div><Switch/></div>
                                     </div>
                                 </div>
                             </div>

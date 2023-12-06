@@ -1287,3 +1287,20 @@ opacity: 0;
     --fill-card-modal:#f2f4f6;
     background-color: var(--fill-card-modal);
 }
+.new-list_home-new-list h2{
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 50px;
+    text-align: center;
+}
+.new-list_home-new-view-markets {
+    margin-bottom: 16px;
+    text-align: end;
+    line-height: 0;
+}
+.new-list_home-new-view-markets a {
+    color: var(--primary-base);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
