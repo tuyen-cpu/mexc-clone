@@ -1,10 +1,10 @@
 .footer-wrapper{
     opacity: 1!important;
     overflow-x: clip;
-    background-color: #fff;
-    color: #555b63;
+    background-color: var(--bg-primary);
+    color: var(--primary-text);
     padding: 64px 0 64px 24px;
-    border-top: 1px solid #ebedf1;
+    border-top: 1px solid var(--divider-primary);
 }
 .footer-content{
     display: flex;
@@ -39,7 +39,7 @@
 }
 .footer-content-dl dd a {
     display: block;
-    color: #0d0e0f;
+    color: var(--text-primary);;
 }
 .footer-media{
     display: flex;

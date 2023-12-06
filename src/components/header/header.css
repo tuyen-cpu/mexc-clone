@@ -1,4 +1,5 @@
 .header-nav{
+    --divider-primary: #222429;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -752,8 +753,6 @@
     color: var(--primary-base);
 }
 .header_mobileMenuWrapper__tHt0l {
-    --text-primary:#0d0e0f;
-    --bg-modal:#fff;
     position: fixed;
     z-index: 1000;
     height: 100%;
@@ -772,8 +771,6 @@
     box-shadow: 0 6px 24px rgba(0,0,0,.08);
 }
 .header_mobileMenuWrapper__tHt0l .header_header__rBp6t {
-    --divider-modal-primary:#e6e9eb;
-    --bg-modal:#fff;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -819,11 +816,17 @@
 
 }
 .header_menu__SBibF .header_mobileMenuBtn__KBVfi{
-    background: #fff;
+    background: var(--bg-modal);
 }
 .header_menu__SBibF .menu-item:hover .header_mobileMenuBtn__KBVfi{
-    --fill-page-button-default:#ebedf1;
+    /*--fill-page-button-default:#ebedf1;*/
     background: var(--fill-page-button-default)!important;
+}
+.ant-drawer-content{
+    background: var(--bg-modal)!important;
+}
+.anticon-close{
+    color: var(--text-primary);
 }
 .header_mobileMenuWrapper__tHt0l .header_mobileMenuBtn__KBVfi {
     font-size: 14px;
@@ -895,6 +898,8 @@
     -ms-user-select: none;
     user-select: none;
 }
+.ant-switch-checked {
+    background: var(--switch-color);}
 .ant-switch-handle:before {
     top: 0;
     right: 0;
@@ -910,6 +915,7 @@
     left: var(--switch-padding);
     width: 16px;
     height: 16px;
+    transform: translateY(-1px);
 }
 .ant-switch-handle, .ant-switch-handle:before {
     position: absolute;
@@ -930,7 +936,6 @@
     line-height: 1.5;
 }
 .header_mobileMenuWrapper__tHt0l .header_mobileMenuBtn__KBVfi:hover {
-    --fill-tab-tertiary:#f2f4f6;
     background-color: var(--fill-tab-tertiary);
     color: var(--text-primary);
 }
@@ -955,7 +960,6 @@
     min-height: 48px;
 }
 .header_menu__SBibF {
-    --bg-level-primary:#f7f8fa;
     background-color: var(--bg-level-primary);
     box-shadow: none;
     margin: 0;
@@ -977,7 +981,6 @@
     min-height: 48px;
 }
 .header_itemTitle__jicUg{
-    --text-primary:#0d0e0f;
     display: flex;
     align-items: center;
     color: var(--text-primary);
@@ -1000,7 +1003,7 @@
     top: 50%;
     margin-top: -.5em;
     pointer-events: none;
-    color: #0d0e0f;
+    color: var(--primary-text);
     opacity: .8;
 }
 .header_drawerLeafs__Rjfvn .header_mobileMenuBtn__KBVfi {
@@ -1026,7 +1029,6 @@
     min-height: 48px;
 }
 .header_itemTitle__jicUg {
-    --text-primary:#0d0e0f;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -1051,7 +1053,7 @@
     font-weight: 500;
 }
 .header_menu__SBibF li:hover {
-    --fill-page-button-default:#ebedf1;
+
     background: var(--fill-page-button-default)!important;
 }
 .header_menu__SBibF li a .header_itemBody__U65v7 {

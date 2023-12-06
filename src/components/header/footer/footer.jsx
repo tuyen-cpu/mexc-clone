@@ -1,7 +1,10 @@
 import './footer.css';
 import {Button, Popover} from "antd";
 import {useState} from "react";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Line } from "react-chartjs-2";
 
+ChartJS.register(ArcElement, Tooltip, Legend);
 const socialIcons = [
     'https://public.mocortech.com/banner/F20230822155201934UfZdMHFm2nifuh.png',
     'https://public.mocortech.com/banner/F20230809152906655hpY3SsIldymI9c.png',
@@ -164,6 +167,7 @@ export default function FooterPage() {
                 </dl>
             </div>
             <p className="footer_copyRight__Axy8j">© 2023 MEXC.COM</p>
+
         </div>
     )
 }

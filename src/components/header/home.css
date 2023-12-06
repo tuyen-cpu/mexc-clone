@@ -108,6 +108,7 @@
 }
 
 .banner-content-box__title h1 {
+    --text-primary:#f2f4f6;
     margin-bottom: 0;
     font-weight: 600;
     font-size: 54px;
@@ -126,6 +127,7 @@
 }
 
 .banner-content-box__desc strong {
+    --text-primary:#f2f4f6;
     color: var(--text-primary);
     font-weight: 600;
 }
@@ -147,6 +149,7 @@
 }
 
 .banner-content-action .social-btn {
+    --text-primary:#f2f4f6;
     width: 78px;
     height: 48px;
     background: var(--bg-tertiary);
@@ -386,7 +389,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 27px;
-    color: #0d0e0f;
+    color: var(--text-primary);
 }
 
 .download_downloadGroup__V_bnp {
@@ -437,13 +440,12 @@
 }
 
 .community_community-bg__HcGIb {
-    --home-community-gradient-color: rgba(247, 248, 249, .85);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f7f8fa;
+    background: var(--bg-secondary);
     overflow: hidden;
 }
 
@@ -472,7 +474,7 @@
     height: 100%;
     font-size: 0;
     line-height: 0;
-    background: linear-gradient(90.37deg, #f7f8fa .36%, #f7f8f9d9 86.6%);
+    background: linear-gradient(90.37deg, var(--bg-secondary) .36%, var(--home-community-gradient-color) 86.6%);
 }
 
 .community_community-bg__HcGIb .community_community-mask__i7dO_:after {
@@ -485,9 +487,11 @@
     height: 100%;
     font-size: 0;
     line-height: 0;
-    background: linear-gradient(273.56deg, #f7f8fa 3.29%, transparent 97.48%);
+    background: linear-gradient(273.56deg, var(--bg-secondary) 3.29%, transparent 97.48%);
 }
-
+.antd-btn{
+    color: var(--btn-default-color);;
+}
 .community_community-bg__HcGIb .community_community-mask__i7dO_ > img {
     width: auto;
     height: 100%;
@@ -512,7 +516,9 @@
     line-height: 22px;
     color: var(--text-secondary);
 }
-
+.dark-mode .ant-btn-default{
+    color: #f2f4f6 !important;
+}
 .community_community__EJdFT .community_community-body__Jgr43 .community_communityBigBtn__MD3tR {
     margin: 36px -12px 0;
     display: flex;
@@ -643,7 +649,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 34px;
-    color: #0d0e0f;
+    color: var(--text-primary);
 }
 
 .products_productsContWrap__4ogse .products_productsCont__QZKeW li p {
@@ -779,7 +785,7 @@
     cursor: pointer;
 }
 .why-choose-mexc_why-choose-wrapper__ud1w8 {
-    background-color: #f7f8fa;
+    background-color: var(--bg-secondary);
 }
 .video-player_video-player__e0dtZ .video-player_specs-tab__lYN2b .video-player_specs-tab-item__sIc2t.video-player_specs-tab-item__active__rBx_j, .video-player_video-player__e0dtZ .video-player_specs-tab__lYN2b .video-player_specs-tab-item__sIc2t:hover {
     color: var(--text-primary);
@@ -832,14 +838,13 @@
     }
 }
 .banner-bottom-bar_bottomBar__IuLsX {
-    --bg-tertiary:#f2f4f6;
     margin: 0 15px;
     position: fixed;
     display: none;
     align-items: center;
     justify-content: space-around;
     border-radius: 16px;
-    border: 1px solid #dde0e2;
+    border: 1px solid var(--border-button);
     background: var(--bg-tertiary);
     width: calc(100% - 30px);
     height: 64px;
@@ -1226,8 +1231,7 @@ opacity: 0;
 @media screen and (min-width: 760px){
 
     .sidebar_floatWrapper__SOb5e.sidebar_expandWrapper__4TpDm, .sidebar_floatWrapper__SOb5e:hover {
-        --divider-primary:#ebedf1;
-        --bg-modal:#fff;
+
         right: 16px;
         bottom: 24px;
         padding: 8px;

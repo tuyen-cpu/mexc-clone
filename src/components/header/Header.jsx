@@ -588,6 +588,7 @@ export default function Header() {
     const [showMenuSide, setShowMenuSide] = useState([false,false,false,false,false,false]);
     const [openDraw, setOpenDraw] = useState(false);
     const [drawContent, setDrawContent] = useState([]);
+    const [isDarkMode, setIsDarkMode] = useState(false);
     const handleShowMenuSideBar =(index)=>{
         setShowMenuSide((prevState) => {
             console.log(prevState)
@@ -641,11 +642,19 @@ export default function Header() {
         setOpenDraw(false);
     };
     useEffect(() => {
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
         document.addEventListener('mousedown', handleClick);
         return () => {
             document.removeEventListener('mousedown', handleClick);
         };
-    }, []);
+    }, [isDarkMode]);
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
+    };
 
     return (
         <>
@@ -798,7 +807,7 @@ export default function Header() {
                                 </div>
                                 <div className="header_hostComponent__gMit0">
                                     <div className="header_mobileMenuBtn__KBVfi"><span>Chế độ tối</span>
-                                        <div><Switch/></div>
+                                        <div><Switch onClick={toggleDarkMode} checked={isDarkMode}/></div>
                                     </div>
                                 </div>
                             </div>
@@ -844,7 +853,7 @@ export default function Header() {
                                                 <div className="header_innerMenu__SAvVj">
                                                     <div className="header_innerMenuBtn__gCP9O header_mobileMenuBtn__KBVfi">
                                                 <span><a className=""
-                                                         href={item.link}><div
+                                                         href={item.url}><div
                                                     className="header_itemBody__U65v7">
                                                     <div className="header_itemTitle__jicUg">
                                                     <span>{item.title} {item.status === 'hot' &&  <span className='icon-hot'>HOT</span>}
@@ -964,7 +973,7 @@ export default function Header() {
                                 </svg>
 
                             </li>
-                            <li className='setting-item'>
+                            <li className='setting-item' onClick={toggleDarkMode}>
                                 <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                                      fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                                      data-icon="SunOutlined"

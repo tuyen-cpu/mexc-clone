@@ -346,7 +346,7 @@ export default function Homepage() {
                                                                                      fill="currentColor"></path></svg>
                     </span>
                         <div className='notice-wrapper-slider'>
-                            <AntdCarousel autoplay dotPosition='right'>
+                            <AntdCarousel autoplay dotPosition='right' dots={false}>
                                 {noticeData.map((item, index) => {
                                     return (
                                         <div key={index}>
@@ -828,6 +828,7 @@ export default function Homepage() {
                     </svg>
                 </div>
             </div>
+
         </>
 
     )
