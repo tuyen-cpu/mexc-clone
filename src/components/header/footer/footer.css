@@ -84,7 +84,7 @@
         margin-bottom: 30px;
     }
     .footer-content__title {
-        --text-primary:#0d0e0f;
+
         cursor: pointer;
         color: var(--text-primary);
         font-size: 16px;

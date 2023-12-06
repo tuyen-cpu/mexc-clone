@@ -150,6 +150,7 @@
 
 .banner-content-action .social-btn {
     --text-primary:#f2f4f6;
+    --bg-tertiary:#111421;
     width: 78px;
     height: 48px;
     background: var(--bg-tertiary);

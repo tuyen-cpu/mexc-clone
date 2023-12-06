@@ -40,12 +40,18 @@ export default function FooterPage() {
             <div className='footer-content'>
                 <dl className='footer-content-dl'>
                     <dt className='footer-content__title'><span>Về chúng tôi</span>
-                        <svg onClick={handleClick} data-id='1' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
-                             height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
-                             data-icon="PlusOutlined">
+                        {!show[0] && <svg onClick={handleClick} data-id='1' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
+                                         height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
+                                         data-icon="PlusOutlined">
                             <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
                             <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
-                        </svg>
+                        </svg>}
+                        {show[0] &&  <svg onClick={handleClick} data-id='1'
+                            className="sc-aXZVg ktFCMi mx-icon iconfont footer_toggleBtn__3F0ol footer_toggleBtnOpen__GhJzW"
+                            focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true"
+                            viewBox="0 0 1024 1024" data-icon="MinusOutlined">
+                            <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
+                        </svg>}
                     </dt>
                     <div className={`footer-content__body ${show[0]?'active':''}`} data-id='1'>
                         <dd><a href="https://www.mexc.com/vi-VN/about">Giới thiệu MEXC</a></dd>
@@ -59,12 +65,18 @@ export default function FooterPage() {
                 </dl>
                 <dl className="footer-content-dl">
                     <dt className='footer-content__title'><span>Dịch vụ</span>
-                        <svg onClick={handleClick} data-id='2' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
-                             height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
-                             data-icon="PlusOutlined">
+                        {!show[1] && <svg onClick={handleClick} data-id='2' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
+                                          height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
+                                          data-icon="PlusOutlined">
                             <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
                             <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
-                        </svg>
+                        </svg>}
+                        {show[1] &&  <svg onClick={handleClick} data-id='2'
+                                          className="sc-aXZVg ktFCMi mx-icon iconfont footer_toggleBtn__3F0ol footer_toggleBtnOpen__GhJzW"
+                                          focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true"
+                                          viewBox="0 0 1024 1024" data-icon="MinusOutlined">
+                            <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
+                        </svg>}
                     </dt>
                     <div className={`footer-content__body ${show[1]?'active':''}`} data-id='2'>
                         <dd><a href="https://otc.mexc.com/vi-VN/fastTransaction">Mua Crypto</a></dd>
@@ -83,12 +95,18 @@ export default function FooterPage() {
                 </dl>
                 <dl className="footer-content-dl">
                     <dt className="footer-content__title"><span>Hỗ trợ người dùng</span>
-                        <svg onClick={handleClick} data-id='3' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
-                             height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
-                             data-icon="PlusOutlined">
+                        {!show[2] && <svg onClick={handleClick} data-id='3' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
+                                          height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
+                                          data-icon="PlusOutlined">
                             <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
                             <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
-                        </svg>
+                        </svg>}
+                        {show[2] &&  <svg onClick={handleClick} data-id='3'
+                                          className="sc-aXZVg ktFCMi mx-icon iconfont footer_toggleBtn__3F0ol footer_toggleBtnOpen__GhJzW"
+                                          focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true"
+                                          viewBox="0 0 1024 1024" data-icon="MinusOutlined">
+                            <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
+                        </svg>}
                     </dt>
                     <div className={`footer-content__body ${show[2]?'active':''}`} data-id='3'>
                         <dd><a>CSKH</a></dd>
@@ -113,12 +131,18 @@ export default function FooterPage() {
                 </dl>
                 <dl className="footer-content-dl">
                     <dt className="footer-content__title"><span>Liên hệ với chúng tôi</span>
-                        <svg onClick={handleClick} data-id='4' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
-                             height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
-                             data-icon="PlusOutlined">
+                        {!show[3] && <svg onClick={handleClick} data-id='4' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
+                                          height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
+                                          data-icon="PlusOutlined">
                             <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
                             <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
-                        </svg>
+                        </svg>}
+                        {show[3] &&  <svg onClick={handleClick} data-id='4'
+                                          className="sc-aXZVg ktFCMi mx-icon iconfont footer_toggleBtn__3F0ol footer_toggleBtnOpen__GhJzW"
+                                          focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true"
+                                          viewBox="0 0 1024 1024" data-icon="MinusOutlined">
+                            <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
+                        </svg>}
                     </dt>
                     <div data-id='4' className={`footer-content__body ${show[3]?'active':''}`}>
                         <dd><a href="mailto:business@mexc.com">Hợp tác kinh doanh</a></dd>
