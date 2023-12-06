@@ -170,14 +170,7 @@ const removeClass = (element, className) => {
         element.current.classList.remove(className);
     }
 };
-const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-        /* you can also use 'auto' behaviour
-           in place of 'smooth' */
-    });
-};
+
 
 export default function Homepage() {
     const myvideo = useRef(null);
@@ -194,7 +187,11 @@ export default function Homepage() {
         }
 
     }
+    const handleScrollTop = () => {
 
+        document.body.scrollTop = 0;
+
+    };
     const handleScroll = () => {
         const scrollPosition = document.body.scrollTop;
         if (scrollPosition > 100) {
@@ -676,7 +673,7 @@ export default function Homepage() {
                     </div>
                 </div>
             </div>
-            <div className={`scroll-top-wrapper ${scrollTop ? 'active' : ''}`}>
+            <div className={`scroll-top-wrapper ${scrollTop ? 'active' : ''}`} onClick={handleScrollTop}>
                 <Tooltip placement="left" title={(<div>Quay lại đầu trang</div>)}>
                     <div className="sidebar_btn__5nhuP sidebar_toTop__ocJY_">
                         <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconzhiding" focusable="false" width="1em"

@@ -1,5 +1,6 @@
 import './footer.css';
 import {Button, Popover} from "antd";
+import {useState} from "react";
 
 const socialIcons = [
     'https://public.mocortech.com/banner/F20230822155201934UfZdMHFm2nifuh.png',
@@ -19,19 +20,31 @@ const socialIcons = [
     'https://public.mocortech.com/banner/F20230822155443043RJqBoi5IsZJ6Tx.png'
 ]
 export default function FooterPage() {
+    const [show, setShow] = useState([false,false,false,false]);
+    const handleClick = event => {
+
+       setShow((prev) => {
+           const prevShow = [...prev];
+              prevShow[Number(event.target.dataset.id) - 1] = !prevShow[Number(event.target.dataset.id) - 1];
+              console.log(prevShow);
+              return prevShow;
+       })
+
+    };
+
     return (
         <div className='footer-wrapper'>
             <div className='footer-content'>
                 <dl className='footer-content-dl'>
                     <dt className='footer-content__title'><span>Về chúng tôi</span>
-                        <svg className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
+                        <svg onClick={handleClick} data-id='1' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
                              height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                              data-icon="PlusOutlined">
                             <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
                             <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
                         </svg>
                     </dt>
-                    <div className='footer-content__body'>
+                    <div className={`footer-content__body ${show[0]?'active':''}`} data-id='1'>
                         <dd><a href="https://www.mexc.com/vi-VN/about">Giới thiệu MEXC</a></dd>
                         <dd><a href="https://www.mexc.com/vi-VN/terms">Thỏa thuận người dùng</a></dd>
                         <dd><a href="https://www.mexc.com/vi-VN/privacypolicy">Chính sách bảo mật</a></dd>
@@ -43,14 +56,14 @@ export default function FooterPage() {
                 </dl>
                 <dl className="footer-content-dl">
                     <dt className='footer-content__title'><span>Dịch vụ</span>
-                        <svg className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
+                        <svg onClick={handleClick} data-id='2' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
                              height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                              data-icon="PlusOutlined">
                             <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
                             <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
                         </svg>
                     </dt>
-                    <div className="footer-content__body">
+                    <div className={`footer-content__body ${show[1]?'active':''}`} data-id='2'>
                         <dd><a href="https://otc.mexc.com/vi-VN/fastTransaction">Mua Crypto</a></dd>
                         <dd><a href="https://www.mexc.com/vi-VN/download">Tải xuống APP</a></dd>
                         <dd><a href="https://www.mexc.com/vi-VN/fee">Phí</a></dd>
@@ -67,14 +80,14 @@ export default function FooterPage() {
                 </dl>
                 <dl className="footer-content-dl">
                     <dt className="footer-content__title"><span>Hỗ trợ người dùng</span>
-                        <svg className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
+                        <svg onClick={handleClick} data-id='3' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
                              height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                              data-icon="PlusOutlined">
                             <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
                             <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
                         </svg>
                     </dt>
-                    <div className="footer-content__body">
+                    <div className={`footer-content__body ${show[2]?'active':''}`} data-id='3'>
                         <dd><a>CSKH</a></dd>
                         <dd><a target="_blank" rel="noopener noreferrer" href="https://www.mexc.com/vi-VN/support">Trung
                             tâm trợ giúp</a></dd>
@@ -97,14 +110,14 @@ export default function FooterPage() {
                 </dl>
                 <dl className="footer-content-dl">
                     <dt className="footer-content__title"><span>Liên hệ với chúng tôi</span>
-                        <svg className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
+                        <svg onClick={handleClick} data-id='4' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
                              height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                              data-icon="PlusOutlined">
                             <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
                             <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
                         </svg>
                     </dt>
-                    <div className="footer-content__body">
+                    <div data-id='4' className={`footer-content__body ${show[3]?'active':''}`}>
                         <dd><a href="mailto:business@mexc.com">Hợp tác kinh doanh</a></dd>
                         <dd><a href="mailto:institution@mexc.com">Hợp tác thể chế</a></dd>
                         <dd><a href="mailto:media@mexc.com">Hợp tác truyền thông</a></dd>
@@ -114,14 +127,14 @@ export default function FooterPage() {
                 </dl>
                 <dl className="footer-content-dl">
                     <dt className="footer-content__title"><span>Cộng đồng</span>
-                        <svg className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"
-                             height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
-                             data-icon="PlusOutlined">
-                            <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>
-                            <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>
-                        </svg>
+                        {/*<svg onClick={handleClick} data-id='5' className="sc-aXZVg ktFCMi mx-icon footer_toggleBtn__3F0ol" focusable="false" width="1em"*/}
+                        {/*     height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"*/}
+                        {/*     data-icon="PlusOutlined">*/}
+                        {/*    <path d="M80 512A48 48 0 0 1 128 464h768a48 48 0 0 1 0 96H128A48 48 0 0 1 80 512z"></path>*/}
+                        {/*    <path d="M512 944a48 48 0 0 1-48-48V128a48 48 0 0 1 96 0v768a48 48 0 0 1-48 48z"></path>*/}
+                        {/*</svg>*/}
                     </dt>
-                    <div className="footer-content__body">
+                    <div  className={`footer-content__body`}>
                         <div className="footer-media">
                             {socialIcons.map((icon, index) => (
                                 // <Popover className='banner-content-action__btn social-btn social-btn-qr' placement="top"
@@ -150,6 +163,7 @@ export default function FooterPage() {
                     </div>
                 </dl>
             </div>
+            <p className="footer_copyRight__Axy8j">© 2023 MEXC.COM</p>
         </div>
     )
 }

@@ -1119,6 +1119,12 @@
     .banner-bottom-bar_bottomBar__IuLsX {
         display: flex;
     }
+    .sidebar_btn__5nhuP.sidebar_toTop__ocJY_, .sidebar_gift__MhLeX {
+        display: none;
+    }
+    .sidebar_wrapper__LNgtQ{
+        display: none !important;
+    }
 }
 @media screen and (max-width: 1200px) {
     .react-multiple-carousel__arrow{
