@@ -1,4 +1,4 @@
-import {Button, Input, Layout, Modal, Switch} from "antd";
+import {Button, Drawer, Input, Layout, Modal, Switch} from "antd";
 
 const {Header: AntdHeader} = Layout;
 import {SearchOutlined} from '@ant-design/icons';
@@ -586,6 +586,8 @@ export default function Header() {
     });
     const sideBarRef = useRef(null);
     const [showMenuSide, setShowMenuSide] = useState([false,false,false,false,false,false]);
+    const [openDraw, setOpenDraw] = useState(false);
+    const [drawContent, setDrawContent] = useState([]);
     const handleShowMenuSideBar =(index)=>{
         setShowMenuSide((prevState) => {
             console.log(prevState)
@@ -614,7 +616,6 @@ export default function Header() {
         }
     };
     const handleSetActiveTabLanguage = () => {
-
         setActiveTabLanguage('1')
         showModal()
     }
@@ -626,6 +627,19 @@ export default function Header() {
     const handleShowSideBar = () => {
         setIShowSideBar(!isShowSideBar);
     }
+
+
+    const showDrawer = () => {
+        setOpenDraw(true);
+    };
+    const handleShowDrawContent = (content) => {
+        console.log(content)
+        setDrawContent(content);
+        showDrawer();
+    }
+    const onClose = () => {
+        setOpenDraw(false);
+    };
     useEffect(() => {
         document.addEventListener('mousedown', handleClick);
         return () => {
@@ -717,14 +731,25 @@ export default function Header() {
                                                         {item.submenu.map((item, index) => {
                                                             return(<li key={index} className="menu-item" >
                                                                 <a className=""
-                                                                   href={item.url}>
+                                                                   >
                                                                     {/*<img src={`./${item.icon}`} alt="" className="header_sunImg__uJbyS"/>*/}
                                                                     <div className="header_itemBody__U65v7">
                                                                         <div className="header_itemTitle__jicUg">
-                                                                            <span>{item.title}{item.status}
+                                                                            <span onClick={()=> {
+                                                                                console.log("ddd")
+                                                                                handleShowDrawContent(item.submenu)
+                                                                                // window.location.href = item.url
+                                                                            }}>{item.title}
                                                                                 {item.status === 'new' &&
                                                                                     <i className='new-icon'>NEW</i>}
                                                                                 {item.status === 'hot' &&  <span className='icon-hot'>HOT</span>}</span>
+                                                                            {item.submenu &&
+                                                                                <svg onClick={()=>{
+                                                                                    console.log("ddd")
+                                                                                    handleShowDrawContent(item.submenu)
+                                                                                }} className="sc-aXZVg ktFCMi mx-icon header_arrowIcon__PedAF" focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024" data-icon="RightOutlined"><path d="M350.08 801.92a48 48 0 0 1 0-67.84L572.16 512 350.08 289.92a48 48 0 0 1 67.84-67.84l256 256a48 48 0 0 1 0 67.84l-256 256a48 48 0 0 1-67.84 0z"></path></svg>
+                                                                            }
+
                                                                         </div>
                                                                         {/*<div className="header_itemDesc__WfPVv">Mua*/}
                                                                         {/*    Crypto với thẻ*/}
@@ -809,6 +834,43 @@ export default function Header() {
                                 />
                             </li>)
                         })}
+                        <Drawer placement="right" onClose={onClose} open={openDraw}>
+                            <div className="">
+                                <ul className="header_menu__SBibF header_addArrow__0_Wfk header_addArrow__0_Wf" >
+                                    {drawContent.map((item, index) => {
+                                        {console.log(JSON.stringify(item))}
+                                        return(
+                                            <li key={index} className="menu-item">
+                                                <div className="header_innerMenu__SAvVj">
+                                                    <div className="header_innerMenuBtn__gCP9O header_mobileMenuBtn__KBVfi">
+                                                <span><a className=""
+                                                         href={item.link}><div
+                                                    className="header_itemBody__U65v7">
+                                                    <div className="header_itemTitle__jicUg">
+                                                    <span>{item.title} {item.status === 'hot' &&  <span className='icon-hot'>HOT</span>}
+                                                        {item.status === 'new' &&
+                                                            <i className='new-icon'>NEW</i>}
+                                                    </span></div>
+                                                    <div
+                                                    className="header_itemDesc__WfPVv">{item.content}</div></div></a></span>
+                                                    </div>
+                                                    <div className="header_innerDrop__7dsea">
+                                                        <div
+                                                            className="header_popNavMenuContainer__dn3Q1 header_treeIndex0__ly3lg shadow-s1-down">
+                                                            <ul className="header_menu__SBibF header_addArrow__0_Wfk"
+                                                                ></ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        )
+                                    })}
+
+
+
+                                </ul>
+                            </div>
+                        </Drawer>
                     </ul>
                 </div>
                 <div style={rightMenuStyle} className='right-menu'>
