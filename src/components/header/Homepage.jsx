@@ -163,7 +163,7 @@ export default function Homepage() {
     useEffect(() => {
         console.log(myvideo.current)
         myvideo.current.play();
-    },[])
+    }, [])
     return (
         <>
             <div className='banner-wrapper'>
@@ -352,9 +352,9 @@ export default function Homepage() {
                     <div className="why-choose-container">
                         <div className="video-player_video-player__e0dtZ">
                             <div className="video-player_video-player-content__Kmbbl">
-                                <video muted="" playsInline=""  preload="metadata" ref={myvideo} loop autoPlay={true}>
-                                    <source src="https://learn.mocortech.com/learnvideo/Frontpage-Video-VN.mp4"
-                                            type="video/mp4"/>
+                                <video src="https://learn.mocortech.com/learnvideo/Frontpage-Video-VN.mp4" ref={myvideo}
+                                       muted preLoad="auto" loop>
+
                                 </video>
                             </div>
                             <div className="video-player_specs-tab__lYN2b">
@@ -404,7 +404,9 @@ export default function Homepage() {
                             </div>
                         </div>
                     </div>
-                    <Button type="primary" className='section-main-btn' onClick={()=>window.location.href='https://www.mexc.com/vi-VN/login'}>Bắt đầu giao dịch</Button>
+                    <Button type="primary" className='section-main-btn'
+                            onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/login'}>Bắt đầu giao
+                        dịch</Button>
 
                 </div>
             </div>
@@ -414,7 +416,7 @@ export default function Homepage() {
                 <ul className="products_productsCont__QZKeW">
                     <li>
                         <div className="products_webCont__QX7YI"><img
-                            src="./product-future_2x.png?v=1003" alt="mexc" loading="lazy" width="200"
+                            src="./product-future_2x.png" alt="mexc" loading="lazy" width="200"
                             height="200"/>
                             <div className="products_rightPart__zRAWS"><h3>Future</h3><p>Số 1 về thanh khoản, Phí Maker
                                 0.</p><p className="products_des__CFIiD">Đòn bẩy lên tới 200x đối với hợp đồng tương
@@ -434,7 +436,7 @@ export default function Homepage() {
                         </div>
                     </li>
                     <li>
-                        <div className="products_webCont__QX7YI"><img src="./product-spot_2x.png?v=1003"
+                        <div className="products_webCont__QX7YI"><img src="./product-spot_2x.png"
                                                                       alt="mexc" loading="lazy" width="200"
                                                                       height="200"/>
                             <div className="products_rightPart__zRAWS"><h3>Spot</h3><p>Đa dạng về loại Crypto. Niêm yết
@@ -571,5 +573,5 @@ export default function Homepage() {
 
         </>
 
-)
+    )
 }

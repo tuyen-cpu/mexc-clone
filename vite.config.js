@@ -7,4 +7,5 @@ export default defineConfig({
   // antd:{
   //   import: true
   // }
+  base: "./mexc-clone",
 })

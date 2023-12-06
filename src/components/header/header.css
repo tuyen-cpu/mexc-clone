@@ -339,6 +339,9 @@
 }
 .right-menu .login-btn{
     font-weight: 500;
+    margin-inline-end: 16px;
+}
+.right-menu{
     margin-right: 16px;
 }
 .setting-item-wrapper{
@@ -472,9 +475,12 @@
     align-items: center;
     justify-content: space-between;
 }
-.setting-item-wrapper .setting-item-list .setting-item {
-    margin-inline-end: 16px;
+.setting-item-wrapper .setting-item-list .setting-item{
+    margin-right: 16px;
     cursor: pointer;
+}
+.setting-item-wrapper .setting-item-list .setting-item:last-child{
+    margin-right: 0;
 }
 .setting-item-wrapper .setting-item-list .setting-item .mx-icon{
     vertical-align: -0.25rem;
@@ -729,6 +735,22 @@
 .language-item.active{
     color: #357aff;
 }
+.responsive-mobile-header{
+    display: none;
+}
+
+.responsive-mobile-header .header_mobileMenuToggle{
+    padding: 0 4px;
+    margin: 0;
+    font-size: 22px;
+}
+.responsive-mobile-header__more{
+    display: flex;
+    cursor: pointer;
+}
+.responsive-mobile-header__more:hover .header_mobileMenuToggle{
+    color: var(--primary-base);
+}
 @media screen and (max-width: 910px) {
     .navbar-list.menus{
         display: none;
@@ -741,6 +763,14 @@
 }
 @media screen and (max-width: 1145px) {
     .setting-item-wrapper{
+        display: none;
+    }
+    .responsive-mobile-header{
+        display: block;
+    }
+}
+@media screen and (max-width: 394px) {
+    .login-btn{
         display: none;
     }
 }

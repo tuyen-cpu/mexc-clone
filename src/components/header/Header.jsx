@@ -753,7 +753,11 @@ export default function Header() {
                                 </svg>
                             </li>
                         </ul>
-
+                    </div>
+                    <div className='responsive-mobile-header'>
+                        <div className='responsive-mobile-header__more'>
+                            <svg className="sc-aXZVg ktFCMi mx-icon header_mobileMenuToggle header_navItem__dEqAQ" focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true" style={{fontSize:'22px'}} viewBox="0 0 20 20" data-icon="MenuOutlined"><path fillRule="evenodd" clipRule="evenodd" d="M0 2H20V4H0V2ZM0 9H20V11H0V9ZM20 16H0V18H20V16Z"></path></svg>
+                        </div>
                     </div>
                 </div>
 
