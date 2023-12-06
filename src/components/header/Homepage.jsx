@@ -2,7 +2,7 @@ import 'react-multi-carousel/lib/styles.css'
 import './home.css';
 import {Button, Carousel as AntdCarousel, Popover} from "antd";
 import {default as ReactCarousel} from "react-multi-carousel";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 
 
 const noticeData = [
@@ -157,15 +157,83 @@ const communitySocialData = [
     'https://public.mocortech.com/banner/F202308221554012327aWtAh2tFavbYb.png',
     'https://public.mocortech.com/banner/F202308221554114182thJcamotY7rP5.png'
 ]
+const addClass = (element,className) => {
+    // Sử dụng classList để thêm lớp vào phần tử DOM
+    if (element.current) {
+        element.current.classList.add(className);
+    }
+};
+
+const removeClass = (element,className) => {
+    // Sử dụng classList để xóa lớp khỏi phần tử DOM
+    if (element.current) {
+        element.current.classList.remove(className);
+    }
+};
 export default function Homepage() {
     const myvideo = useRef(null);
+    const elementRef = useRef(null);
+    const [scrollTop, setScrollTop] = useState(0);
 
+
+    const handleScroll = () => {
+        addClass(elementRef,'banner-bottom-bar_isScroll__ErFdi')
+        setTimeout(()=>{
+            removeClass(elementRef,'banner-bottom-bar_isScroll__ErFdi');
+        },1000)
+    };
     useEffect(() => {
+
+        window.addEventListener('scroll', handleScroll, true);
         console.log(myvideo.current)
         myvideo.current.play();
+
     }, [])
     return (
         <>
+            <div className="banner-bottom-bar_bottomBar__IuLsX banner-bottom-bar_isScrollStop__j6DKa" ref={elementRef}>
+                <div className="banner-bottom-bar_barInfo__bCyyu" onClick={()=>window.location.href='https://www.mexc.com/vi-VN/markets'}>
+                    <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
+                         fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconMarket">
+                        <path
+                            d="M21 5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5ZM13.7353 7H17C17.5523 7 18 7.44772 18 8C18 8.55228 17.5523 9 17 9H14.8897L10.2686 17H7C6.44772 17 6 16.5523 6 16C6 15.4477 6.44772 15 7 15H9.1142L13.7353 7Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <div>Thị trường</div>
+                </div>
+                <div className="banner-bottom-bar_barInfo__bCyyu" onClick={()=>window.location.href='https://www.mexc.com/vi-VN/exchange/BTC_USDT'}>
+                    <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
+                         fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconTrade">
+                        <path
+                            d="M7.0002 4C7.0002 3.44772 6.55249 3 6.0002 3C5.44792 3 5.0002 3.44772 5.0002 4V12.9994H1.95985C1.57501 12.9994 1.3343 13.416 1.52663 13.7493L5.56378 20.7462C5.7561 21.0796 6.23712 21.0798 6.42973 20.7466L10.4747 13.7497C10.6674 13.4164 10.4266 12.9994 10.0416 12.9994H7.0002V4Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M22.4669 10.2498C22.6596 10.5831 22.4159 11 22.0309 11H19.0002V19.9996C19.0002 20.5519 18.5525 20.9996 18.0002 20.9996C17.4479 20.9996 17.0002 20.5519 17.0002 19.9996V11H13.9699C13.5851 11 13.3402 10.5835 13.5325 10.2502L17.5628 3.26513C17.7551 2.9318 18.2362 2.9316 18.4288 3.26476L22.4669 10.2498Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <div>Giao dịch</div>
+                </div>
+                <div className="banner-bottom-bar_barInfo__bCyyu" onClick={()=>window.location.href='https://futures.mexc.com/exchange?type=linear_swap'}>
+                    <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
+                         fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconFutures">
+                        <path d="M10 10.0001L12.0001 8L14.0001 10.0001L12.0001 12.0002L10 10.0001Z"
+                              fill="currentColor"></path>
+                        <path
+                            d="M6 2C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V7L15 2H6ZM16 10C16 12.2091 14.2091 14 12 14C9.79086 14 8 12.2091 8 10C8 7.79086 9.79086 6 12 6C14.2091 6 16 7.79086 16 10ZM8 17H16C16.5523 17 17 17.4477 17 18C17 18.5523 16.5523 19 16 19H8C7.44772 19 7 18.5523 7 18C7 17.4477 7.44772 17 8 17Z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <div>Futures</div>
+                </div>
+                <div className="banner-bottom-bar_barInfo__bCyyu" onClick={()=>window.location.href='https://www.mexc.com/vi-VN/login?previous=%2Fassets%2Foverview&handleDefaultLocale=keep'}>
+                    <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
+                         fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconWallet">
+                        <path fillRule="evenodd" clipRule="evenodd"
+                              d="M21 5C21 3.89543 20.1046 3 19 3H6C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H19C20.1046 21 21 20.1046 21 19V9.25056C21 8.5602 20.4404 8.00056 19.75 8.00056H6.5C5.67157 8.00056 5 7.32898 5 6.50056C5 5.67213 5.67157 5.00056 6.5 5.00056C7.93983 5.00056 9.37966 5.0007 10.8195 5.00083C14.213 5.00116 17.6065 5.00149 21 5ZM19.0312 14.5C19.0312 15.3284 18.3597 16 17.5312 16C16.7028 16 16.0312 15.3284 16.0312 14.5C16.0312 13.6716 16.7028 13 17.5312 13C18.3597 13 19.0312 13.6716 19.0312 14.5Z"
+                              fill="currentColor"></path>
+                    </svg>
+                    <div>Tài sản</div>
+                </div>
+            </div>
             <div className='banner-wrapper'>
                 <div className='banner-img-wrapper'>
                     <div className='banner-img-content'>
@@ -306,20 +374,28 @@ export default function Homepage() {
                                 items: 4,
                                 partialVisibilityGutter: 40
                             },
-                            mobile: {
-                                breakpoint: {
-                                    max: 464,
-                                    min: 0
-                                },
-                                items: 1,
-                                partialVisibilityGutter: 30
-                            },
                             tablet: {
                                 breakpoint: {
-                                    max: 1024,
+                                    max: 1200,
+                                    min: 464
+                                },
+                                items: 3,
+                                partialVisibilityGutter: 30
+                            },
+                            custom: {
+                                breakpoint: {
+                                    max: 950,
                                     min: 464
                                 },
                                 items: 2,
+                                partialVisibilityGutter: 30
+                            },
+                            mobile: {
+                                breakpoint: {
+                                    max: 650,
+                                    min: 0
+                                },
+                                items: 1,
                                 partialVisibilityGutter: 30
                             }
                         }}
@@ -353,7 +429,7 @@ export default function Homepage() {
                         <div className="video-player_video-player__e0dtZ">
                             <div className="video-player_video-player-content__Kmbbl">
                                 <video src="https://learn.mocortech.com/learnvideo/Frontpage-Video-VN.mp4" ref={myvideo}
-                                       muted preLoad="auto" loop>
+                                       muted preload="auto" loop>
 
                                 </video>
                             </div>

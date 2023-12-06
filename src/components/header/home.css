@@ -793,6 +793,68 @@
     font-size: 16px;
     line-height: 22px;
 }
+.banner-bottom-bar_bottomBar__IuLsX.banner-bottom-bar_isScrollStop__j6DKa {
+    animation: banner-bottom-bar_isScrollStop__j6DKa;
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+    bottom: 18px;
+    opacity: 1;
+}
+.banner-bottom-bar_bottomBar__IuLsX.banner-bottom-bar_isScroll__ErFdi {
+    animation: banner-bottom-bar_isScroll__ErFdi;
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+    bottom: -32px;
+    opacity: .5
+}
+
+@keyframes banner-bottom-bar_isScrollStop__j6DKa {
+    0% {
+        bottom: -32px;
+        opacity: .5
+    }
+    to {
+        bottom: 18px;
+        opacity: 1
+    }
+}
+@keyframes banner-bottom-bar_isScroll__ErFdi {
+    0% {
+        bottom: 18px;
+        opacity: 1
+    }
+
+    to {
+        bottom: -32px;
+        opacity: .5
+    }
+}
+.banner-bottom-bar_bottomBar__IuLsX {
+    --bg-tertiary:#f2f4f6;
+    margin: 0 15px;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 16px;
+    border: 1px solid #dde0e2;
+    background: var(--bg-tertiary);
+    width: calc(100% - 30px);
+    height: 64px;
+    z-index: 10;
+}
+.banner-bottom-bar_bottomBar__IuLsX svg {
+    --icon-secondary:#87909f;
+    font-size: 24px;
+    color: var(--icon-secondary);
+}
+.banner-bottom-bar_bottomBar__IuLsX .banner-bottom-bar_barInfo__bCyyu {
+    --text-primary: #87909f;
+    color: var(--text-secondary);
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+}
 @media screen and (max-width: 576px) {
     .community_community__EJdFT .community_community-body__Jgr43 .community_communityBigBtn__MD3tR > .main-community-btn, .community_community__EJdFT .community_community-body__Jgr43 .community_communityBigBtn__MD3tR > div {
         flex: 1 0;
@@ -1040,5 +1102,12 @@
     .banner-content-box__title {
         height: auto;
         margin: 24px 0 12px;
+    }
+    .react-multi-carousel-item{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .banner-bottom-bar_bottomBar__IuLsX {
+        display: flex;
     }
 }
