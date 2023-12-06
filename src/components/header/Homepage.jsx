@@ -1,6 +1,6 @@
 import 'react-multi-carousel/lib/styles.css'
 import './home.css';
-import {Button, Carousel as AntdCarousel, Popover} from "antd";
+import {Button, Carousel as AntdCarousel, Popover, Tooltip} from "antd";
 import {default as ReactCarousel} from "react-multi-carousel";
 import {useEffect, useRef, useState} from "react";
 
@@ -157,42 +157,68 @@ const communitySocialData = [
     'https://public.mocortech.com/banner/F202308221554012327aWtAh2tFavbYb.png',
     'https://public.mocortech.com/banner/F202308221554114182thJcamotY7rP5.png'
 ]
-const addClass = (element,className) => {
+const addClass = (element, className) => {
     // Sử dụng classList để thêm lớp vào phần tử DOM
     if (element.current) {
         element.current.classList.add(className);
     }
 };
 
-const removeClass = (element,className) => {
+const removeClass = (element, className) => {
     // Sử dụng classList để xóa lớp khỏi phần tử DOM
     if (element.current) {
         element.current.classList.remove(className);
     }
 };
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        /* you can also use 'auto' behaviour
+           in place of 'smooth' */
+    });
+};
+
 export default function Homepage() {
     const myvideo = useRef(null);
     const elementRef = useRef(null);
-    const [scrollTop, setScrollTop] = useState(0);
+    const [scrollTop, setScrollTop] = useState(false);
+    const contacRef = useRef(null);
+    const [pinTab, setPintab] = useState(false);
+    const handlePinBar = () => {
+        setPintab((prevState) => !prevState)
+        if (pinTab) {
+            contacRef.current.classList.remove("sidebar_expandWrapper__4TpDm")
+        } else {
+            contacRef.current.classList.add("sidebar_expandWrapper__4TpDm")
+        }
 
+    }
 
     const handleScroll = () => {
-        addClass(elementRef,'banner-bottom-bar_isScroll__ErFdi')
-        setTimeout(()=>{
-            removeClass(elementRef,'banner-bottom-bar_isScroll__ErFdi');
-        },1000)
+        const scrollPosition = document.body.scrollTop;
+        if (scrollPosition > 100) {
+            setScrollTop(true)
+        } else {
+            setScrollTop(false)
+        }
+        addClass(elementRef, 'banner-bottom-bar_isScroll__ErFdi')
+        setTimeout(() => {
+            removeClass(elementRef, 'banner-bottom-bar_isScroll__ErFdi');
+        }, 1000)
     };
     useEffect(() => {
 
         window.addEventListener('scroll', handleScroll, true);
-        console.log(myvideo.current)
         myvideo.current.play();
 
     }, [])
+
     return (
         <>
             <div className="banner-bottom-bar_bottomBar__IuLsX banner-bottom-bar_isScrollStop__j6DKa" ref={elementRef}>
-                <div className="banner-bottom-bar_barInfo__bCyyu" onClick={()=>window.location.href='https://www.mexc.com/vi-VN/markets'}>
+                <div className="banner-bottom-bar_barInfo__bCyyu"
+                     onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/markets'}>
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconMarket">
                         <path
@@ -201,7 +227,8 @@ export default function Homepage() {
                     </svg>
                     <div>Thị trường</div>
                 </div>
-                <div className="banner-bottom-bar_barInfo__bCyyu" onClick={()=>window.location.href='https://www.mexc.com/vi-VN/exchange/BTC_USDT'}>
+                <div className="banner-bottom-bar_barInfo__bCyyu"
+                     onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/exchange/BTC_USDT'}>
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconTrade">
                         <path
@@ -213,7 +240,8 @@ export default function Homepage() {
                     </svg>
                     <div>Giao dịch</div>
                 </div>
-                <div className="banner-bottom-bar_barInfo__bCyyu" onClick={()=>window.location.href='https://futures.mexc.com/exchange?type=linear_swap'}>
+                <div className="banner-bottom-bar_barInfo__bCyyu"
+                     onClick={() => window.location.href = 'https://futures.mexc.com/exchange?type=linear_swap'}>
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconFutures">
                         <path d="M10 10.0001L12.0001 8L14.0001 10.0001L12.0001 12.0002L10 10.0001Z"
@@ -224,7 +252,8 @@ export default function Homepage() {
                     </svg>
                     <div>Futures</div>
                 </div>
-                <div className="banner-bottom-bar_barInfo__bCyyu" onClick={()=>window.location.href='https://www.mexc.com/vi-VN/login?previous=%2Fassets%2Foverview&handleDefaultLocale=keep'}>
+                <div className="banner-bottom-bar_barInfo__bCyyu"
+                     onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/login?previous=%2Fassets%2Foverview&handleDefaultLocale=keep'}>
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconWallet">
                         <path fillRule="evenodd" clipRule="evenodd"
@@ -281,6 +310,7 @@ export default function Homepage() {
                                     </svg>
                                 </a>
                                 <Popover className='banner-content-action__btn social-btn social-btn-qr'
+                                         overlayStyle={{width: '176px'}}
                                          placement="bottom"
                                          content={(
                                              <div>
@@ -372,7 +402,7 @@ export default function Homepage() {
                                     min: 1024
                                 },
                                 items: 4,
-                                partialVisibilityGutter: 40
+                                partialVisibilityGutter: 40,
                             },
                             tablet: {
                                 breakpoint: {
@@ -646,7 +676,143 @@ export default function Homepage() {
                     </div>
                 </div>
             </div>
+            <div className={`scroll-top-wrapper ${scrollTop ? 'active' : ''}`}>
+                <Tooltip placement="left" title={(<div>Quay lại đầu trang</div>)}>
+                    <div className="sidebar_btn__5nhuP sidebar_toTop__ocJY_">
+                        <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconzhiding" focusable="false" width="1em"
+                             height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"
+                             data-icon="VerticalAlignTopOutlined">
+                            <path
+                                d="M1.67973 0.5383C1.16679 0.5383 0.750977 0.954115 0.750977 1.46705C0.750977 1.97998 1.16679 2.3958 1.67973 2.3958H14.3214C14.8344 2.3958 15.2502 1.97998 15.2502 1.46705C15.2502 0.954114 14.8344 0.5383 14.3214 0.5383H1.67973Z"></path>
+                            <path
+                                d="M8.65399 4.07351C8.29206 3.7152 7.70909 3.7152 7.34716 4.07351L2.068 9.29988C1.70348 9.66075 1.70053 10.2488 2.0614 10.6133C2.42227 10.9778 3.01032 10.9808 3.37483 10.6199L7.07183 6.95989V14.533C7.07183 15.0459 7.48764 15.4617 8.00057 15.4617C8.51351 15.4617 8.92932 15.0459 8.92932 14.533V6.95989L12.6263 10.6199C12.9908 10.9808 13.5789 10.9778 13.9397 10.6133C14.3006 10.2488 14.2977 9.66075 13.9331 9.29988L8.65399 4.07351Z"></path>
+                        </svg>
+                    </div>
+                </Tooltip>
 
+            </div>
+            <div className="sidebar_wrapper__LNgtQ sidebar_floatWrapper__SOb5e" ref={contacRef}>
+                <Tooltip placement="top" title={(<div>{pinTab ? "Đóng" : "Cố định"}</div>)}>
+                    <div className="iconfont sidebar_btn__5nhuP" onClick={handlePinBar}>
+                        <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
+                             fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
+                             data-icon="PushpinVerticalOutlined">
+                            <path
+                                d="M736.042683 524.815065h-93.120125l3.3745-286.912829H694.905924V84.121459H242.763123v153.499569l3.776226 0.241036 48.287485 3.213809v283.85971l-96.735661 3.334327-3.896744 0.16069V682.050687h4.017262l537.911338-3.454845h3.977089V524.774892h-4.017262z m-145.746253 56.643389h100.069988v40.493998H254.292664v-40.53417h97.137387v-3.977089l3.495018-392.084739v-4.097607H306.316202V140.724676h332.06685v40.252962l-47.805414-3.173636-4.258297-0.281209V581.418282h4.017262z"></path>
+                            <path d="M494.765947 1023.959827h4.017262V672.369086H441.617576V1024h53.108199z"></path>
+                        </svg>
+                    </div>
+                </Tooltip>
+
+                <Tooltip placement="top" title={(<div>Tài liệu API</div>)}>
+                    <a className="sidebar_btn__5nhuP"
+                       href="https://mexcdevelop.github.io/apidocs/spot_v3_en/#introduction"
+                       rel="nofollow noopener noreferrer">
+                        <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconapi" focusable="false" width="1em"
+                             height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"
+                             data-icon="ApiOutlined">
+                            <path fillRule="evenodd" clipRule="evenodd"
+                                  d="M8.97192 3.23804L11.2291 3.23804L11.2291 12.762H8.97193C6.34197 12.762 4.20996 10.63 4.20996 8C4.20996 5.37004 6.34196 3.23804 8.97192 3.23804ZM2.78991 6.9967C2.70945 6.97583 2.62507 6.96472 2.53809 6.96472H1.76562C1.21334 6.96472 0.765625 7.41244 0.765625 7.96472C0.765625 8.51701 1.21334 8.96472 1.76562 8.96472H2.53809C2.62127 8.96472 2.70209 8.95457 2.77936 8.93542C3.23091 11.9501 5.83144 14.262 8.97193 14.262H11.7291C12.2814 14.262 12.7291 13.8142 12.7291 13.262V11.7261H14.5047C15.057 11.7261 15.5047 11.2784 15.5047 10.7261C15.5047 10.1738 15.057 9.72607 14.5047 9.72607H12.7291V6.71655L14.5047 6.71655C15.057 6.71655 15.5047 6.26884 15.5047 5.71655C15.5047 5.16427 15.057 4.71655 14.5047 4.71655L12.7291 4.71655V2.73804C12.7291 2.18575 12.2814 1.73804 11.7291 1.73804H8.97192C5.85505 1.73804 3.27004 4.01526 2.78991 6.9967Z"></path>
+                        </svg>
+                    </a>
+                </Tooltip>
+                <Popover placement="topRight" overlayClassName="mediaTT" content={
+                    <div className="media_mediaMenu__VC0K1">
+                        <ul className="media_ul_2__J7ulA">
+                            <li><a href="https://t.me/MEXCEnglish" target="_blank" title="MEXC Official"
+                                   rel="noopener noreferrer">MEXC Official</a></li>
+                            <li><a href="https://t.me/MEXC_ZH" target="_blank" title="MEXC 港臺交流群"
+                                   rel="noopener noreferrer">MEXC 港臺交流群</a></li>
+                            <li><a href="https://t.me/MEXC_ENofficial" target="_blank" title="MEXC EN"
+                                   rel="noopener noreferrer">MEXC EN</a></li>
+                            <li><a href="https://t.me/MEXCJapan" target="_blank" title="MEXC 日本コミュニティ"
+                                   rel="noopener noreferrer">MEXC 日本コミュニティ</a></li>
+                            <li><a href="https://t.me/MEXCKorean" target="_blank" title="MEXC Korea"
+                                   rel="noopener noreferrer">MEXC Korea</a></li>
+                            <li><a href="https://t.me/MEXCTurkey" target="_blank" title="MEXC Türkiye"
+                                   rel="noopener noreferrer">MEXC Türkiye</a></li>
+                            <li><a href="https://t.me/MEXCVN_Community" target="_blank" title="MEXC Việt Nam"
+                                   rel="noopener noreferrer">MEXC Việt Nam</a></li>
+                            <li><a href="https://t.me/MEXCRussianOfficial" target="_blank" title="MEXC Русский"
+                                   rel="noopener noreferrer">MEXC Русский</a></li>
+                            <li><a href="https://t.me/MEXCSpanish" target="_blank" title="MEXC Español"
+                                   rel="noopener noreferrer">MEXC Español</a></li>
+                        </ul>
+                        <ul className="media_ul_2__J7ulA">
+                            <li><a href="https://t.me/MEXC_MalaysiaOfficial" target="_blank"
+                                   title="MEXC Malaysian" rel="noopener noreferrer">MEXC Malaysian</a></li>
+                            <li><a href="https://t.me/MEXCPortuguese" target="_blank" title="MEXC Português"
+                                   rel="noopener noreferrer">MEXC Português</a></li>
+                            <li><a href="https://t.me/MEXCFilipino" target="_blank" title="MEXC Filipino"
+                                   rel="noopener noreferrer">MEXC Filipino</a></li>
+                            <li><a href="https://t.me/MEXCBengali" target="_blank" title="MEXC Bengali"
+                                   rel="noopener noreferrer">MEXC Bengali</a></li>
+                            <li><a href="https://t.me/MEXCIndonesian" target="_blank" title="MEXC Indonesian"
+                                   rel="noopener noreferrer">MEXC Indonesian</a></li>
+                            <li><a href="https://t.me/MEXC_DE" target="_blank" title="MEXC DACH"
+                                   rel="noopener noreferrer">MEXC DACH</a></li>
+                            <li><a href="https://t.me/MEXC_PER" target="_blank" title="MEXC فارسی"
+                                   rel="noopener noreferrer">MEXC فارسی</a></li>
+                            <li><a href="https://t.me/MEXCUkraineOfficial" target="_blank" title="MEXC Україна"
+                                   rel="noopener noreferrer">MEXC Україна</a></li>
+                            <li><a href="https://t.me/MEXCFutures" target="_blank" title="MEXC Futures"
+                                   rel="noopener noreferrer">MEXC Futures</a></li>
+                        </ul>
+                    </div>
+                } arrow={false}>
+                    <div className="sidebar_btn__5nhuP">
+                        <svg className="sc-gEvEer hSTeNi mx-icon iconfont icontelegram-line" focusable="false"
+                             width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"
+                             data-icon="TelegramOutlined">
+                            <path fillRule="evenodd" clipRule="evenodd"
+                                  d="M15.7573 1.14981C15.9432 1.30162 16.0321 1.54231 15.9895 1.7785L13.7061 14.4557C13.666 14.6783 13.5148 14.865 13.3054 14.9503C13.0959 15.0357 12.8573 15.0079 12.673 14.8768L8.56055 11.9496L6.67217 13.8314C6.5083 13.9947 6.27094 14.0603 6.04643 14.0045C5.82193 13.9486 5.64301 13.7794 5.57476 13.5583L4.36475 9.63955L0.424149 8.12923C0.170169 8.03189 0.00182325 7.78882 1.47091e-05 7.51683C-0.00179377 7.24484 0.163305 6.99955 0.415968 6.89884L15.0949 1.04781C15.3178 0.958948 15.5714 0.997996 15.7573 1.14981ZM5.68409 9.43453L6.51438 12.1235L7.48167 11.1596L6.78906 10.642C6.49684 10.4236 6.437 10.0097 6.65539 9.71745C6.87379 9.42523 7.28772 9.36539 7.57994 9.58379L8.87859 10.5544L12.5906 13.1965L14.4784 2.71573L2.47478 7.50037L4.83475 8.40488L9.4915 5.57143C9.80315 5.3818 10.2095 5.48072 10.3992 5.79237C10.5888 6.10402 10.4899 6.51039 10.1782 6.70002L5.68409 9.43453Z"></path>
+                        </svg>
+                    </div>
+                </Popover>
+                <div className="popover_wrapper__4Xcve">
+
+                    <div className="popover_topRight__I3e4f popover_overlay__8GEVa component-popover-overlay">
+                        <div className="popover_overlayInner__e_vvb">
+
+                        </div>
+                    </div>
+                </div>
+                <Tooltip placement="top" title={(<div>Gửi yêu cầu</div>)}>
+                    <a className="sidebar_btn__5nhuP" href="https://www.mexc.com/vi-VN/support/requests"
+                       rel="nofollow noopener noreferrer">
+                        <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconyijian" focusable="false" width="1em"
+                             height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"
+                             data-icon="FeedbackOutlined">
+                            <path
+                                d="M4.93262 6.13333C4.93262 5.72831 5.26095 5.39999 5.66595 5.39999H10.0659C10.471 5.39999 10.7993 5.72831 10.7993 6.13333C10.7993 6.53834 10.471 6.86666 10.0659 6.86666H5.66595C5.26095 6.86666 4.93262 6.53834 4.93262 6.13333Z"></path>
+                            <path
+                                d="M5.66595 8.33333C5.26095 8.33333 4.93262 8.66164 4.93262 9.06666C4.93262 9.47168 5.26095 9.79999 5.66595 9.79999H8.59928C9.0043 9.79999 9.33262 9.47168 9.33262 9.06666C9.33262 8.66164 9.0043 8.33333 8.59928 8.33333H5.66595Z"></path>
+                            <path fillRule="evenodd" clipRule="evenodd"
+                                  d="M13.7333 4.67898V14.2C13.7333 15.01 13.0767 15.6667 12.2667 15.6667H3.46667C2.65665 15.6667 2 15.01 2 14.2V2.46667C2 1.65665 2.65665 1 3.46667 1H10.0667L13.7333 4.67898ZM3.46667 14.2V2.46667H9.4577L12.2667 5.28505V14.2H3.46667Z"></path>
+                        </svg>
+                    </a></Tooltip>
+
+                <div className="sidebar_btn__5nhuP">
+                    <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconkefu-en" focusable="false" width="1em"
+                         height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"
+                         data-icon="CustomerServiceFilled">
+                        <path fillRule="evenodd" clipRule="evenodd"
+                              d="M2.08153 5.81175C2.59605 3.01066 5.05016 0.888184 8 0.888184C10.9498 0.888184 13.404 3.01066 13.9185 5.81175H14.9059C15.5101 5.81175 16 6.30161 16 6.90588V10.1883C16 10.7925 15.5101 11.2824 14.9059 11.2824H13.4176C12.7215 12.7103 11.474 13.8138 9.96435 14.3265C9.8153 14.9979 9.21628 15.5 8.5 15.5C7.67157 15.5 7 14.8284 7 14C7 13.1716 7.67157 12.5 8.5 12.5C9.04586 12.5 9.52362 12.7916 9.78603 13.2275C11.6096 12.5296 12.9236 10.7634 12.9236 8.66875V6.90588C12.9236 4.18667 10.7192 1.98231 8 1.98231C5.28079 1.98231 3.07643 4.18667 3.07643 6.90588V11.0824C3.07643 11.1928 2.98689 11.2824 2.87643 11.2824L1.09413 11.2824C0.489857 11.2824 0 10.7925 0 10.1883V6.90588C0 6.30161 0.489857 5.81175 1.09413 5.81175H2.08153ZM14.0177 10.1883H14.9059V6.90588L14.0177 6.90588V10.1883ZM1.9823 10.1883L1.9823 6.90588L1.09413 6.90588V10.1883H1.9823Z"></path>
+                        <path
+                            d="M4.91492 8.46662C5.06214 8.233 5.37088 8.16296 5.6045 8.31018C6.29787 8.74713 7.11864 9 8 9C8.88115 9 9.70167 8.74707 10.395 8.31017C10.6286 8.16296 10.9373 8.233 11.0846 8.46663C11.2318 8.70025 11.1617 9.00899 10.9281 9.15621C10.08 9.69066 9.07543 10 8 10C6.92448 10 5.91966 9.69079 5.07135 9.1562C4.83773 9.00898 4.76769 8.70024 4.91492 8.46662Z"></path>
+                    </svg>
+                </div>
+                <div className="sidebar_more__AJ7D9">
+                    <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconCustomer" focusable="false" width="1em"
+                         height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"
+                         data-icon="CustomerServiceFilled">
+                        <path fillRule="evenodd" clipRule="evenodd"
+                              d="M2.08153 5.81175C2.59605 3.01066 5.05016 0.888184 8 0.888184C10.9498 0.888184 13.404 3.01066 13.9185 5.81175H14.9059C15.5101 5.81175 16 6.30161 16 6.90588V10.1883C16 10.7925 15.5101 11.2824 14.9059 11.2824H13.4176C12.7215 12.7103 11.474 13.8138 9.96435 14.3265C9.8153 14.9979 9.21628 15.5 8.5 15.5C7.67157 15.5 7 14.8284 7 14C7 13.1716 7.67157 12.5 8.5 12.5C9.04586 12.5 9.52362 12.7916 9.78603 13.2275C11.6096 12.5296 12.9236 10.7634 12.9236 8.66875V6.90588C12.9236 4.18667 10.7192 1.98231 8 1.98231C5.28079 1.98231 3.07643 4.18667 3.07643 6.90588V11.0824C3.07643 11.1928 2.98689 11.2824 2.87643 11.2824L1.09413 11.2824C0.489857 11.2824 0 10.7925 0 10.1883V6.90588C0 6.30161 0.489857 5.81175 1.09413 5.81175H2.08153ZM14.0177 10.1883H14.9059V6.90588L14.0177 6.90588V10.1883ZM1.9823 10.1883L1.9823 6.90588L1.09413 6.90588V10.1883H1.9823Z"></path>
+                        <path
+                            d="M4.91492 8.46662C5.06214 8.233 5.37088 8.16296 5.6045 8.31018C6.29787 8.74713 7.11864 9 8 9C8.88115 9 9.70167 8.74707 10.395 8.31017C10.6286 8.16296 10.9373 8.233 11.0846 8.46663C11.2318 8.70025 11.1617 9.00899 10.9281 9.15621C10.08 9.69066 9.07543 10 8 10C6.92448 10 5.91966 9.69079 5.07135 9.1562C4.83773 9.00898 4.76769 8.70024 4.91492 8.46662Z"></path>
+                    </svg>
+                </div>
+            </div>
         </>
 
     )
