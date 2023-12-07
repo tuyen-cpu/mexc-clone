@@ -3,6 +3,9 @@ import './home.css';
 import {Button, Carousel as AntdCarousel, Popover, Tooltip} from "antd";
 import {default as ReactCarousel} from "react-multi-carousel";
 import {useEffect, useRef, useState} from "react";
+import NewPinSection from "./NewPinSection.jsx";
+
+
 
 
 const noticeData = [
@@ -273,6 +276,7 @@ const removeClass = (element, className) => {
 
 
 export default function Homepage() {
+
     const myvideo = useRef(null);
     const elementRef = useRef(null);
     const [scrollTop, setScrollTop] = useState(false);
@@ -550,22 +554,7 @@ export default function Homepage() {
                 </div>
             </div>
 
-            <div className='new-list_home-new-list '>
-                <h2>Niêm yết mới</h2>
-                <div className="new-list_home-new-view-markets home-container">
-                    <a href="https://www.mexc.com/vi-VN/markets">Xem Thị Trường
-                        <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
-                             fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
-                             data-icon="ArrowRightOutlined">
-                            <path
-                                d="M128 469.333333h604.586667l-152.746667-153.173333L640 256l256 256-256 256-60.16-60.16L732.586667 554.666667H128z"></path>
-                        </svg>
-                    </a><
-                /div>
-                <div>
-
-                </div>
-            </div>
+            <NewPinSection/>
 
             <div className="why-choose-mexc_why-choose-wrapper__ud1w8">
                 <div className="why-choose-mexc_why-choose__SUZms home-container"><h2>Vì sao lại lựa chọn
@@ -679,7 +668,7 @@ export default function Homepage() {
                     </li>
                 </ul>
                 <div className="products_loginBtn__rFbKX">
-                    <Button type="primary" className='section-main-btn '>Đăng ký để giao dịch</Button>
+                    <Button onClick={()=>{window.location.href='https://www.mexc.com/vi-VN/login'}} type="primary" className='section-main-btn '>Đăng ký để giao dịch</Button>
                 </div>
             </div>
             <div className="community_community__EJdFT">
