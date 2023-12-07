@@ -1,37 +1,45 @@
-.hot-list_markets__ihE0y{
+.hot-list_markets__ihE0y {
     --space-size: 24px;
     padding: 48px 0 55px;
-    background: linear-gradient(180deg,transparent,var(--bg-secondary) 100%);
+    background: linear-gradient(180deg, transparent, var(--bg-secondary) 100%);
     overflow: hidden;
 }
+
 .hot-list_markets__ihE0y .ant-tabs-nav {
     padding: 36px var(--space-size) 24px;
     margin-bottom: 0;
 }
+
 .hot-list_markets__ihE0y .ant-tabs {
     border: 1px solid var(--divider-primary);
     border-radius: 12px;
 }
-.hot-list_markets__ihE0y .ant-tabs-ink-bar{
+
+.hot-list_markets__ihE0y .ant-tabs-ink-bar {
     height: 0 !important;
 }
+
 .hot-list_symbolWrapper__T_j7e {
     display: flex;
     align-items: center;
     font-weight: 400;
 }
-.hot-list_sss{
+
+.hot-list_sss {
     width: 28px;
     height: 28px;
     margin-inline-end: 16px;
 }
-.hot-list_sss img{
+
+.hot-list_sss img {
     width: 100%;
     height: 100%;
 }
-.hot-list_title{
+
+.hot-list_title {
     font-size: 16px;
 }
+
 .hot-list_markets__ihE0y tr > td {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -39,16 +47,196 @@
     font-size: 16px;
     line-height: 22px;
 }
-.hot-list_toTradeLink___yvj0{
+
+.hot-list_toTradeLink___yvj0 {
     font-weight: 500;
 }
-.hot-list_toTradeLink___yvj0:hover{
+
+.hot-list_toTradeLink___yvj0:hover {
     background-color: var(--primary-base) !important;
     border-color: var(--primary-base) !important;
     color: #fff !important;
 }
-.antd-custom-wrapper{
+
+.antd-custom-wrapper {
     background-color: var(--bg-primary1);
     border: 1px solid var(--divider-primary);
     border-radius: 12px;
+}
+
+.hot-list_markets__ihE0y .hot-list_makerWrapper__SOmuY {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hot-list_markets__ihE0y .hot-list_makerWrapper__SOmuY .hot-list_makerTitle__ngRja {
+    display: inline-block;
+    -webkit-margin-start: 8px;
+    margin-inline-start: 8px;
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 2px;
+    text-shadow: none;
+    color: var(--primary-base);
+    border: 1px solid var(--primary-base);
+}
+
+.hot-list_vvv {
+    color: var(--text-tertiary);
+    font-size: 20px;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .hot-list_makerWrapper__SOmuY .hot-list_vvv {
+    color: var(--text-primary);
+}
+.ant-table-tbody > tr > td {
+    background-color: var(--bg-primary1);
+    color: #555; /* Màu chữ cho row */
+}
+.antd-custom-wrapper tr:hover td{
+    background: var(--bg-tertiary) !important
+}
+.ant-table-wrapper .ant-table-tbody >tr >td{
+    border:none;
+}
+.antd-custom-wrapper .ant-table-thead th {
+    background-color: red; /* Màu nền cho header */
+    color: #333; /* Màu chữ cho header */
+}
+.ant-pagination.ant-table-pagination{
+    display: none;
+}
+.antd-custom-wrapper .ant-table-thead>tr>th {
+    position: relative;
+    color: #87909f;
+    font-weight: 500;
+    text-align: left;
+    background: var(--bg-primary1);
+    border-bottom: var(--border-width-base) var(--border-style-base) blue;
+    transition: background .3s ease;
+}
+.antd-custom-wrapper .ant-table-cell:before{
+    display: none;
+}
+.language-wrapper .ant-tabs-bottom>.ant-tabs-nav:before, .ant-tabs-bottom>div>.ant-tabs-nav:before, .ant-tabs-top>.ant-tabs-nav:before, .ant-tabs-top>div>.ant-tabs-nav:before {
+    border: none;
+}
+.hot-list_markets__ihE0y .ant-tabs-nav .ant-tabs-tab {
+    padding: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-tertiary);
+}
+.ant-table-wrapper .ant-table{
+    background: transparent !important;
+}
+.ant-table-tbody > tr > td{
+    color: var(--text-primary);
+}
+.hot-list_exploreMarket__FSKIX {
+    margin-top: 36px;
+    font-size: 18px;
+    text-align: center;
+}
+.hot-list_exploreMarket__FSKIX button.section-main-btn {
+    min-width: 160px;
+    height: auto;
+    padding: 12px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+.hot-list_increaseTabTitleWrapper__JsBg2 {
+    display: flex;
+    align-items: center;
+}.hot-list_changeBlock__K6hyV.hot-list_changeUp__O_Kgh {
+     border-color: #0aa869;
+ }
+ .hot-list_changeBlock__K6hyV {
+    display: inline-block;
+    -webkit-margin-start: 8px;
+    margin-inline-start: 8px;
+    padding: 2px 4px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 2px;
+    text-shadow: none;
+    border: 1px solid;
+     color: #0aa869;
+}
+@media screen and (max-width: 760px){
+    .hot-list_symbolWrapper__T_j7e .hot-list_sss {
+        -webkit-margin-end: 0;
+        margin-inline-end: 0;
+        display: none;
+    }
+    .hot-list_exploreMarket__FSKIX button.section-main-btn {
+        width: 100%;
+    }
+}
+.hot-list_viewMore__poZ__ {
+    color: var(--primary-base);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.hot-list_homeTabs__Y0p_r .ant-tabs-nav .ant-tabs-tab {
+    padding: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-tertiary);
+}
+.count-down_countdown-color-primary__7B_p0 {
+
+    --countdown-color: var(--primary-base);
+    --countdown-background: var(--fill-sidebar-selected);
+}
+.price_hotListPrice__wMs3R {
+    margin: -8px 0 -1px;
+}
+.count-down_countdown-size__m__281lC {
+    display: block;
+    color: var(--text-secondary);
+}
+.count-down_countdown-content__0juoW {
+    flex-wrap: wrap;
+}
+.count-down_countdown-content__0juoW, .count-down_countdown__x6uQ4 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+}
+.count-down_countdown-size__m__281lC .count-down_countdown-title-text__LW70v {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+.count-down_countdown-size__m__281lC .count-down_countdown-title__dFAlT {
+    margin-bottom: 4px;
+}
+.count-down_countdown-middle-content__sRyeH, .count-down_countdown-small-content__ZSJoO {
+    white-space: nowrap;
+}
+.count-down_countdown-size__m__281lC .count-down_countdown-middle-content__sRyeH span {
+    padding: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    background: var(--fill-sidebar-selected);
+    color: var(--primary-base);
+    border-radius: 2px;
+}
+.count-down_countdown-size__m__281lC .count-down_countdown-middle-content__sRyeH b {
+    margin: 0 4px;
+    color: var(--text-tertiary);
+    font-size: 12px;
+    font-weight: 300;
 }

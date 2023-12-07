@@ -74,6 +74,7 @@ body{
     --divider-primary: #ebedf1;
     --bg-primary1:#fff ;
     --fill-card-modal:#f2f4f6;
+    --fill-sidebar-selected:#f2f4f6;
 }
 body.dark-mode{
     --bg-secondary: #111214;
@@ -94,5 +95,7 @@ body.dark-mode{
     --bg-primary1:#080a11 ;
     --title:#fff;
     --fill-card-modal:#222429;
+    --fill-sidebar-selected:#18191c;
+
 }
 
