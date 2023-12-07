@@ -218,8 +218,9 @@
 .dropdown-wrapper-site{
     overflow: hidden;
 }
+
 .dropdown-wrapper-site-lv2{
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-modal);
     height: 100%;
     border-radius: 2px;
 }
