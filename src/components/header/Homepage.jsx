@@ -4,6 +4,7 @@ import {Button, Carousel as AntdCarousel, Popover, Tooltip} from "antd";
 import {default as ReactCarousel} from "react-multi-carousel";
 import {useEffect, useRef, useState} from "react";
 import NewPinSection from "./NewPinSection.jsx";
+import PopularCrypto from "./PopularCrypto.jsx";
 
 
 
@@ -548,11 +549,7 @@ export default function Homepage() {
                 </div>
 
             </div>
-            <div className='hot-list_markets'>
-                <div className='home-container'>
-                    <h2>Tiền mã hoá phổ biến</h2>
-                </div>
-            </div>
+           <PopularCrypto/>
 
             <NewPinSection/>
 

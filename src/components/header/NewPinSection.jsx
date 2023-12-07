@@ -1,6 +1,7 @@
 import {default as ReactCarousel} from "react-multi-carousel";
 import ReactECharts from 'echarts-for-react';
 import './newpinsection.css'
+import {Button} from "antd";
 const newPinData = [
     {
         name:'NCDT/USDT',
@@ -378,7 +379,14 @@ export default function NewPinSection() {
                     })}
 
                 </ReactCarousel>
+                <div className='new-list_home-new-list-footer__6RXpK'>
+                    <Button type="primary" className='section-main-btn'
+                            onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/login'}>Bắt đầu giao
+                        dịch</Button>
+                </div>
+
             </div>
+
         </div>
     )
 }
