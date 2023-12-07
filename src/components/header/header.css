@@ -454,6 +454,7 @@
     font-size: 24px !important;
 }
 .download-dropdown-wrapper {
+    --bg-modal:#18191c;
     background-color: var(--bg-modal);
     font-weight: 500;
     padding: 16px;
@@ -660,6 +661,30 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.desktop-nav{
+    --bg-modal:#18191c;
+    --fill-page-button-default:#222429;
+}
+.search-dropdown-wrapper{
+    --bg-modal:#18191c;
+    --bg-secondary: #111214;
+    --text-primary:#f2f4f6;
+}
+.language-wrapper-modal{
+    --bg-modal:#18191c;
+}
+.dark-mode .ant-modal-body{
+    --bg-modal:#18191c;
+    --fill-menu-selected:#222429;
+}
+.ant-modal-body{
+    --bg-modal:#fff;
+    --fill-menu-selected:#f7f8fa;
+}
+
+.ant-modal-body{
+    background: var(--bg-modal);
+}
 .language-wrapper-modal .ant-modal-content {
     position: relative !important;
     background-color: var(--modal-content-bg) !important;
@@ -693,7 +718,7 @@
     height: 48px;
 }
 .language-wrapper .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: #000;
+    color: var(--text-primary);
     text-shadow: 0 0 0.25px currentcolor;
 }
 .language-wrapper .ant-tabs-tab-btn {
@@ -708,7 +733,7 @@
     color:#87909f
 }
 .language-wrapper .ant-tabs-tab:hover {
-    color: #0d0e0f;
+    color: var(--text-primary);
 }
 .language-list {
     padding: 0 24px;
@@ -723,14 +748,14 @@
     height: 44px;
     line-height: 44px;
     cursor: pointer;
-    color: #0d0e0f;
+    color: var(--text-primary);
     margin: 0 13px 16px 0;
     width: 160px;
     padding-left: 12px;
 }
 .language-item:hover {
     color: #357aff;
-    background: #f7f8fa;
+    background: var(--fill-menu-selected);
     border-radius: 4px;
 }
 .language-item.active{

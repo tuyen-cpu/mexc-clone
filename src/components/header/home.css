@@ -408,10 +408,12 @@
     line-height: 44px;
     display: inline-flex;
     align-items: center;
-    border: 1px solid #dde0e2;
+    border: 1px solid var(--border-button);
     justify-content: center;
 }
-
+.ant-layout-content{
+    background: var(--bg-primary1);
+}
 .download_downloadGroup__V_bnp a:not(:last-child) {
     -webkit-margin-end: 24px;
     margin-inline-end: 24px;
@@ -446,7 +448,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--bg-secondary);
+    background: var(--bg-secondary1);
     overflow: hidden;
 }
 
@@ -627,7 +629,7 @@
     cursor: pointer;
     text-align: center;
     border-radius: 12px;
-    border: 1px solid #ebedf1;
+    border: 1px solid var(--divider-primary);
 }
 
 .products_productsContWrap__4ogse .products_productsCont__QZKeW .products_webCont__QX7YI {
@@ -786,7 +788,7 @@
     cursor: pointer;
 }
 .why-choose-mexc_why-choose-wrapper__ud1w8 {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-secondary1);
 }
 .video-player_video-player__e0dtZ .video-player_specs-tab__lYN2b .video-player_specs-tab-item__sIc2t.video-player_specs-tab-item__active__rBx_j, .video-player_video-player__e0dtZ .video-player_specs-tab__lYN2b .video-player_specs-tab-item__sIc2t:hover {
     color: var(--text-primary);
@@ -1077,7 +1079,7 @@
       width: unset;
     }
     .video-player_video-player__e0dtZ .video-player_specs-tab__lYN2b .video-player_specs-tab-item__sIc2t.video-player_specs-tab-item__active__rBx_j, .video-player_video-player__e0dtZ .video-player_specs-tab__lYN2b .video-player_specs-tab-item__sIc2t:hover {
-        color: #0d0e0f;
+        color: var(--text-primary);
     }
     .banner-img-content__img {
         animation-name: banner-background_bannerScaleMobile__nPxVL;
@@ -1130,6 +1132,9 @@
     }
     .sidebar_wrapper__LNgtQ{
         display: none !important;
+    }
+    .download_downloadInfoGroup__ITmEa .download_downloadInfo__WX6Ki .download_contRight___VlGG {
+        max-width: none;
     }
 }
 @media screen and (max-width: 1200px) {
@@ -1266,8 +1271,8 @@ opacity: 0;
     color: var(--secondary-text);
 }
 .media_mediaMenu__VC0K1 {
-    --text-primary:#0d0e0f;
-    --bg-modal:#fff;
+    /*--text-primary:#0d0e0f;*/
+    /*--bg-modal:#fff;*/
     display: flex;
     background-color: var(--bg-modal);
     box-shadow: 0 6px 24px rgba(0,0,0,.08);

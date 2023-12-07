@@ -974,13 +974,19 @@ export default function Header() {
 
                             </li>
                             <li className='setting-item' onClick={toggleDarkMode}>
-                                <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
-                                     fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
-                                     data-icon="SunOutlined"
+                                {!isDarkMode &&<svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
+                                                   fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
+                                                   data-icon="SunOutlined"
                                 >
                                     <path
                                         d="M512 768a256 256 0 1 1 0-512 256 256 0 0 1 0 512z m0-85.333333a170.666667 170.666667 0 1 0 0-341.333334 170.666667 170.666667 0 0 0 0 341.333334zM469.333333 42.666667h85.333334v128h-85.333334V42.666667z m0 810.666666h85.333334v128h-85.333334v-128zM149.973333 210.304l60.330667-60.330667L300.8 240.469333 240.469333 300.8 149.973333 210.346667zM723.2 783.530667l60.330667-60.330667 90.496 90.496-60.330667 60.330667-90.496-90.496z m90.496-633.6l60.330667 60.373333-90.496 90.496-60.330667-60.330667 90.496-90.496zM240.469333 723.2l60.330667 60.330667-90.496 90.496-60.330667-60.330667 90.496-90.496zM981.333333 469.333333v85.333334h-128v-85.333334h128zM170.666667 469.333333v85.333334H42.666667v-85.333334h128z"></path>
-                                </svg>
+                                </svg>}
+                                {isDarkMode &&   <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
+                                                      fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
+                                                      data-icon="MoonOutlined">
+                                    <path
+                                        d="M426.666667 298.666667a298.666667 298.666667 0 0 0 512 209.066666v4.266667c0 235.648-191.018667 426.666667-426.666667 426.666667S85.333333 747.648 85.333333 512 276.352 85.333333 512 85.333333h4.266667A297.770667 297.770667 0 0 0 426.666667 298.666667z m-256 213.333333a341.333333 341.333333 0 0 0 642.645333 160.512A384 384 0 0 1 351.488 210.688 341.290667 341.290667 0 0 0 170.666667 512z"></path>
+                                </svg>}
                             </li>
                         </ul>
                     </div>
