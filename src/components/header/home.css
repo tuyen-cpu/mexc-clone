@@ -1297,6 +1297,9 @@ opacity: 0;
     --fill-card-modal:#f2f4f6;
     background-color: var(--fill-card-modal);
 }
+.sshow .ant-popover-inner{
+    background: var(--bg-modal);
+}
 .new-list_home-new-list h2{
     font-weight: 600;
     font-size: 36px;
@@ -1313,4 +1316,21 @@ opacity: 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+}
+.ant-popover.hidden{
+    display: none;
+}
+.media-menu_mediumMenu-content__q_4RL ul a {
+    display: block;
+    padding: 6px 16px;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+.sshow .ant-popover-inner{
+    padding: 0 !important;
+}
+.media-menu_mediumMenu-content__q_4RL ul a:hover {
+    background-color: var(--fill-card-modal);
 }

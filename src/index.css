@@ -73,6 +73,7 @@ body{
     --border-card:#e2e5e7;
     --divider-primary: #ebedf1;
     --bg-primary1:#fff ;
+    --fill-card-modal:#f2f4f6;
 }
 body.dark-mode{
     --bg-secondary: #111214;
@@ -92,5 +93,6 @@ body.dark-mode{
     --border-card:#282a2c;
     --bg-primary1:#080a11 ;
     --title:#fff;
+    --fill-card-modal:#222429;
 }
 

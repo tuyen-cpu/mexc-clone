@@ -146,16 +146,116 @@ const activityData = [
 
 ]
 const communitySocialData = [
-    'https://public.mocortech.com/banner/F20230822155229778s0suWntyOovsxl.png',
-    'https://public.mocortech.com/banner/F202308221552408392lb9SGdeK5017S.png',
-    'https://public.mocortech.com/banner/F202307241212107880YTsQlvnBAvjuQ.jpeg',
-    'https://public.mocortech.com/banner/F20230822155305528L9mV2FVnwudz35.png',
-    'https://public.mocortech.com/banner/F20230822155318715TXC1ahjCQHGjfH.png',
-    'https://public.mocortech.com/banner/F20230724121158714sGf4sSd41CbTGD.jpeg',
-    'https://public.mocortech.com/banner/F20230822155337560uFg55xz4kjrKc6.png',
-    'https://public.mocortech.com/banner/F20230822155349228BGxdO9lZYpFFYV.png',
-    'https://public.mocortech.com/banner/F202308221554012327aWtAh2tFavbYb.png',
-    'https://public.mocortech.com/banner/F202308221554114182thJcamotY7rP5.png'
+    {
+        icon: 'https://public.mocortech.com/banner/F20230822155229778s0suWntyOovsxl.png',
+        links: [
+            {
+                name: 'MEXC Official',
+                link: 'https://www.facebook.com/mexcofficial'
+            },
+            {
+                name: 'MEXC Türkiye',
+                link: 'https://www.facebook.com/MEXC_TR/'
+            },
+            {
+                name: 'MEXC Việt Nam',
+                link: 'https://www.facebook.com/MEXCVN'
+            },
+            {
+                name: 'MEXC Korea',
+                link: 'https://www.facebook.com/people/Mexc-Ko/100076308821804/'
+            }
+        ]
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F202308221552408392lb9SGdeK5017S.png',
+        links: [
+            {
+                name: 'MEXC Official',
+                link: 'https://www.instagram.com/mexc_official/'
+            },
+            {
+                name: 'MEXC Korea',
+                link: 'https://www.instagram.com/mexc_korea/'
+            },
+            {
+                name: 'MEXC Türkiye',
+                link: 'https://www.instagram.com/mexc_turkiye/'
+            },
+            {
+                name: 'MEXC DACH🇩🇪🇨🇭🇦🇹',
+                link: 'https://www.instagram.com/deutsch_mexc/'
+            }
+        ]
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F202307241212107880YTsQlvnBAvjuQ.jpeg',
+        links: [
+            {
+                name: 'MEXC Official',
+                link: 'https://www.youtube.com/@MEXCofficial'
+            },
+            {
+                name: 'MEXC Türkiye',
+                link: 'https://www.youtube.com/@MEXCTurkiye'
+            },
+            {
+                name: 'MEXC Việt Nam',
+                link: 'https://www.youtube.com/@MEXC-Vietnam'
+            },
+            {
+                name: 'MEXC Русский',
+                link: 'https://youtube.com/@mexcrussian'
+            }
+        ]
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F20230822155305528L9mV2FVnwudz35.png',
+        links: [
+            {
+                name: 'MEXC Korea',
+                link: 'https://medium.com/@mexc.korea'
+            },
+            {
+                name: 'MEXC Türkiye',
+                link: 'https://medium.com/@MEXC_TR'
+            }
+        ]
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F20230822155318715TXC1ahjCQHGjfH.png',
+        link: 'https://discord.com/invite/Hs2e93Xav5'
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F20230724121158714sGf4sSd41CbTGD.jpeg',
+        links: [
+            {
+                name: 'MEXC Türkiye',
+                link: 'https://www.tiktok.com/@mexc_turkiye'
+            },
+            {
+                name: 'MEXC Việt Nam',
+                link: 'https://www.tiktok.com/@mexc.vn'
+            }
+        ]
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F20230822155337560uFg55xz4kjrKc6.png',
+        link: 'https://line.me/R/ti/p/@917sttae'
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F20230822155349228BGxdO9lZYpFFYV.png',
+        link: 'https://www.reddit.com/r/MEXC_official/'
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F202308221554012327aWtAh2tFavbYb.png',
+        link: 'https://teletype.in/@mexcrussian'
+    },
+    {
+        icon: 'https://public.mocortech.com/banner/F202308221554114182thJcamotY7rP5.png',
+        link: 'https://public.mocortech.com/banner/F202308221554114182thJcamotY7rP5.png'
+    },
+
 ]
 const addClass = (element, className) => {
     // Sử dụng classList để thêm lớp vào phần tử DOM
@@ -624,10 +724,34 @@ export default function Homepage() {
                     <div className="community_otherMedia__K3_H_">
                         {communitySocialData.map((item, index) => (
                             <div key={index} className="media-menu_mediaItem__KFU_G">
-                                <div className="ant-popover-arrow media-menu_ant-popover-arrow__hidden__ov9qR"><span
-                                    className="ant-popover-arrow-content"></span></div>
-                                <div className="media-menu_mediaItemContent__dTapB"
-                                     style={{backgroundImage: `url(${item})`}}></div>
+                                <Popover overlayClassName={`${item.link ? 'hidden' : 'sshow'}`} content={(<div>
+                                    <div className="media-menu_mediumMenu__qS4Rr">
+                                        <div className="media-menu_mediumMenu-body__LzXV5">
+                                            <div className="media-menu_mediumMenu-content__q_4RL">
+                                                <ul>
+                                                    {item.links && item.links.map((item, index) => {
+                                                        return(
+                                                            <li key={index}><a href={item.link} target="_blank"
+                                                                   title="MEXC Official" rel="noopener noreferrer">
+
+                                                                {item.name}</a></li>
+                                                        )
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>)}>
+                                    <div className="media-menu_mediaItemContent__dTapB" onClick={() => {
+                                        if(item.link){
+                                            window.location.href = item.link
+                                        }
+                                    }}
+                                         style={{backgroundImage: `url(${item.icon})`}}></div>
+                                </Popover>
+
+
                             </div>
                         ))}
 
