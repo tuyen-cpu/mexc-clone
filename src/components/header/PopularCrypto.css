@@ -179,6 +179,23 @@
     .hot-list_exploreMarket__FSKIX button.section-main-btn {
         width: 100%;
     }
+    .antd-custom-wrapper .ant-tabs-extra-content {
+        position: absolute;
+        top: -30px;
+        left: 0;
+        -webkit-padding-start: 0;
+        padding-inline-start: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .antd-custom-wrapper {
+        padding-top: 36px;
+        background: none;
+
+    }
+    .hot-list_markets__ihE0y .ant-tabs {
+        border: none;
+    }
 }
 .hot-list_viewMore__poZ__ {
     color: var(--primary-base);

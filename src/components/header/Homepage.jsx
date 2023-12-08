@@ -94,7 +94,6 @@ const noticeData = [
         title: '[Niêm yết đầu tiên] MEXC Kickstarter - Bỏ phiếu WEAVERS TOKEN (VRS2) để nhận 2,250,000 VRS2 & 20,000USDT airdrop miễn phí!',
         link: 'https://www.mexc.com/vi-VN/support/articles/17827791511881'
     },
-
 ]
 const activityData = [
     {
@@ -262,14 +261,12 @@ const communitySocialData = [
 
 ]
 const addClass = (element, className) => {
-    // Sử dụng classList để thêm lớp vào phần tử DOM
     if (element.current) {
         element.current.classList.add(className);
     }
 };
 
 const removeClass = (element, className) => {
-    // Sử dụng classList để xóa lớp khỏi phần tử DOM
     if (element.current) {
         element.current.classList.remove(className);
     }
@@ -277,7 +274,6 @@ const removeClass = (element, className) => {
 
 
 export default function Homepage() {
-
     const myvideo = useRef(null);
     const elementRef = useRef(null);
     const [scrollTop, setScrollTop] = useState(false);

@@ -1,11 +1,8 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import {Tabs} from "antd";
 import {json} from "react-router-dom";
-function addCommasToNumber(number) {
-    const parts = number.toString().split('.');
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    return parts.join('.');
-}
+import {addCommasToNumber, randomDecimals, randomizeDecimalPlaces} from "../utils.js";
+
 
 
 const itemsTab = (dataHotSearch, eventsData) => (
@@ -89,38 +86,17 @@ const itemsTab = (dataHotSearch, eventsData) => (
         }
     ]
 );
-function randomizeDecimalPlaces(number) {
-    const stringNumber = number.toString();
-    const decimalIndex = stringNumber.indexOf('.');
 
-    if (decimalIndex !== -1) {
-        const decimalPart = stringNumber.slice(decimalIndex + 1);
-        let randomDecimalPart = '';
-        for (let i = 0; i < decimalPart.length; i++) {
-            if (i < decimalPart.length - 4) {
-                randomDecimalPart += decimalPart[i];
-            } else {
-                randomDecimalPart += Math.floor(Math.random() * 10);
-            }
-        }
-        return parseFloat(stringNumber.slice(0, decimalIndex + 1) + randomDecimalPart);
-    }else{
-        if(number > 1000){
-            number+=0.003
-        }
-    }
-    return number;
-}
 const SearchResult = ({dataHotSearch, eventsData}) => {
     const [dataHot, setDataHot] = useState([...dataHotSearch]);
     useEffect(() => {
         const interval = setInterval(() => {
             setDataHot((prevDataHot) => {
                 return prevDataHot.map((item) => {
-
                     return {
                         ...item,
                         price: randomizeDecimalPlaces(item.price),
+                        rate:randomDecimals(item.rate)
                     };
                 });
             });
