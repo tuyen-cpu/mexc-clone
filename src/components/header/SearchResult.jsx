@@ -9,7 +9,7 @@ const itemsTab = (dataHotSearch, eventsData) => (
     [
         {
             key: '1',
-            label: 'Tìm kiếm hàng đầu',
+            label: 'Top Searches',
             children: (
                 <div className='hot-search-wrapper'>
                     <div className='hot-search-content'>
@@ -25,7 +25,7 @@ const itemsTab = (dataHotSearch, eventsData) => (
                                                 className='hot-search-info__name hot-search-info__market'>{item.market}</span>
                                         </div>
                                         <div className='hot-search-info__attr'>
-                                            <span className='attr-tag'>Vĩnh cửu</span>
+                                            <span className='attr-tag'>Perpetual</span>
                                             <span className='attr-hot-fire'>
                                                     {(index + 1) <= 3 && Array(3 - index).fill(null).map((item, index) => {
                                                         return (<img key={index} src="./fire.svg" alt=""/>)
@@ -55,7 +55,7 @@ const itemsTab = (dataHotSearch, eventsData) => (
         },
         {
             key: '2',
-            label: 'Sự kiện Hot',
+            label: 'Hot Events',
             children: (
                 <div className='hot-event-wrapper'>
                     <div className='hot-event-site'>

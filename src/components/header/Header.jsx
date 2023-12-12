@@ -37,43 +37,43 @@ const onChange = (key) => {
 
 const menuItemsData = [
     {
-        title: "Thị trường",
+        title: "Market",
         url: "https://www.mexc.com/markets",
     },
     {
-        title: "Mua Crypto",
+        title: "Buy Crypto",
         url: "https://www.mexc.com/buy-crypto",
         icon: true,
         submenu: [
             {
-                title: "Thẻ Debit/Credit",
-                url: "https://otc.mexc.com/vi-VN/checkout-deposit?newPage=1&type=1",
-                content: "Mua Crypto với thẻ",
+                title: "Debit/Credit Card",
+                url: "https://otc.mexc.com/checkout-deposit?newPage=1&type=1",
+                content: "Buy Crypto via Card",
                 icon: 'credit-icon.png'
             },
             {
-                title: "Chuyển khoản ngân hàng toàn cầu",
-                url: "https://otc.mexc.com/vi-VN/deposit-fiat?newPage=1&type=1",
-                content: "Mua/Bán qua SEPA",
+                title: "Global Bank Transfer",
+                url: "https://otc.mexc.com/deposit-fiat?newPage=1&type=1",
+                content: "Buy/Sell via SEPA",
                 icon: 'bank-icon.png',
                 status: 'new'
             },
             {
-                title: "Mua/Bán ngay",
-                url: "https://otc.mexc.com/vi-VN/fastTransaction",
-                content: "Giao dịch tài sản kỹ thuật số nhanh chóng",
+                title: "Quick Buy/Sell",
+                url: "https://otc.mexc.com/fastTransaction",
+                content: "Fast and secure digital asset transactions",
                 icon: 'wallet-icon.png',
             },
             {
-                title: "Giao dịch P2P",
-                url: "https://otc.mexc.com/vi-VN",
-                content: "Chuyển khoản ngân hàng và các lựa chọn khác",
+                title: "P2P Trading",
+                url: "https://otc.mexc.com",
+                content: "Bank transfer and more options",
                 icon: 'people-icon.png',
             },
             {
                 title: "MEXC MasterCard",
-                url: "https://otc.mexc.com/vi-VN/mexcCard",
-                content: "Hỗ trợ tiêu dùng toàn cầu",
+                url: "https://otc.mexc.com/mexcCard",
+                content: "Supporting global consumption",
                 icon: 'master-card-icon.png',
                 status: 'new'
             }
@@ -86,48 +86,48 @@ const menuItemsData = [
         submenu: [
             {
                 title: "Spot",
-                url: "https://www.mexc.com/vi-VN/exchange/ETH_USDT?_from=header",
-                content: "Đầu tư hiệu quả tại MEXC",
+                url: "https://www.mexc.com/exchange/GEC_USDT?_from=header",
+                content: "Trade on our award-winning platform",
                 icon: 'spot-1.png'
             },
             {
                 title: "MX Zone",
-                url: "https://www.mexc.com/vi-VN/mx",
-                content: "Khu đặc quyền của chủ sở hữu MX",
+                url: "https://www.mexc.com/mx",
+                content: "Privileges and rewards for MX Token Holders",
                 icon: 'spot-2.png'
             },
             {
                 title: "Launchpad",
-                url: "https://www.mexc.com/vi-VN/launchpads/assessment",
-                content: "Nắm giữ MX và Kiếm airdrop token mới",
+                url: "https://www.mexc.com/launchpads/assessment",
+                content: "Hold MX and Earn New Token Airdrops",
                 icon: 'spot-3.png',
                 status: 'hot'
             },
             {
                 title: "Kickstarter",
-                url: "https://www.mexc.com/vi-VN/sun/assessment",
-                content: "Đặc quyền của người nắm giữ MX - Tham gia và chia sẻ token mới",
+                url: "https://www.mexc.com/sun/assessment",
+                content: "MX Holder Privileges - Join and Share New Tokens",
                 icon: 'spot-4.png',
                 status: 'hot'
             },
             {
-                title: "Nạp để niêm yết",
-                url: "https://www.mexc.com/vi-VN/depositing-vote",
-                content: "Tham gia các sự kiện nạp và chia sẻ phần thưởng MX",
+                title: "Deposit for Listing",
+                url: "https://www.mexc.com/depositing-vote",
+                content: "Join Deposit Events & Share MX Rewards",
                 icon: 'spot-5.png',
 
             },
             {
-                title: "Tiết kiệm",
-                url: "https://www.mexc.com/vi-VN/staking",
-                content: "PoS để kiếm lãi suất",
+                title: "Savings",
+                url: "https://www.mexc.com/staking",
+                content: "Simple & secure way to earn crypto",
                 icon: 'spot-5.png',
 
             },
             {
                 title: "MEXC Loans",
-                url: "https://www.mexc.com/vi-VN/mx-activity/loan?type=1",
-                content: "Thế chấp tiền mã hoá, nhận ngay khoản vay",
+                url: "https://www.mexc.com/mx-activity/loan?type=1",
+                content: "Get an instant loan secured by crypto assets",
                 icon: 'spot-5.png',
                 status: 'new'
             }
@@ -140,26 +140,26 @@ const menuItemsData = [
         status: 'hot',
         submenu: [
             {
-                title: "Tổng quan Features",
-                url: "https://www.mexc.com/vi-VN/futures",
-                content: "Xem đầy đủ các công cụ phái sinh tiền điện tử của chúng tôi",
+                title: "Futures Overview",
+                url: "https://www.mexc.com/futures",
+                content: "View our full range of crypto-derivative tools",
                 icon: 'feature-1.png'
             },
             {
-                title: "Features Vĩnh cữu",
+                title: "Perpetual Futures",
                 url: "https://futures.mexc.com/exchange/BTC_USDT?type=linear_swap",
-                content: "Phí thấp nhất, thanh khoản tốt nhất",
+                content: "Lowest fees, best liquidity",
                 icon: 'feature-2.png',
                 submenu: [
                     {
-                        title: "USDT-M Futures Vĩnh cửu",
+                        title: "USDT-M Perpetual Futures",
                         url: "https://futures.mexc.com/exchange?type=linear_swap",
-                        content: "Futures Vĩnh cửu thanh toán bằng USDT",
+                        content: "Perpetual futures settled in USDT",
                     },
                     {
-                        title: "Sự kiện Futures hàng tuần!",
-                        url: "https://www.mexc.com/vi-VN/futures-activity/crazy-week?id=60&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=week20231204",
-                        content: "Phần thưởng Check-in được thêm mới, giao dịch để chia sẻ phần thưởng 60,000 USDT từ Thứ Hai đến Thứ Sáu!"
+                        title: "Coin-M Perpetual Futures",
+                        url: "https://futures.mexc.com/exchange?type=swap",
+                        content: "Perpetual futures settled in the underlying crypto"
 
                     },
 
@@ -168,56 +168,71 @@ const menuItemsData = [
             {
                 title: "Copy Trade",
                 url: "https://futures.mexc.com/copyTrade/home",
-                content: "Theo dõi các nhà giao dịch xuất sắc và kiếm tiền dễ dàng hơn",
+                content: "Follow excellent traders and earn more easily",
                 icon: 'feature-3.png',
             },
             {
-                title: "Giao dịch Demo",
-                url: "https://futures.testnet.mexc.com/exchange?lang=vi-VN",
-                content: "Mô phỏng giao dịch Futures trong đời thực mà không gặp rủi ro với tài sản thực",
+                title: "Demo Trading",
+                url: "https://futures.testnet.mexc.com/exchange",
+                content: "Simulate real-life futures trading without risking real assets",
                 icon: 'feature-4.png',
             },
             {
-                title: "Sự kiện Futures",
-                content: "Nhận phần thưởng hàng ngày từ các cuộc thi đấu hàng tháng của chúng tôi",
+                title: "Futures Events",
+                content: "Get rewarded daily in our monthly competitions",
                 icon: 'feature-5.png',
                 status: 'uncheck',
                 submenu: [
                     {
-                        title: "M-Day Futures",
-                        url: "https://www.mexc.com/vi-VN/futures-mday?utm_source=mexc&utm_medium=webheader&utm_campaign=mdayevent",
-                        content: "Giao dịch Futures và nhận giải thưởng lớn hàng ngày",
+                        title: "December Futures Competition",
+                        url: "https://www.mexc.com/futures-activity/trading-competition?id=decfc&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=trading-activity202312",
+                        content: "Total Prize Pool 5,000,000 USDT",
                         status: 'hot',
                     },
                     {
-                        title: "Sự kiện Futures hàng tuần!",
-                        url: "https://www.mexc.com/vi-VN/futures-activity/crazy-week?id=60&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=week20231204",
-                        content: "Phần thưởng Check-in được thêm mới, giao dịch để chia sẻ phần thưởng 60,000 USDT từ Thứ Hai đến Thứ Sáu!"
+                        title: "Futures M-Day",
+                        url: "https://www.mexc.com/futures-mday?utm_source=mexc&utm_medium=webheader&utm_campaign=mdayevent",
+                        content: "Trade futures and claim huge rewards daily",
+                        status: 'hot',
+                    },
+                    {
+                        title: "Get $1,000",
+                        url: "https://www.mexc.com/futures-activity/bonus",
+                        content: "Claim 1,000 USDT bonus easily"
+                    },
+                    {
+                        title: "Weekly Futures Event!",
+                        url: "https://www.mexc.com/futures-activity/crazy-week?id=66&event-id=crazy60&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=week20231211",
+                        content: "Grab newly added check-in rewards, trade to share 60,000 USDT bonus every Mon to Fri!"
                     }, {
-                        title: "[Mùa 14] Super X-Game",
-                        url: "https://www.mexc.com/vi-VN/futures-activity/x-game?utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=xgame20231204",
-                        content: "Chia sẻ tiền thưởng lên đến 100,000 USDT!"
+                        title: "[15th Season] Super X-Game",
+                        url: "https://www.mexc.com/futures-activity/x-game?utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=xgame20231211",
+                        content: "Share up to 100,000 USDT in bonus!"
                     }, {
-                        title: "Bảng xếp hạng Futures",
+                        title: "Futures Leaderboard",
                         url: "https://futures.mexc.com/contractRank?utm_source=mexc&utm_medium=webheader&utm_campaign=rankevent",
-                        content: "Giới thiệu Xếp hạng khối lượng giao dịch. Chia sẻ tiền thưởng hàng ngày trị giá 15,000 USDT được chia sẻ (phân phối vào ngày hôm sau)!"
+                        content: "Introduce Trading Volume Ranking. Daily bonus worth $15,000 to be shared (issued next day)!"
                     }, {
-                        title: "Thử thách Đòn bẩy BTC, LUNC, USTC, XRP, FTT, SHIB, SUPER & LUNA Futures",
-                        url: "https://www.mexc.com/vi-VN/futures-activity/hot-coins/67?time=2023/12/04&name=BTC&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=btc20231204",
-                        content: "Trải nghiệm đòn bẩy 15-200x, chia sẻ 20,000 USDT tiền thưởng!",
+                        title: "SOL, ETH, BIGTIME, GROK, TIA, XRP, TRB & BNB Leverage Challenge",
+                        url: "https://www.mexc.com/futures-activity/hot-coins/75?time=2023/12/12&name=SOL&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=sol20231212",
+                        content: "Experience 15-200x leverage, share 20,000 USDT bonus!",
                         status: 'uncheck',
                     }, {
-                        title: "Thử thách Đòn bẩy ID, INJ, GRIMACE, MATIC, RNDR, BIGTIME, DOT & OCEAN Futures",
-                        url: "https://www.mexc.com/vi-VN/futures-activity/hot-coins/64?time=2023/12/01&name=ID&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=id20231201",
-                        content: "Trải nghiệm đòn bẩy 15-200x, chia sẻ 20,000 USDT tiền thưởng!"
+                        title: "BTC, AVAX, TURBO, LUNC, FTT, USTC, LUNA & SAND Leverage Challenge",
+                        url: "https://www.mexc.com/futures-activity/hot-coins/74?time=2023/12/11&name=BTC&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=btc20231211",
+                        content: "Experience 15-200x leverage, share 20,000 USDT bonus!"
                     }, {
-                        title: "Thử thách Đòn bẩy IOTA, STX, APE, AUCTION, WLD, HOOK & OP Futures",
-                        url: "https://www.mexc.com/vi-VN/futures-activity/hot-coins/63?time=2023/11/30&name=IOTA&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=iota220231130",
-                        content: "Trải nghiệm đòn bẩy 15-200x, chia sẻ 20,000 USDT tiền thưởng!"
+                        title: "OP, 1000BONK, LINK, ARB, GRIMACE, INJ, GALA & ETC Leverage Challenge",
+                        url: "https://www.mexc.com/futures-activity/hot-coins/71?time=2023/12/08&name=OP&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=op20231208",
+                        content: "Experience 15-200x leverage, share 20,000 USDT bonus!"
                     }, {
-                        title: "Lịch sự kiện",
+                        title: "Trade JTO Futuresn",
+                        url: "https://www.mexc.com/landings/JTO_newlist?handleDefaultLocale=keep&utm_source=mexc&utm_medium=webfuturesmenu&utm_campaign=jto20231208",
+                        content: "Share 20,000 USDT Futures Bonus",
+                    },{
+                        title: "Events Calendar Center",
                         url: "https://futures.mexc.com/activities-calendar-center",
-                        content: "Dễ dàng giành được phần thưởng và đồng thời có thêm kiến thức vô hạn về ngành",
+                        content: "Win event rewards easily and gain unlimited industry knowledge at the same time",
                         status: 'new',
                     },
 
@@ -226,12 +241,17 @@ const menuItemsData = [
         ],
 
     }, {
-        title: "M-Day Futures",
-        url: "https://www.mexc.com/vi-VN/futures-mday?utm_source=mexc&utm_medium=webheader&utm_campaign=mdayevent",
+        title: "Futures M-Day",
+        url: "https://www.mexc.com/futures-mday?utm_source=mexc&utm_medium=webheader&utm_campaign=mdayevent",
     },
     {
         title: "Learn",
-        url: "https://www.mexc.com/vi-VN/learn",
+        url: "https://www.mexc.com/learn",
+    },
+    {
+        title: "December Futures Competition",
+        url: "https://www.mexc.com/futures-activity/trading-competition?id=decfc&utm_source=mexc&utm_medium=webmenu&utm_campaign=trading-activity202312",
+        img:'https://www.mexc.com/api/file/download/F20230513123659282d06twGdPWw54E3'
     }
 ];
 
@@ -240,39 +260,46 @@ const eventsData = [
     {
         icon: 'event-1.png',
         title: 'Launchpad',
-        content: 'Đặc quyền của người nắm giữ MX - Tham gia và chia sẻ token mới',
-        link: 'https://www.mexc.com/vi-VN/launchpads/assessment?_from=search'
+        content: 'MX Holder Privileges - Join and Share New Tokens',
+        link: 'https://www.mexc.com/launchpads/assessment?_from=search'
     },
     {
         icon: 'event-2.png',
-        title: 'M-Day Futures - Giải thưởng hàng ngày',
-        content: 'Giao dịch Futures và giành phần thưởng hơn 70,000 USDT mỗi ngày!',
-        link: 'https://www.mexc.com/vi-VN/futures-mday?_from=search'
+        title: 'Futures M-Day - Daily Prize',
+        content: 'Trade futures and win over 70,000 USDT rewards every day!',
+        link: 'https://www.mexc.com/futures-mday?_from=search'
     },
     {
         icon: 'event-3.png',
         title: 'Kickstarter',
-        content: 'Đặc quyền của người nắm giữ MX - Tham gia và chia sẻ token mới',
-        link: 'https://www.mexc.com/vi-VN/sun/assessment?_from=search'
+        content: 'MX Holder Privileges - Join and Share New Tokens',
+        link: 'https://www.mexc.com/sun/assessment?_from=search'
     }
     ,
     {
         icon: 'event-4.png',
-        title: 'Chia sẻ 100,000$',
-        content: 'Giao dịch Futures với Đòn bẩy 21-200x',
-        link: 'https://www.mexc.com/vi-VN/futures-activity/x-game?utm_source=mexc&utm_medium=icon&utm_campaign=xgame20231204&_from=search'
+        title: 'Win $100,000 Bonus!',
+        content: 'Trade Futures with 21-200x Leverage',
+        link: 'https://www.mexc.com/futures-activity/x-game?utm_source=mexc&utm_medium=icon&utm_campaign=xgame20231211&_from=search'
     },
     {
         icon: 'event-5.png',
-        title: 'Bảng xếp hạng Futures',
-        content: 'chia sẻ $15,000 USD mỗi ngày, và giải thưởng sẽ được phân phối vào ngày hôm sau!',
-        link: 'https://futures.mexc.com/contractrank?_from=search&utm_campaign=rankevent&utm_medium=icon&utm_source=mexc'
+        title: 'Futures Leaderboard',
+        content: 'Daily bonus worth $15,000 to be shared (issued next day)!',
+        link: 'https://futures.mexc.com/contractrank?utm_source=mexc&utm_medium=icon&utm_campaign=rankevent&_from=search'
+    }
+    ,
+    {
+        icon: 'event-7.png',
+        title: 'Get $1000',
+        content: '1,000 USDT in Bonus Waiting to be Discovered',
+        link: 'https://www.mexc.com/futures-activity/bonus?_from=search'
     },
     {
         icon: 'event-6.png',
-        title: 'Sự kiện Futures hàng tuần!',
-        content: 'Giao dịch và Check-in hàng ngày để chia sẻ Tiền thưởng trị giá 60,000 USDT vào mỗi Thứ Hai-Thứ Sáu!',
-        link: 'https://www.mexc.com/vi-VN/futures-activity/crazy-week?id=60&utm_source=mexc&utm_medium=icon&utm_campaign=week20231204&_from=search'
+        title: 'Weekly Futures Event!',
+        content: 'Trade and check in daily to share 60,000 USDT bonus every Mon to Fri!',
+        link: 'https://www.mexc.com/futures-activity/crazy-week?id=66&event-id=crazy60&utm_source=mexc&utm_medium=icon&utm_campaign=week20231211&_from=search'
     }
 ];
 const languageData = [
@@ -544,7 +571,7 @@ export default function Header() {
                     <Tabs defaultActiveKey='2' items={[
                         {
                             key: '1',
-                            label: 'Ngôn ngữ',
+                            label: 'Language',
                             children: (<div>
                                 <div className='language-list'>
                                     {languageData.map((item, index) => {
@@ -559,7 +586,7 @@ export default function Header() {
                         },
                         {
                             key: '2',
-                            label: 'Tiền tệ',
+                            label: 'Currency',
                             children: (<div>
                                 <div className='language-list'>
                                     {moneyData.map((item, index) => {
@@ -594,7 +621,7 @@ export default function Header() {
                             <div className="header_headerLeft__RZb3I">
                                 <div className="header_navItem__dEqAQ header_authBtn__Gch60 header_navItem__dEqAQ">
                                     <a href='https://www.mexc.com/vi-VN/login?previous=%2F'
-                                       className="header_registerBtn__fsUiv header_authBtn__Gch60">Đăng nhập/Đăng ký</a>
+                                       className="header_registerBtn__fsUiv header_authBtn__Gch60">Log In/Sign Up</a>
                                 </div>
                             </div>
 
@@ -703,7 +730,7 @@ export default function Header() {
                     <ul className='navbar-list menus'>
                         {menuItemsData.map((item, index) => {
                             return (<li key={index} className='navbar-list-item'>
-                                <a className='navbar-list-item__link'>{item.title}
+                                <a className='navbar-list-item__link'>{item.title} {item.img && <img className='header_navItemCustomIconTag' src={item.img} alt="img" />}
                                     {item.status === 'hot' && <span className='hot-tag'>HOT</span>}
                                     {item.icon && <svg className="icon-down"
                                                        focusable="false"
@@ -754,9 +781,6 @@ export default function Header() {
                                             </li>
                                         )
                                     })}
-
-
-
                                 </ul>
                             </div>
                         </Drawer>
@@ -767,7 +791,7 @@ export default function Header() {
                         <Input
                             onFocus={() => setShowDropdown(true)}
                             className='search-input-header'
-                            placeholder="Tìm kiếm"
+                            placeholder="Search"
                             prefix={<SearchOutlined/>}
                         />
                         <div className='search-dropdown-wrapper' ref={dropdownRef}
@@ -777,7 +801,7 @@ export default function Header() {
                     </div>
                     <Button type="primary" className='login-btn' onClick={() => {
                         window.location.href = 'https://www.mexc.com/vi-VN/login?previous=%2F'
-                    }}>Đăng nhập/Đăng ký</Button>
+                    }}>Log In/Sign Up</Button>
                     <div className='setting-item-wrapper'>
                         <div className='header_divider'></div>
                         <ul className='setting-item-list'>
@@ -807,15 +831,12 @@ export default function Header() {
                                                     d="M4 4C4 2.89543 4.89543 2 6 2H18C19.1046 2 20 2.89543 20 4V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4ZM6 4H18V20H6V4Z"></path></svg></span>
                                                     <span>Mobile</span>
                                                 </div>
-                                                <div className='download-dropdown__desc'>Quét và tải xuống để tận hưởng
-                                                    trải
-                                                    nghiệm giao dịch mượt mà với MEXC
-                                                    App
+                                                <div className='download-dropdown__desc'>Scan to download and experience seamless trading on the MEXC App
                                                 </div>
                                                 <div className='download-dropdown__link-wrapper'>
                                                     <a className='download-dropdown__link'
                                                        href="https://www.mexc.com/support/articles/10100036082457">
-                                                        <span>Không thể tải xuống?</span>
+                                                        <span>Can't download?</span>
                                                         <svg className="sc-aXZVg ktFCMi mx-icon iconfont iconright"
                                                              focusable="false" width="1em" height="1em"
                                                              fill="currentColor"
@@ -829,9 +850,9 @@ export default function Header() {
                                             </div>
                                         </div>
                                         <div className='download-dropdown__footer'>
-                                            <span className='download-dropdown__title-verson'>Phiên bản Windows</span>
+                                            <span className='download-dropdown__title-verson'>Windows Client</span>
                                             <a href="https://www.mexc.com/download" className='download-dropdown__more'>
-                                                <span>Xem thêm</span>
+                                                <span>View More</span>
                                                 <svg className="download-dropdown__more-icon" focusable="false"
                                                      width="1em"
                                                      height="1em" fill="currentColor" aria-hidden="true"

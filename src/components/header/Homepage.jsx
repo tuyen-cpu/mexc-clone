@@ -376,15 +376,15 @@ export default function Homepage() {
                         <div className='banner-content'>
                             <div className='banner-content-box'>
                                 <div className='banner-content-box__title'>
-                                    <h1>Phí thấp nhất<br/>Lợi nhuận cao nhất</h1>
+                                    <h1>Lowest Fees<br/>Highest Profits</h1>
                                 </div>
-                                <p className='banner-content-box__desc'><strong>0%</strong> Phí Maker &amp; Taker
-                                    Spot<br/><strong>0%</strong> Phí Maker Futures, <strong>0.02%</strong> Phí Taker</p>
+                                <p className='banner-content-box__desc'><strong>0%</strong>  Spot Maker &amp; Taker Fees
+                                    <br/><strong>0%</strong>  Futures Maker Fee, <strong>0.03%</strong> Taker Fee</p>
                             </div>
                             <div className='banner-content-action'>
                                 <Button type="primary" className='banner-content-action__btn login-btn' onClick={() => {
                                     window.location.href = 'https://www.mexc.com/vi-VN/login'
-                                }}>Đăng ký</Button>
+                                }}>Sign Up</Button>
                                 <a href="https://mexc.onelink.me/KTsj/Ios" target="_blank"
                                    className="banner-content-action__btn social-btn"
                                    data-testid="appleStoreUrl">
