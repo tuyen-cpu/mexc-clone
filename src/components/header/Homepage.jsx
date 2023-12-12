@@ -11,140 +11,136 @@ import PopularCrypto from "./PopularCrypto.jsx";
 
 const noticeData = [
     {
-        title: 'MEXC hoàn thành hoán đổi hợp đồng Ben (BEN)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511885'
+        title: 'Voting Result and Listing Arrangement for Kickstarter - THE LUMINA (TLT)',
+        link: 'https://www.mexc.com/support/articles/17827791512041' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết WEAVERS TOKEN (VRS2)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511907'
+        title: '[Initial Listing] MEXC Kickstarter - Vote XRPBABY(XRPBABY) to Win Free 50,000 USDT Airdrops！',
+        link: 'https://www.mexc.com/support/articles/17827791512055' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết Send Finance (SEND)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511896'
+        title: 'Suspension of Deposits for PMG and CPH',
+        link: 'https://www.mexc.com/support/articles/17827791512062' ,
     },
     {
-        title: '[Niêm yết đầu tiên] MEXC Kickstarter - Bỏ phiếu Groooook(GROOOOOK) để nhận 50,000 USDT airdrop miễn phí!',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511910'
+        title: 'Voting Result and Listing Arrangement for Kickstarter -ApeBond (ABOND)',
+        link: 'https://www.mexc.com/support/articles/17827791512053' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết DOGE69 (DOGE69)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511913'
+        title: '[Initial Listing] MEXC Kickstarter - Vote Tunnel (TNL) to Win Free 107,875,000 TNL &amp; 20,000 USDT Airdrops!',
+        link: 'https://www.mexc.com/support/articles/17827791512037' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter - Ideaology (IDEA)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511893'
+        title: 'MEXC Futures Copy Trade supporting SATS USDT-M futures',
+        link: 'https://www.mexc.com/support/articles/17827791512061' ,
     },
     {
-        title: 'MEXC sẽ ra mắt “Thử thách đòn bẩy Futures 15-200x”. Giao dịch ORDI, SOL, DOGE, PEPE, AVAX, IOTX, STX và KAS USDT-M Perpetual Futures để chia sẻ 20,000 USDT tiền thưởng (05/12 - 10/12)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511904'
+        title: 'MEXC Will Conduct the System Upgrade (15 December 2023 )',
+        link: 'https://www.mexc.com/support/articles/17827791512057' ,
     },
     {
-        title: 'MEXC Kickstarter - Bỏ phiếu Strike Finance (STRK) để nhận 2,200 STRK & 20,000 USDC airdrop miễn phí!',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511901'
+        title: 'MEXC Will Delist VRTX and 1000DOGE2 USDT-M Perpetual Futures (December 15)',
+        link: 'https://www.mexc.com/support/articles/17827791512054' ,
     },
     {
-        title: 'Thông báo nâng cấp ứng dụng MEXC lên phiên bản từ v4.4.8 trở lên',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511898'
+        title: 'Voting Result and Listing Arrangement for Kickstarter- CYBERTRUCK (CYBERTRUCK)',
+        link: 'https://www.mexc.com/support/articles/17827791512052' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết Altura (ALU)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511895'
+        title: 'Voting Result and Listing Arrangement for Kickstarter - Decubate (DCB)',
+        link: 'https://www.mexc.com/support/articles/17827791512051' ,
     },
     {
-        title: 'MEXC sẽ niêm yết Anchored Coins EUR (AEUR) trên Khu vực Đổi mới',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511892'
+        title: '[Initial Listing] MEXC Kickstarter - Vote Honorswap (HONOR)  to Win Free 150,000 HONOR &amp; 20,000USDT Airdrops!',
+        link: 'https://www.mexc.com/support/articles/17827791512049' ,
     },
     {
-        title: '[Niêm yết đầu tiên] MEXC Kickstarter - Bỏ phiếu MiddleLend (MIDDLE) để nhận 37,500 MIDDLE & 20,000 USDTUSDT airdrop miễn phí!',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511883'
+        title: 'Voting Result and Listing Arrangement for Kickstarter - GOOD (GOOD)',
+        link: 'https://www.mexc.com/support/articles/17827791512046' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết SUC (SUC)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511874'
+        title: 'The Root Network (ROOT) Launchpad Listing Arrangement',
+        link: 'https://www.mexc.com/support/articles/17827791512047' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết zkPEPE (ZKPEPE)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511891'
+        title: 'Voting Result and Listing Arrangement for Kickstarter - Covasart (CO)',
+        link: 'https://www.mexc.com/support/articles/17827791512038' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết Viridis Network (VRD)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511890'
+        title: '[Initial Listing] MEXC Kickstarter - Vote XAIGROK(XAIGROK) to Win Free 50,000 USDT Airdrops!',
+        link: 'https://www.mexc.com/support/articles/17827791512048' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết Baby Grok1 (BABYGROK1)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511889'
+        title: 'MEXC Kickstarter - Vote Seamless(SEAM) to Win Free 50,000 USDT Airdrops!',
+        link: 'https://www.mexc.com/support/articles/17827791512040' ,
     },
     {
-        title: 'MEXC Kickstarter - Bỏ phiếu Send Finance (SEND) để nhận 15,385 SEND & 20,000 USDT airdrop miễn phí!',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511855'
+        title: '[Initial Listing] MEXC Kickstarter - Vote Calm Finance (CALM) to Win Free 33,334 CALM &amp; 20,000 USDT Airdrops!',
+        link: 'https://www.mexc.com/support/articles/17827791512045' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết Gorilla (GORILLA)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511887'
+        title: 'MEXC Futures Launches the "15-200x Futures Leverage Challenge". Trade SOL, ETH, BIGTIME, GROK, TIA, XRP, TRB and BNB USDT-M Perpetual Contracts to Win 20,000 USDT Bonus (Dec 12 - Dec 17)',
+        link: 'https://www.mexc.com/support/articles/17827791512044' ,
     },
     {
-        title: 'Kết quả bỏ phiếu Kickstarter và lịch trình niêm yết ratsDAO (RAT)',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511886'
+        title: '[Initial Listing] MEXC Kickstarter - Vote Pepeultimate (PEPE8) to Win Free 35,295 PEPE8 &amp; 20,000 USDT Airdrops!',
+        link: 'https://www.mexc.com/support/articles/17827791512043' ,
     },
     {
-        title: '[Niêm yết đầu tiên] MEXC Kickstarter - Bỏ phiếu DOGE69(DOGE69) để nhận 50,000 USDT airdrop miễn phí!',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511880'
-    },
-    {
-        title: '[Niêm yết đầu tiên] MEXC Kickstarter - Bỏ phiếu WEAVERS TOKEN (VRS2) để nhận 2,250,000 VRS2 & 20,000USDT airdrop miễn phí!',
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511881'
-    },
+        title: 'Voting Result and Listing Arrangement for Kickstarter - Ordinals Inscribe (ORDII)',
+        link: 'https://www.mexc.com/support/articles/17827791512042' ,
+    }
 ]
 const activityData = [
     {
         id: 1,
-        link: 'https://www.mexc.com/vi-VN/support/articles/14106206825113',
-        image: 'https://www.mexc.com/api/file/download/F20230710154521291p3WInakGugxIUw'
+        link: 'https://www.mexc.com/futures-mday?utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=mdayevent',
+        image: 'https://www.mexc.com/api/file/download/F20231021154639768QBdULDXpG1RyGK'
     },
     {
         id: 2,
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511485',
-        image: 'https://www.mexc.com/api/file/download/F20231113183521324OPOCimtcUnoaGi'
+        link: 'https://affiliates.mexc.com/intro',
+        image: 'https://www.mexc.com/api/file/download/F20231020162459266iIBecVVgQpOQHl'
     },
     {
         id: 3,
-        link: 'https://affiliates.mexc.com/vi-VN/intro',
-        image: 'https://www.mexc.com/api/file/download/F202310201628505737LySrKxInuL7WR'
+        link: 'https://www.mexc.com/launchpads/assessment?utm_source=mexc&amp;utm_medium=launchpadactivity&amp;utm_campaign=launchpad',
+        image: 'https://www.mexc.com/api/file/download/F20231204115610656rablpiia38Ascs'
     },
     {
         id: 4,
-        link: 'https://www.mexc.com/vi-VN/sun/assessment?utm_source=mexc&utm_medium=kickstarteractivity&utm_campaign=ygpz',
-        image: 'https://www.mexc.com/api/file/download/F20231204115051737PrqJe4GV97P5rs'
+        link: 'https://www.mexc.com/landings/JTO_newlist?handleDefaultLocale=keep&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=jto20231208',
+        image: 'https://www.mexc.com/api/file/download/F20231208021825548LAo56sDGygmvEz'
     },
     {
         id: 5,
-        link: 'https://www.mexc.com/vi-VN/futures-activity/hot-coins/64?time=2023/12/01&name=ID&utm_source=mexc&utm_medium=appwebbanner&utm_campaign=id20231201',
-        image: 'https://www.mexc.com/api/file/download/F20231201125546962CwgNPiNN3phPEZ'
+        link: 'https://www.mexc.com/futures-activity/hot-coins/71?time=2023/12/08&amp;name=OP&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=op20231208',
+        image: 'https://www.mexc.com/api/file/download/F20231208155137882wVN7OHowgRjzXX'
     },
     {
         id: 6,
-        link: 'https://www.mexc.com/vi-VN/futures-activity/crazy-week?id=60&utm_source=mexc&utm_medium=appwebbanner&utm_campaign=week20231204',
-        image: 'https://www.mexc.com/api/file/download/F20230724182719335AgkkTsPEgLVOvS'
+        link: 'https://www.mexc.com/futures-activity/crazy-week?id=66&amp;event-id=crazy60&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=week20231211',
+        image: 'https://www.mexc.com/api/file/download/F20231206153945954h3hu4MUZioKVEw'
     },
     {
         id: 7,
-        link: 'https://www.mexc.com/vi-VN/futures-activity/x-game?utm_source=mexc&utm_medium=appwebbanner&utm_campaign=xgame20231204',
-        image: 'https://www.mexc.com/api/file/download/F202312032331333264G0Z8j99Ke2IK8'
+        link: 'https://www.mexc.com/futures-activity/x-game?utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=xgame20231211',
+        image: 'https://www.mexc.com/api/file/download/F20231210233412993HfZTWIqj9CGVcS'
     },
     {
         id: 8,
-        link: 'https://www.mexc.com/vi-VN/launchpads/assessment?utm_source=mexc&utm_medium=launchpadactivity&utm_campaign=launchpad',
-        image: 'https://www.mexc.com/api/file/download/F20231204115640255hh97kWyNTKH39F'
+        link: 'https://www.mexc.com/fee?utm_source=mexc&amp;utm_medium=webbannner&amp;utm_campaign=holdmx',
+        image: 'https://www.mexc.com/api/file/download/F20231210000803910fZpCISIrcnDq9A'
     },
     {
         id: 9,
-        link: 'https://www.mexc.com/vi-VN/support/articles/17827791511485?utm_source=mexc&utm_medium=webbannner&utm_campaign=holdmx',
-        image: 'https://www.mexc.com/api/file/download/F20231112120007712OnlKHWXbmuvJX7'
+        link: 'https://www.mexc.com/futures-activity/trading-competition?id=decfc&amp;utm_source=mexc&amp;utm_medium=webbannner&amp;utm_campaign=trading-activity202312',
+        image: 'https://www.mexc.com/api/file/download/F20231211130525236c3jy6HCpJ80Hjr'
     },
     {
         id: 10,
-        link: 'https://twitter.com/MEXCVietnam/status/1696791180439351556',
-        image: 'https://www.mexc.com/api/file/download/F20230727160039800G7OkBbmY9t5J7c'
+        link: 'https://www.mexc.com/sun/assessment?utm_source=mexc&amp;utm_medium=kickstarteractivity&amp;utm_campaign=ygpz',
+        image: 'https://www.mexc.com/api/file/download/F20231204114601621zuRifFEfZRqYJS'
     }
 
 ]
