@@ -5,7 +5,7 @@ import {default as ReactCarousel} from "react-multi-carousel";
 import {useEffect, useRef, useState} from "react";
 import NewPinSection from "./NewPinSection.jsx";
 import PopularCrypto from "./PopularCrypto.jsx";
-import {activityData} from "../data/data.js";
+import data from '../data/activity.json';
 
 
 
@@ -224,6 +224,7 @@ export default function Homepage() {
     const [scrollTop, setScrollTop] = useState(false);
     const contacRef = useRef(null);
     const [pinTab, setPintab] = useState(false);
+
     const handlePinBar = () => {
         setPintab((prevState) => !prevState)
         if (pinTab) {
@@ -478,7 +479,7 @@ export default function Homepage() {
                         slidesToSlide={1}
                         swipeable
                     >
-                        {activityData.map((item, index) => {
+                        {data.map((item, index) => {
                             return (<a className='activity-banner__item' key={index}
                                        style={{backgroundImage: `url(${item.image})`}} href={item.link}>
 
