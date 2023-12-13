@@ -5,6 +5,7 @@ import {default as ReactCarousel} from "react-multi-carousel";
 import {useEffect, useRef, useState} from "react";
 import NewPinSection from "./NewPinSection.jsx";
 import PopularCrypto from "./PopularCrypto.jsx";
+import {activityData} from "../data/data.js";
 
 
 
@@ -91,59 +92,7 @@ const noticeData = [
         link: 'https://www.mexc.com/support/articles/17827791512042' ,
     }
 ]
-const activityData = [
-    {
-        id: 1,
-        link: 'https://www.mexc.com/futures-mday?utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=mdayevent',
-        image: 'https://www.mexc.com/api/file/download/F20231021154639768QBdULDXpG1RyGK'
-    },
-    {
-        id: 2,
-        link: 'https://affiliates.mexc.com/intro',
-        image: 'https://www.mexc.com/api/file/download/F20231020162459266iIBecVVgQpOQHl'
-    },
-    {
-        id: 3,
-        link: 'https://www.mexc.com/launchpads/assessment?utm_source=mexc&amp;utm_medium=launchpadactivity&amp;utm_campaign=launchpad',
-        image: 'https://www.mexc.com/api/file/download/F20231204115610656rablpiia38Ascs'
-    },
-    {
-        id: 4,
-        link: 'https://www.mexc.com/landings/JTO_newlist?handleDefaultLocale=keep&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=jto20231208',
-        image: 'https://www.mexc.com/api/file/download/F20231208021825548LAo56sDGygmvEz'
-    },
-    {
-        id: 5,
-        link: 'https://www.mexc.com/futures-activity/hot-coins/71?time=2023/12/08&amp;name=OP&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=op20231208',
-        image: 'https://www.mexc.com/api/file/download/F20231208155137882wVN7OHowgRjzXX'
-    },
-    {
-        id: 6,
-        link: 'https://www.mexc.com/futures-activity/crazy-week?id=66&amp;event-id=crazy60&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=week20231211',
-        image: 'https://www.mexc.com/api/file/download/F20231206153945954h3hu4MUZioKVEw'
-    },
-    {
-        id: 7,
-        link: 'https://www.mexc.com/futures-activity/x-game?utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=xgame20231211',
-        image: 'https://www.mexc.com/api/file/download/F20231210233412993HfZTWIqj9CGVcS'
-    },
-    {
-        id: 8,
-        link: 'https://www.mexc.com/fee?utm_source=mexc&amp;utm_medium=webbannner&amp;utm_campaign=holdmx',
-        image: 'https://www.mexc.com/api/file/download/F20231210000803910fZpCISIrcnDq9A'
-    },
-    {
-        id: 9,
-        link: 'https://www.mexc.com/futures-activity/trading-competition?id=decfc&amp;utm_source=mexc&amp;utm_medium=webbannner&amp;utm_campaign=trading-activity202312',
-        image: 'https://www.mexc.com/api/file/download/F20231211130525236c3jy6HCpJ80Hjr'
-    },
-    {
-        id: 10,
-        link: 'https://www.mexc.com/sun/assessment?utm_source=mexc&amp;utm_medium=kickstarteractivity&amp;utm_campaign=ygpz',
-        image: 'https://www.mexc.com/api/file/download/F20231204114601621zuRifFEfZRqYJS'
-    }
 
-]
 const communitySocialData = [
     {
         icon: 'https://public.mocortech.com/banner/F20230822155229778s0suWntyOovsxl.png',
@@ -252,7 +201,7 @@ const communitySocialData = [
     },
     {
         icon: 'https://public.mocortech.com/banner/F202308221554114182thJcamotY7rP5.png',
-        link: 'https://public.mocortech.com/banner/F202308221554114182thJcamotY7rP5.png'
+        link: 'https://mexc-japan.theletter.jp/'
     },
 
 ]
@@ -312,17 +261,17 @@ export default function Homepage() {
         <>
             <div className="banner-bottom-bar_bottomBar__IuLsX banner-bottom-bar_isScrollStop__j6DKa" ref={elementRef}>
                 <div className="banner-bottom-bar_barInfo__bCyyu"
-                     onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/markets'}>
+                     onClick={() => window.location.href = 'https://www.mexc.com/markets'}>
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconMarket">
                         <path
                             d="M21 5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5ZM13.7353 7H17C17.5523 7 18 7.44772 18 8C18 8.55228 17.5523 9 17 9H14.8897L10.2686 17H7C6.44772 17 6 16.5523 6 16C6 15.4477 6.44772 15 7 15H9.1142L13.7353 7Z"
                             fill="currentColor"></path>
                     </svg>
-                    <div>Thị trường</div>
+                    <div>Market</div>
                 </div>
                 <div className="banner-bottom-bar_barInfo__bCyyu"
-                     onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/exchange/BTC_USDT'}>
+                     onClick={() => window.location.href = 'https://www.mexc.com/exchange/BTC_USDT'}>
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconTrade">
                         <path
@@ -332,10 +281,10 @@ export default function Homepage() {
                             d="M22.4669 10.2498C22.6596 10.5831 22.4159 11 22.0309 11H19.0002V19.9996C19.0002 20.5519 18.5525 20.9996 18.0002 20.9996C17.4479 20.9996 17.0002 20.5519 17.0002 19.9996V11H13.9699C13.5851 11 13.3402 10.5835 13.5325 10.2502L17.5628 3.26513C17.7551 2.9318 18.2362 2.9316 18.4288 3.26476L22.4669 10.2498Z"
                             fill="currentColor"></path>
                     </svg>
-                    <div>Giao dịch</div>
+                    <div>Trade</div>
                 </div>
                 <div className="banner-bottom-bar_barInfo__bCyyu"
-                     onClick={() => window.location.href = 'https://futures.mexc.com/exchange?type=linear_swap'}>
+                     onClick={() => window.location.href = 'https://futures.mexc.com/exchange/ORDI_USDT'}>
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconFutures">
                         <path d="M10 10.0001L12.0001 8L14.0001 10.0001L12.0001 12.0002L10 10.0001Z"
@@ -347,14 +296,14 @@ export default function Homepage() {
                     <div>Futures</div>
                 </div>
                 <div className="banner-bottom-bar_barInfo__bCyyu"
-                     onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/login?previous=%2Fassets%2Foverview&handleDefaultLocale=keep'}>
+                     onClick={() => window.location.href = 'https://www.mexc.com/assets/overview'}>
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" data-icon="IconWallet">
                         <path fillRule="evenodd" clipRule="evenodd"
                               d="M21 5C21 3.89543 20.1046 3 19 3H6C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H19C20.1046 21 21 20.1046 21 19V9.25056C21 8.5602 20.4404 8.00056 19.75 8.00056H6.5C5.67157 8.00056 5 7.32898 5 6.50056C5 5.67213 5.67157 5.00056 6.5 5.00056C7.93983 5.00056 9.37966 5.0007 10.8195 5.00083C14.213 5.00116 17.6065 5.00149 21 5ZM19.0312 14.5C19.0312 15.3284 18.3597 16 17.5312 16C16.7028 16 16.0312 15.3284 16.0312 14.5C16.0312 13.6716 16.7028 13 17.5312 13C18.3597 13 19.0312 13.6716 19.0312 14.5Z"
                               fill="currentColor"></path>
                     </svg>
-                    <div>Tài sản</div>
+                    <div>Wallets</div>
                 </div>
             </div>
             <div className='banner-wrapper'>
@@ -379,7 +328,7 @@ export default function Homepage() {
                             </div>
                             <div className='banner-content-action'>
                                 <Button type="primary" className='banner-content-action__btn login-btn' onClick={() => {
-                                    window.location.href = 'https://www.mexc.com/vi-VN/login'
+                                    window.location.href = 'https://www.mexc.com/login'
                                 }}>Sign Up</Button>
                                 <a href="https://mexc.onelink.me/KTsj/Ios" target="_blank"
                                    className="banner-content-action__btn social-btn"
@@ -408,9 +357,7 @@ export default function Homepage() {
                                          placement="bottom"
                                          content={(
                                              <div>
-                                                 <p className="banner-content-action-btn__title">Tải xuống App MEXC
-                                                     chính
-                                                     thức</p>
+                                                 <p className="banner-content-action-btn__title">Download MEXC Official App</p>
                                                  <div className='qr-img'>
                                                      <img src="./qr-1.png" alt=""/>
                                                  </div>
@@ -454,8 +401,8 @@ export default function Homepage() {
                             </AntdCarousel>
                         </div>
                         <a className='notice-content-more'
-                           href="https://www.mexc.com/vi-VN/support/categories/360000254192">
-                            <span>Xem thêm</span>
+                           href="https://www.mexc.com/support/categories/360000254192">
+                            <span>View More</span>
                             <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconic_arrow1 notices_arrow__hcJeo"
                                  focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true"
                                  viewBox="0 0 1024 1024" data-icon="ArrowRightOutlined">
@@ -546,8 +493,7 @@ export default function Homepage() {
             <NewPinSection/>
 
             <div className="why-choose-mexc_why-choose-wrapper__ud1w8">
-                <div className="why-choose-mexc_why-choose__SUZms home-container"><h2>Vì sao lại lựa chọn
-                    MEXC?</h2>
+                <div className="why-choose-mexc_why-choose__SUZms home-container"><h2>Why Choose MEXC?</h2>
                     <div className="why-choose-container">
                         <div className="video-player_video-player__e0dtZ">
                             <div className="video-player_video-player-content__Kmbbl">
@@ -571,7 +517,7 @@ export default function Homepage() {
                                             <rect x="6" y="39" width="36" height="3" rx="1.5"
                                                   fill="currentColor"></rect>
                                         </svg>
-                                        <label>Tỷ lệ phí thấp nhất trên thị trường</label></div>
+                                        <label>Lowest Rate In The Market</label></div>
                                     <div className="video-player_specs-tab-item__sIc2t">
                                         <svg className="sc-gEvEer hSTeNi mx-icon icon-liquidity" focusable="false"
                                              width="1em" height="1em" fill="currentColor" aria-hidden="true"
@@ -585,7 +531,7 @@ export default function Homepage() {
                                                 d="M24.5 24V40.5H38C39.3807 40.5 40.5 39.3807 40.5 38V14.5H31.5571V22.5V24H30.0571H24.5Z"
                                                 stroke="currentColor" fill="none" strokeWidth="3"></path>
                                         </svg>
-                                        <label>Thanh khoản tốt nhất thị trường</label></div>
+                                        <label>Best Liquidity In The Market</label></div>
                                     <div
                                         className="video-player_specs-tab-item__sIc2t video-player_specs-tab-item__active__rBx_j">
                                         <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em"
@@ -598,31 +544,28 @@ export default function Homepage() {
                                                 d="M32.6178 19.9447C33.2036 19.3589 33.2036 18.4091 32.6178 17.8234C32.032 17.2376 31.0823 17.2376 30.4965 17.8234L23.2641 25.0558C23.0688 25.251 22.7522 25.251 22.557 25.0558L19.0216 21.5204C18.4358 20.9346 17.486 20.9346 16.9003 21.5204C16.3145 22.1062 16.3145 23.0559 16.9003 23.6417L22.2035 28.945C22.5941 29.3355 23.2273 29.3355 23.6178 28.945L32.6178 19.9447Z"
                                                 fill="currentColor"></path>
                                         </svg>
-                                        <label>Hệ thống bảo mật đạt chuẩn thế giới</label></div>
+                                        <label>World Class Security System</label></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <Button type="primary" className='section-main-btn'
-                            onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/login'}>Bắt đầu giao
-                        dịch</Button>
+                            onClick={() => window.location.href = 'https://www.mexc.com/login'}>Start Trading</Button>
 
                 </div>
             </div>
             <div className="products_productsContWrap__4ogse home-container">
-                <h2>Khám phá sản phẩm của chúng
-                    tôi</h2>
+                <h2>Discover Our Products</h2>
                 <ul className="products_productsCont__QZKeW">
                     <li>
                         <div className="products_webCont__QX7YI"><img
                             src="./product-future_2x.png" alt="mexc" loading="lazy" width="200"
                             height="200"/>
-                            <div className="products_rightPart__zRAWS"><h3>Future</h3><p>Số 1 về thanh khoản, Phí Maker
-                                0.</p><p className="products_des__CFIiD">Đòn bẩy lên tới 200x đối với hợp đồng tương
-                                lai. Bạn có thể sử dụng Futures để bảo hộ các vị thế Spot của mình.</p>
+                            <div className="products_rightPart__zRAWS"><h3>Future</h3><p>No. 1 Liquidity, 0 Maker Fees.</p>
+                                <p className="products_des__CFIiD">We launch new and high-quality crypto projects efficiently with good liquidity.</p>
                                 <aside>
                                     <button type="button" className="ant-btn ant-btn-text products_productsLink__7krbH">
-                                        <span>Tìm hiểu thêm</span>
+                                        <span>Learn more</span>
                                         <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em"
                                              height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                                              data-icon="ArrowRightOutlined">
@@ -638,12 +581,11 @@ export default function Homepage() {
                         <div className="products_webCont__QX7YI"><img src="./product-spot_2x.png"
                                                                       alt="mexc" loading="lazy" width="200"
                                                                       height="200"/>
-                            <div className="products_rightPart__zRAWS"><h3>Spot</h3><p>Đa dạng về loại Crypto. Niêm yết
-                                Crypto nhanh chóng.</p><p className="products_des__CFIiD">Hơn 1,500 loại tiền điện tử có
-                                sẵn để bạn giao dịch với tỷ lệ phí tốt nhất.</p>
+                            <div className="products_rightPart__zRAWS"><h3>Spot</h3><p>Tons of Cryptos. Fast Crypto Listing.</p>
+                                <p className="products_des__CFIiD">We rank top in the quantity of crypto listed among the first-tier exchanges.</p>
                                 <aside>
                                     <button type="button" className="ant-btn ant-btn-text products_productsLink__7krbH">
-                                        <span>Tìm hiểu thêm</span>
+                                        <span>Learn more</span>
                                         <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em"
                                              height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                                              data-icon="ArrowRightOutlined">
@@ -657,7 +599,7 @@ export default function Homepage() {
                     </li>
                 </ul>
                 <div className="products_loginBtn__rFbKX">
-                    <Button onClick={()=>{window.location.href='https://www.mexc.com/vi-VN/login'}} type="primary" className='section-main-btn '>Đăng ký để giao dịch</Button>
+                    <Button onClick={()=>{window.location.href='https://www.mexc.com/login'}} type="primary" className='section-main-btn '>Sign up to trade</Button>
                 </div>
             </div>
             <div className="community_community__EJdFT">
@@ -668,8 +610,8 @@ export default function Homepage() {
                         </div>
                     </div>
                 </div>
-                <div className="community_community-body__Jgr43 home-container"><h2>Tham gia cộng đồng MEXC</h2>
-                    <p>Luôn bên cạnh bạn.</p>
+                <div className="community_community-body__Jgr43 home-container"><h2>Join the MEXC Community Today</h2>
+                    <p>Always there for you.</p>
                     <div className="community_communityBigBtn__MD3tR">
                         <div>
 
@@ -737,8 +679,8 @@ export default function Homepage() {
                 </div>
             </div>
             <div className='download_home-download__0ReTU home-container'>
-                <h2>Giao dịch mọi lúc mọi nơi với App MEXC</h2>
-                <p>Hỗ trợ trên iOS, Android, Windows.</p>
+                <h2>Trade Anywhere with the MEXC App</h2>
+                <p>Full iOS, Android & Windows Support.</p>
                 <div className="download_downloadContent__w4yWM">
                     <div className="download_device__cW4OQ"><img className="download_deviceLogo__mGXRx"
                                                                  src="https://static.mocortech.com/www/static/images/new-home/imh_iPhone_light.png"
@@ -747,20 +689,17 @@ export default function Homepage() {
                         <div className="download_downloadInfoGroup__ITmEa">
                             <div className="download_downloadInfo__WX6Ki"><img
                                 src="./portfolio.svg?v=1001" alt="mexc" loading="lazy"/>
-                                <div className="download_contRight___VlGG"><h5>Quản lý danh mục đầu tư của bạn</h5>
-                                    <p>Tận hưởng nền tảng dịch vụ toàn diện của chúng tôi, trở thành một nhà giao dịch
-                                        chuyên nghiệp với các tính năng mạnh mẽ, tốc độ cao và phí giao dịch hấp
-                                        dẫn.</p></div>
+                                <div className="download_contRight___VlGG"><h5>Manage Your Portfolio Easily</h5>
+                                    <p>Turn into a professional trader via our one-stop services platform with powerful features, high execution speed and low fees.</p></div>
                             </div>
                             <div className="download_downloadInfo__WX6Ki"><img
                                 src="./mobile_apps.svg?v=1001" alt="mexc" loading="lazy"/>
-                                <div className="download_contRight___VlGG"><h5>Hỗ trợ ứng dụng đa nền tảng</h5><p>Mua và
-                                    giao dịch tất cả những token mà bạn muốn trên ứng dụng MEXC một cách dễ dàng mọi lúc
-                                    mọi nơi.</p></div>
+                                <div className="download_contRight___VlGG"><h5>Multi-Platform App Support</h5>
+                                    <p>Buy and trade all your favorite tokens on MEXC App effortlessly, anytime and anywhere.</p></div>
                             </div>
                         </div>
                         <div className="download_downloadGroup__V_bnp">
-                            <a href="https://www.mexc.com/vi-VN/download" className="download_www">
+                            <a href="https://www.mexc.com/download" className="download_www">
                                 <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconios1 download_appStore__b4QwE"
                                      focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true"
                                      viewBox="0 0 1024 1024" data-icon="AppleFilled">
@@ -769,7 +708,7 @@ export default function Homepage() {
                                 </svg>
                                 <span style={{marginInlineStart: '10px'}}>App Store</span>
                             </a>
-                            <a href="https://www.mexc.com/vi-VN/download" className="download_www">
+                            <a href="https://www.mexc.com/download" className="download_www">
                                 <svg
                                     className="sc-gEvEer hSTeNi mx-icon iconfont iconGooglePlaylogo1 download_googleplay__Wm4mF"
                                     focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true"
@@ -779,7 +718,7 @@ export default function Homepage() {
                                 </svg>
                                 <span style={{marginInlineStart: '6px'}}>Google Play</span>
                             </a>
-                            <a href="https://www.mexc.com/vi-VN/download" className="download_www">
+                            <a href="https://www.mexc.com/download" className="download_www">
                                 <svg className="sc-gEvEer hSTeNi mx-icon iconfont icondo-windows1" focusable="false"
                                      width="1em" height="1em" fill="currentColor" aria-hidden="true"
                                      viewBox="0 0 1024 1024"
@@ -794,7 +733,7 @@ export default function Homepage() {
                 </div>
             </div>
             <div className={`scroll-top-wrapper ${scrollTop ? 'active' : ''}`} onClick={handleScrollTop}>
-                <Tooltip placement="left" title={(<div>Quay lại đầu trang</div>)}>
+                <Tooltip placement="left" title={(<div>Back to top</div>)}>
                     <div className="sidebar_btn__5nhuP sidebar_toTop__ocJY_">
                         <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconzhiding" focusable="false" width="1em"
                              height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"
@@ -809,7 +748,7 @@ export default function Homepage() {
 
             </div>
             <div className="sidebar_wrapper__LNgtQ sidebar_floatWrapper__SOb5e" ref={contacRef}>
-                <Tooltip placement="top" title={(<div>{pinTab ? "Đóng" : "Cố định"}</div>)}>
+                <Tooltip placement="top" title={(<div>{pinTab ? "Collapse" : "Expand"}</div>)}>
                     <div className="iconfont sidebar_btn__5nhuP" onClick={handlePinBar}>
                         <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                              fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
@@ -821,7 +760,7 @@ export default function Homepage() {
                     </div>
                 </Tooltip>
 
-                <Tooltip placement="top" title={(<div>Tài liệu API</div>)}>
+                <Tooltip placement="top" title={(<div>API Documentation</div>)}>
                     <a className="sidebar_btn__5nhuP"
                        href="https://mexcdevelop.github.io/apidocs/spot_v3_en/#introduction"
                        rel="nofollow noopener noreferrer">
@@ -894,8 +833,8 @@ export default function Homepage() {
                         </div>
                     </div>
                 </div>
-                <Tooltip placement="top" title={(<div>Gửi yêu cầu</div>)}>
-                    <a className="sidebar_btn__5nhuP" href="https://www.mexc.com/vi-VN/support/requests"
+                <Tooltip placement="top" title={(<div>Submit a Request</div>)}>
+                    <a className="sidebar_btn__5nhuP" href="https://www.mexc.com/support/requests"
                        rel="nofollow noopener noreferrer">
                         <svg className="sc-gEvEer hSTeNi mx-icon iconfont iconyijian" focusable="false" width="1em"
                              height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16"

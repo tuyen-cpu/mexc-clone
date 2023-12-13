@@ -37,25 +37,30 @@ function randomizeDecimalPlaces(number) {
    }
 }
 function randomDecimals(numberString) {
-    let sign = "";
-    if (numberString[0] === '+' || numberString[0] === '-') {
-        sign = numberString[0];
-        numberString = numberString.substring(1);
+    try{
+        let sign = "";
+        if (numberString[0] === '+' || numberString[0] === '-') {
+            sign = numberString[0];
+            numberString = numberString.substring(1);
+        }
+
+        let number = parseFloat(numberString);
+        let integerPart = Math.floor(number);
+        let decimalPart = number - integerPart;
+        let randomDecimal = Math.random();
+        let result = integerPart + randomDecimal;
+
+        if (sign !== "") {
+            result = sign + result.toFixed(2);
+        } else {
+            result = result.toFixed(2);
+        }
+
+        return result;
+    }catch (e) {
+        return numberString;
     }
 
-    let number = parseFloat(numberString);
-    let integerPart = Math.floor(number);
-    let decimalPart = number - integerPart;
-    let randomDecimal = Math.random();
-    let result = integerPart + randomDecimal;
-
-    if (sign !== "") {
-        result = sign + result.toFixed(2);
-    } else {
-        result = result.toFixed(2);
-    }
-
-    return result;
 }
 
 export { addCommasToNumber,randomizeDecimalPlaces,randomDecimals };

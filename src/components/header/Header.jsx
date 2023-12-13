@@ -620,7 +620,7 @@ export default function Header() {
                         <div>
                             <div className="header_headerLeft__RZb3I">
                                 <div className="header_navItem__dEqAQ header_authBtn__Gch60 header_navItem__dEqAQ">
-                                    <a href='https://www.mexc.com/vi-VN/login?previous=%2F'
+                                    <a href='https://www.mexc.com/login?previous=%2F'
                                        className="header_registerBtn__fsUiv header_authBtn__Gch60">Log In/Sign Up</a>
                                 </div>
                             </div>
@@ -730,7 +730,7 @@ export default function Header() {
                     <ul className='navbar-list menus'>
                         {menuItemsData.map((item, index) => {
                             return (<li key={index} className='navbar-list-item'>
-                                <a className='navbar-list-item__link'>{item.title} {item.img && <img className='header_navItemCustomIconTag' src={item.img} alt="img" />}
+                                <a className='navbar-list-item__link' href={item.url}>{item.title} {item.img && <img className='header_navItemCustomIconTag' src={item.img} alt="img" />}
                                     {item.status === 'hot' && <span className='hot-tag'>HOT</span>}
                                     {item.icon && <svg className="icon-down"
                                                        focusable="false"
@@ -800,7 +800,7 @@ export default function Header() {
                         </div>
                     </div>
                     <Button type="primary" className='login-btn' onClick={() => {
-                        window.location.href = 'https://www.mexc.com/vi-VN/login?previous=%2F'
+                        window.location.href = 'https://www.mexc.com/login?previous=%2F'
                     }}>Log In/Sign Up</Button>
                     <div className='setting-item-wrapper'>
                         <div className='header_divider'></div>

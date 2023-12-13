@@ -202,7 +202,7 @@ const dataHotSearch = [
         price: '2153.58',
         rate: '+2.35',
         operator: '+',
-        link: 'https://www.mexc.com/vi-VN/exchange/ETH_USDT?_from=search'
+        link: 'https://www.mexc.com/exchange/ETH_USDT?_from=search'
     },
     {
         name: 'FTT',
@@ -235,25 +235,25 @@ const dataNewStart = [
     {
         name: 'GEC',
         market: 'USDT',
-        link: 'https://www.mexc.com/vi-VN/exchange/GEC_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/GEC_USDT?_from=ranking_list',
         icon:'https://www.mexc.com/api/file/download/F20231206170823921achcdFtlHK1ayi',
     },
     {
         name: 'EGRN',
         market: 'USDT',
-        link: 'https://www.mexc.com/vi-VN/exchange/EGRN_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/EGRN_USDT?_from=ranking_list',
         icon: 'https://www.mexc.com/api/file/download/F202312051448342940Y9JyMNow1Y5ze',
     },
     {
         name: 'ANTC',
         market: 'USDT',
-        link: "https://www.mexc.com/vi-VN/exchange/ANTC_USDT?_from=ranking_list",
+        link: "https://www.mexc.com/exchange/ANTC_USDT?_from=ranking_list",
         icon:'https://www.mexc.com/api/file/download/F202312061712318252hpclSh7JyM9zr',
     },
     {
         name: 'EMR',
         market: '/USDT',
-        link: 'https://www.mexc.com/vi-VN/exchange/EMR_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/EMR_USDT?_from=ranking_list',
         icon: 'https://www.mexc.com/api/file/download/F20231207134019100HEEnxv6UnrVRZE',
     },
     {
@@ -262,7 +262,7 @@ const dataNewStart = [
         price: '0.01621',
         rate: '+100.69',
         operator: '+',
-        link: 'https://www.mexc.com/vi-VN/exchange/DEL_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/DEL_USDT?_from=ranking_list',
         icon:'https://www.mexc.com/api/file/download/F20231205145628407f06QQ9MXskzELX',
         data:[
             ['2019-10-10', 166],
@@ -285,7 +285,7 @@ const hotHotSearch = [
         price: '2.9340',
         rate: '-1.63',
         operator: '-',
-        link: "https://www.mexc.com/vi-VN/exchange/MX_USDT?_from=ranking_list",
+        link: "https://www.mexc.com/exchange/MX_USDT?_from=ranking_list",
         icon:'https://www.mexc.com/api/file/download/F20221121121519073gsfH8ct8pJgm4h',
         data:[
             ['2019-10-10', 100],
@@ -346,7 +346,7 @@ const hotHotSearch = [
         price: '0.130902',
         rate: '-5.13',
         operator: '-',
-        link: 'https://www.mexc.com/vi-VN/exchange/KAS_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/KAS_USDT?_from=ranking_list',
         icon: 'https://www.mexc.com/api/file/download/F20220925112925283vwigm9Ac0xkt3l',
         data:[
             ['2019-10-10', 600],
@@ -366,7 +366,7 @@ const hotHotSearch = [
         price: '0.0024505',
         rate: '-27.53',
         operator: '-',
-        link: 'https://www.mexc.com/vi-VN/exchange/DIONE_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/DIONE_USDT?_from=ranking_list',
         icon:'https://www.mexc.com/api/file/download/F202307011849479521fQgQg5dPyHJt5',
         data:[
             ['2019-10-10', 2000],
@@ -394,7 +394,7 @@ const topIncrease = [
         price: '0.4371',
         rate: '+783.20',
         operator: '+',
-        link: "https://www.mexc.com/vi-VN/exchange/DFC_USDT?_from=ranking_list",
+        link: "https://www.mexc.com/exchange/DFC_USDT?_from=ranking_list",
         icon:'https://www.mexc.com/api/file/download/F20231206165935050ykIOprm3qqdoWN',
         data:[
             ['2019-10-10', 100],
@@ -414,7 +414,7 @@ const topIncrease = [
         price: '0.00021191',
         rate: '+338.07',
         operator: '+',
-        link: 'https://www.mexc.com/vi-VN/exchange/RNDX_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/RNDX_USDT?_from=ranking_list',
         icon:'https://www.mexc.com/api/file/download/F202307012026416739QquGMKyn1dggL',
         data:[
             ['2019-10-10', 100],
@@ -434,7 +434,7 @@ const topIncrease = [
         price: '0.26010',
         rate: '+204.78',
         operator: '+',
-        link: 'https://www.mexc.com/vi-VN/exchange/CANDY_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/CANDY_USDT?_from=ranking_list',
         icon: 'https://www.mexc.com/api/file/download/F20230701183854564ZJxTTJnMElega1',
         data:[
             ['2019-10-10', 100],
@@ -455,7 +455,7 @@ const topIncrease = [
         price: '0.018859',
         rate: '+180.90',
         operator: '+',
-        link: 'https://www.mexc.com/vi-VN/exchange/CPU_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/CPU_USDT?_from=ranking_list',
         icon: 'https://www.mexc.com/api/file/download/F20220523131357389ECd2SQylTy5rty',
         data:[
             ['2019-10-10', 600],
@@ -475,7 +475,7 @@ const topIncrease = [
         price: '2.89',
         rate: '+188.29',
         operator: '+',
-        link: 'https://www.mexc.com/vi-VN/exchange/GEC_USDT?_from=ranking_list',
+        link: 'https://www.mexc.com/exchange/GEC_USDT?_from=ranking_list',
         icon:'https://www.mexc.com/api/file/download/F20231206170823921achcdFtlHK1ayi',
         data:[
             ['2019-10-10', 100],
@@ -496,4 +496,61 @@ const topIncrease = [
     }
 
 ]
-export {dataHotSearch,dataNewStart,hotHotSearch,topIncrease}
+
+
+//banner
+const activityData = [
+    {
+        id: 1,
+        link: 'https://www.mexc.com/futures-mday?utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=mdayevent',
+        image: 'https://www.mexc.com/api/file/download/F20231021154639768QBdULDXpG1RyGK'
+    },
+    {
+        id: 2,
+        link: 'https://affiliates.mexc.com/intro',
+        image: 'https://www.mexc.com/api/file/download/F20231020162459266iIBecVVgQpOQHl'
+    },
+    {
+        id: 3,
+        link: 'https://www.mexc.com/launchpads/assessment?utm_source=mexc&amp;utm_medium=launchpadactivity&amp;utm_campaign=launchpad',
+        image: 'https://www.mexc.com/api/file/download/F20231204115610656rablpiia38Ascs'
+    },
+    {
+        id: 4,
+        link: 'https://www.mexc.com/landings/JTO_newlist?handleDefaultLocale=keep&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=jto20231208',
+        image: 'https://www.mexc.com/api/file/download/F20231208021825548LAo56sDGygmvEz'
+    },
+    {
+        id: 5,
+        link: 'https://www.mexc.com/futures-activity/hot-coins/71?time=2023/12/08&amp;name=OP&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=op20231208',
+        image: 'https://www.mexc.com/api/file/download/F20231208155137882wVN7OHowgRjzXX'
+    },
+    {
+        id: 6,
+        link: 'https://www.mexc.com/futures-activity/crazy-week?id=66&amp;event-id=crazy60&amp;utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=week20231211',
+        image: 'https://www.mexc.com/api/file/download/F20231206153945954h3hu4MUZioKVEw'
+    },
+    {
+        id: 7,
+        link: 'https://www.mexc.com/futures-activity/x-game?utm_source=mexc&amp;utm_medium=appwebbanner&amp;utm_campaign=xgame20231211',
+        image: 'https://www.mexc.com/api/file/download/F20231210233412993HfZTWIqj9CGVcS'
+    },
+    {
+        id: 8,
+        link: 'https://www.mexc.com/fee?utm_source=mexc&amp;utm_medium=webbannner&amp;utm_campaign=holdmx',
+        image: 'https://www.mexc.com/api/file/download/F20231210000803910fZpCISIrcnDq9A'
+    },
+    {
+        id: 9,
+        link: 'https://www.mexc.com/futures-activity/trading-competition?id=decfc&amp;utm_source=mexc&amp;utm_medium=webbannner&amp;utm_campaign=trading-activity202312',
+        image: 'https://www.mexc.com/api/file/download/F20231211130525236c3jy6HCpJ80Hjr'
+    },
+    {
+        id: 10,
+        link: 'https://www.mexc.com/sun/assessment?utm_source=mexc&amp;utm_medium=kickstarteractivity&amp;utm_campaign=ygpz',
+        image: 'https://www.mexc.com/api/file/download/F20231204114601621zuRifFEfZRqYJS'
+    }
+
+]
+
+export {dataHotSearch,dataNewStart,hotHotSearch,topIncrease,activityData}

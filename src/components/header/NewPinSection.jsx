@@ -6,11 +6,12 @@ import {useEffect, useState} from "react";
 import {randomDecimals, randomizeDecimalPlaces} from "../utils.js";
 const newPinData = [
     {
-        name:'NCDT/USDT',
+        name:'ROOT/USDT',
         price:0.4417,
-        rate:'+55.80%',
+        rate:'+1.51%',
         operator:'+',
-        avatar:'https://www.mexc.com/api/file/download/F20231030233536253iu0TKkG7zXeUSH',
+        avatar:'https://www.mexc.com/api/file/download/F202312111411102757yoH8siwYu5vYm',
+        link:'https://www.mexc.com/exchange/ROOT_USDT',
         data:[
             ['2019-10-10', 122],
             ['2019-10-11', 222],
@@ -24,11 +25,12 @@ const newPinData = [
         ]
     },
     {
-        name:'HDN/USDT',
-        price:0.12370,
-        rate:'-3.42%',
+        name:'CYBERTRUCK/USDT',
+        price:0.000000000000144,
+        rate:'-0.42%',
         operator:'-',
-        avatar:'https://www.mexc.com/api/file/download/F20231028140828036esxlvhHixVLt3V',
+        avatar:'https://www.mexc.com/api/file/download/F20231211145114751yHJ0pqKzq4ItaM',
+        link:'https://www.mexc.com/exchange/CYBERTRUCK_USDT',
         data:[
             ['2019-10-10', 1111],
             ['2019-10-11', 222],
@@ -42,11 +44,12 @@ const newPinData = [
         ]
     },
     {
-        name:'TMNG/USDT',
-        price:0.07550,
-        rate:'-4.06%',
+        name:'GOOD/USDT',
+        price:0.000000000185,
+        rate:'-43.06%',
         operator:'-',
-        avatar:'https://www.mexc.com/api/file/download/F20231120172800530chc6dKvPShjw5b',
+        avatar:'https://www.mexc.com/api/file/download/F202312111927224630TD6tV2kqdnir2',
+        link:'https://www.mexc.com/exchange/GOOD_USDT',
         data:[
             ['2019-10-10', 2000],
             ['2019-10-11', 1000],
@@ -65,6 +68,7 @@ const newPinData = [
         rate:'-5.17%',
         operator:'-',
         avatar:'https://www.mexc.com/api/file/download/F20231120002235816BRW9nc4jpE4IKt',
+        link:'https://www.mexc.com/exchange/PYTH_USDT',
         data:[
             ['2019-10-10', 2323],
             ['2019-10-11', 444],
@@ -87,11 +91,12 @@ const newPinData = [
         ]
     },
     {
-        name:'MIRTOKEN/USDT',
-        price:0.0009710,
+        name:'ZKPEPE/USDT',
+        price:0.00007582,
         rate:'-11.81%',
         operator:'-',
-        avatar:'https://www.mexc.com/api/file/download/F20231204154951179fCGQtOF1NfguOc',
+        avatar:'https://www.mexc.com/api/file/download/F20231203135058365ppbRQoLzi1gTvh',
+        link:'https://www.mexc.com/exchange/ZKPEPE_USDT',
         data:[
             ['2019-10-10', 100],
             ['2019-10-11', 1000],
@@ -114,11 +119,12 @@ const newPinData = [
         ]
     },
     {
-        name:'SOIL/USDT',
-        price:0.4930,
+        name:'HER/USDT',
+        price:1.4930,
         rate:'+1.37%',
         operator:'+',
-        avatar:'https://www.mexc.com/api/file/download/F20231009171410200C6SC8eL5djP7CL',
+        avatar:'https://www.mexc.com/api/file/download/F20231207133204709T73siXopqofWbu',
+        link:'https://www.mexc.com/exchange/HER_USDT',
         data:[
             ['2019-10-10', 1],
             ['2019-10-11', 10],
@@ -133,11 +139,12 @@ const newPinData = [
 
     },
     {
-        name:'GROKAI/USDT',
+        name:'JOB/USDT',
         price:0.0000000000002251,
         rate:'+4.21%',
         operator:'+',
-        avatar:'https://www.mexc.com/api/file/download/F20231116160146745TtreSzNRRD7elG',
+        avatar:'https://www.mexc.com/api/file/download/F20231015095706833zjmdPkBi1nxhY7',
+        link:'https://www.mexc.com/exchange/JOB_USDT',
         data:[
             ['2019-10-10', 200],
             ['2019-10-11', 560],
@@ -148,6 +155,122 @@ const newPinData = [
             ['2019-10-16', 450],
             ['2019-10-17', 300],
             ['2019-10-18', 200]
+        ]
+    },
+    {
+        name:'BITS/USDT',
+        price:0.007599,
+        rate:'+4.21%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231029090700269AKupqw6DKfzPRX',
+        link:'https://www.mexc.com/exchange/BITS_USDT',
+        data:[
+            ['2019-10-10', 1400],
+            ['2019-10-11', 560],
+            ['2019-10-12', 300],
+            ['2019-10-13', 580],
+            ['2019-10-14', 250],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 450],
+            ['2019-10-17', 300],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'ATEM/USDT',
+        price:0.13553,
+        rate:'+8.21%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231115161745134Un8pkYK2uf7gdQ',
+        link:'https://www.mexc.com/exchange/ATEM_USDT',
+        data:[
+            ['2019-10-10', 100],
+            ['2019-10-11', 1200],
+            ['2019-10-12', 300],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 250],
+            ['2019-10-15', 100],
+            ['2019-10-16', 450],
+            ['2019-10-17', 100],
+            ['2019-10-18', 100]
+        ]
+    }
+    ,
+    {
+        name:'PHAROS/USDT',
+        price:0.0043553,
+        rate:'-8.21%',
+        operator:'-',
+        avatar:'https://www.mexc.com/api/file/download/F20231017140509613zFKQvxVOFUT5RO',
+        link:'https://www.mexc.com/exchange/PHAROS_USDT',
+        data:[
+            ['2019-10-10', 100],
+            ['2019-10-11', 100],
+            ['2019-10-12', 300],
+            ['2019-10-13', 100],
+            ['2019-10-14', 2000],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 450],
+            ['2019-10-17', 2000],
+            ['2019-10-18', 100]
+        ]
+    }
+    ,
+    {
+        name:'TURT/USDT',
+        price:0.02786,
+        rate:'+12.24%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F202312071326460242SqQZ89CMZq1WT',
+        link:'https://www.mexc.com/exchange/TURT_USDT',
+        data:[
+            ['2019-10-10', 100],
+            ['2019-10-11', 100],
+            ['2019-10-12', 300],
+            ['2019-10-13', 100],
+            ['2019-10-14', 2000],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 450],
+            ['2019-10-17', 2000],
+            ['2019-10-18', 100]
+        ]
+    } ,
+    {
+        name:'MAKA/USDT',
+        price:0.03656,
+        rate:'-6.89%',
+        operator:'-',
+        avatar:'https://www.mexc.com/api/file/download/F20231025191046296TkH4qOkTYfxkD4',
+        link:'https://www.mexc.com/exchange/MAKA_USDT',
+        data:[
+            ['2019-10-10', 12],
+            ['2019-10-11', 12],
+            ['2019-10-12', 3000],
+            ['2019-10-13', 3000],
+            ['2019-10-14', 2000],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 1000]
+        ]
+    },
+    {
+        name:'SYNC/USDT',
+        price:0.06231,
+        rate:'+15.98%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231204174948741AHAxvOeTMTiAtQ',
+        link:'https://www.mexc.com/exchange/SYNC_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
         ]
     }
 ]
@@ -183,9 +306,9 @@ export default function NewPinSection() {
     }, []);
     return(
         <div className='new-list_home-new-list '>
-            <h2>Niêm yết mới</h2>
+            <h2>New Listing</h2>
             <div className="new-list_home-new-view-markets home-container">
-                <a href="https://www.mexc.com/vi-VN/markets">Xem Thị Trường
+                <a href="https://www.mexc.com/markets">View Markets
                     <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"
                          fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"
                          data-icon="ArrowRightOutlined">
@@ -264,7 +387,7 @@ export default function NewPinSection() {
                         {dataHot && dataHot.map((item, index) => {
                             return (
                                 <a key={index} className="home-new-item new-list-item_home-new-item__MMsS4" target="_blank"
-                                   href="/vi-VN/exchange/MEOW_USDT">
+                                   href={item.link}>
                                     <div className="new-list-item_new-item-title__klJ1r">
                                         <div className="coin-cover_coin-cover__NV_PX coin-cover">
                                             <div className="ant-image">
@@ -408,7 +531,7 @@ export default function NewPinSection() {
                         {dataHot1 && dataHot1.map((item, index) => {
                             return (
                                 <a key={index} className="home-new-item new-list-item_home-new-item__MMsS4" target="_blank"
-                                   href="/vi-VN/exchange/MEOW_USDT">
+                                   href={item.link}>
                                     <div className="new-list-item_new-item-title__klJ1r">
                                         <div className="coin-cover_coin-cover__NV_PX coin-cover">
                                             <div className="ant-image">
@@ -487,8 +610,7 @@ export default function NewPinSection() {
                 </div>
                 <div className='new-list_home-new-list-footer__6RXpK'>
                     <Button type="primary" className='section-main-btn'
-                            onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/login'}>Bắt đầu giao
-                        dịch</Button>
+                            onClick={() => window.location.href = 'https://www.mexc.com/login'}>Start Trading</Button>
                 </div>
 
             </div>

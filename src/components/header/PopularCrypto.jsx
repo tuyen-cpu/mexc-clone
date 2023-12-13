@@ -9,7 +9,7 @@ import {addCommasToNumber, randomDecimals, randomizeDecimalPlaces} from "../util
 
 const columns = [
     {
-        title: 'Cặp giao dịch',
+        title: 'Trading Pair',
         dataIndex: 'name',
         key: 'name',
         width: 300,
@@ -20,7 +20,7 @@ const columns = [
                         <img src={data.icon} alt=""/>
                     </div>
                     <div className='hot-list_title'>
-                        {name} {data.market} Vĩnh cữu
+                        {name} {data.market} Perpetual
                     </div>
                 </div>
             </>
@@ -28,7 +28,7 @@ const columns = [
         )
     },
     {
-        title: 'Giá',
+        title: 'Price',
         dataIndex: 'price',
         key: 'price',
         width:300,
@@ -39,7 +39,7 @@ const columns = [
         )
     },
     {
-        title: 'Thay đổi',
+        title: 'Change',
         dataIndex: 'rate',
         key: 'rate',
         render: (rate, data) => (
@@ -51,7 +51,7 @@ const columns = [
     }
     ,
     {
-        title: 'Thị trường',
+        title: 'Market',
         dataIndex: 'data',
         key: '3',
         width: 200,
@@ -110,19 +110,19 @@ const columns = [
     }
     ,
     {
-        title: 'Thao tác',
+        title: 'Action',
         dataIndex: '',
         key: '4',
         responsive: ['md', 'lg'],
-        width: '100px',
+        width: '150px',
         render: (data) => <Button className='hot-list_toTradeLink___yvj0'
-                                  onClick={() => window.location.href = data.link}>Giao dịch</Button>,
+                                  onClick={() => window.location.href = data.link}>Trade</Button>,
     },
 ];
 
 const columns2 = [
     {
-        title: 'Cặp giao dịch',
+        title: 'Trading Pair',
         dataIndex: 'name',
         key: 'name',
         width: 300,
@@ -133,7 +133,7 @@ const columns2 = [
                         <img src={data.icon} alt=""/>
                     </div>
                     <div className='hot-list_title'>
-                        {name} {data.market} Vĩnh cữu
+                        {name} {data.market} Perpetual
                     </div>
                 </div>
             </>
@@ -141,7 +141,7 @@ const columns2 = [
         )
     },
     {
-        title: 'Giá',
+        title: 'Price',
         dataIndex: 'price',
         key: 'price',
         render: (price) => (
@@ -152,7 +152,7 @@ const columns2 = [
         )
     },
     {
-        title: 'Thay đổi',
+        title: 'Change',
         dataIndex: 'rate',
         key: 'rate',
         render: (rate, data) => (
@@ -166,7 +166,7 @@ const columns2 = [
     }
     ,
     {
-        title: 'Thị trường',
+        title: 'Market',
         dataIndex: 'data',
         key: '3',
         width: 200,
@@ -224,13 +224,13 @@ const columns2 = [
                         }}/>
                     </div>
                 }
-                {!data && <div> Sắp bắt đầu </div>}
+                {!data && <div> Upcoming </div>}
             </>
         )
     }
     ,
     {
-        title: 'Thao tác',
+        title: 'Action',
         dataIndex: '',
         key: '4',
         responsive: ['md', 'lg'],
@@ -243,8 +243,8 @@ const columns2 = [
 
 
 const OperationsSlot = {
-    right: <a href='https://www.mexc.com/vi-VN/markets/reference?position=contract'
-              className="hot-list_viewMore__poZ__">Xem thêm
+    right: <a href='https://www.mexc.com/markets/reference?position=hot'
+              className="hot-list_viewMore__poZ__">View More
         <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em" fill="currentColor"
              aria-hidden="true" viewBox="0 0 1024 1024" data-icon="ArrowRightOutlined">
             <path
@@ -367,7 +367,7 @@ export default function PopularCrypto() {
         },
         {
             key: '3',
-            label: 'Mới nhất',
+            label: 'Newest',
             children: (<div className='home-market-list '>
                 <Table columns={columns2} dataSource={dataTab3} bordered={false}/>
 
@@ -375,7 +375,7 @@ export default function PopularCrypto() {
         },
         {
             key: '4',
-            label: 'Top KL',
+            label: 'Top Volume',
             children: (<div className='home-market-list '>
                 <Table columns={columns} dataSource={dataTab4.slice(0, 5)} bordered={false}/>
 
@@ -384,7 +384,7 @@ export default function PopularCrypto() {
         {
             key: '5',
             label: (<div className='hot-list_makerWrapper__SOmuY special-tab-line'>
-                <span className='hot-list_toptop'>Top tăng trưởng</span>
+                <span className='hot-list_toptop'>Top Gainers</span>
                 <span className="hot-list_changeBlock__K6hyV hot-list_changeUp__O_Kgh">{console.log(dataTab5)}{dataTab5[0].rate}</span>
             </div>),
             children: (<div className='home-market-list '>
@@ -397,12 +397,12 @@ export default function PopularCrypto() {
         <>
             <div className='hot-list_markets__ihE0y'>
                 <div className='home-container'>
-                    <h2>Tiền mã hoá phổ biến</h2>
+                    <h2>Popular Cryptocurrencies</h2>
                     <Tabs tabBarExtraContent={slot} rootClassName='antd-custom-wrapper' activeKey={activeTab}
                           items={items} pagination={{position: ['none', 'none']}} onChange={handleTabChange}/>
                     <div className='hot-list_exploreMarket__FSKIX'>
-                        <Button onClick={() => window.location.href = 'https://www.mexc.com/vi-VN/login'} type="primary"
-                                className='section-main-btn'>Bắt đầu giao dịch</Button>
+                        <Button onClick={() => window.location.href = 'https://www.mexc.com/login'} type="primary"
+                                className='section-main-btn'>Start Trading</Button>
                     </div>
                 </div>
 

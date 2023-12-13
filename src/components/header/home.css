@@ -789,6 +789,7 @@
 }
 .why-choose-mexc_why-choose-wrapper__ud1w8 {
     background-color: var(--bg-secondary1);
+    --text-primary: #f2f4f6;
 }
 .video-player_video-player__e0dtZ .video-player_specs-tab__lYN2b .video-player_specs-tab-item__sIc2t.video-player_specs-tab-item__active__rBx_j, .video-player_video-player__e0dtZ .video-player_specs-tab__lYN2b .video-player_specs-tab-item__sIc2t:hover {
     color: var(--text-primary);
