@@ -6,6 +6,7 @@ import {useEffect, useRef, useState} from "react";
 import NewPinSection from "./NewPinSection.jsx";
 import PopularCrypto from "./PopularCrypto.jsx";
 import data from '../data/activity.json';
+import AutoplayCarousel from "./AutoplayCarousel.jsx";
 
 
 
@@ -870,6 +871,7 @@ export default function Homepage() {
                     </svg>
                 </div>
             </div>
+
 
         </>
 

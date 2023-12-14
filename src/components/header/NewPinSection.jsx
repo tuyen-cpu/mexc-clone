@@ -4,6 +4,7 @@ import './newpinsection.css'
 import {Button} from "antd";
 import {useEffect, useState} from "react";
 import {randomDecimals, randomizeDecimalPlaces} from "../utils.js";
+import AutoplayCarousel from "./AutoplayCarousel.jsx";
 const newPinData = [
     {
         name:'ROOT/USDT',
@@ -272,13 +273,525 @@ const newPinData = [
             ['2019-10-17', 12],
             ['2019-10-18', 2000]
         ]
+    },
+    {
+        name:'MEME/USDT',
+        price: 0.034698,
+        rate:'+5.64%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231028160204774tNsdre2kHjW1a8',
+        link:'https://www.mexc.com/exchange/MEME_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'XTOKEN/USDT',
+        price: 0.000003238,
+        rate:'+9.57%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F202310261639452559F0OUgQW0oE02t',
+        link:'https://www.mexc.com/exchange/XTOKEN_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'BEAMX/USDT',
+        price: 0.034698,
+        rate:'+2.56%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F202311171156155741YFRj7sg9l91Fv',
+        link:'https://www.mexc.com/exchange/BEAMX_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'XAIGROK/USDT',
+        price: 0.00000000078,
+        rate:'-3.70%',
+        operator:'-',
+        avatar:'https://www.mexc.com/api/file/download/F20231212135211163IjXTftQREiclYr',
+        link:'https://www.mexc.com/exchange/XAIGROK_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'XMP/USDT',
+        price: 0.00219,
+        rate:'-3.70%',
+        operator:'-',
+        avatar:'https://www.mexc.com/api/file/download/F20231211211117431lem8lWAhobpKrB',
+        link:'https://www.mexc.com/exchange/exchange/XMP_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'OCTA/USDT',
+        price: 0.8245,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231016210611207XR6UGUWSsKj6Gv',
+        link:'https://www.mexc.com/exchange/OCTA_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'XAI1/USDT',
+        price: 0.0012122,
+        rate:'-1.64%',
+        operator:'-',
+        avatar:'https://www.mexc.com/api/file/download/F20231118180923838TUQdxUPexHzjKa',
+        link:'https://www.mexc.com/exchange/XAI1_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'KFI/USDT',
+        price: 0.000003238,
+        rate:'+0.09%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231024132915474aBHKCvCmjS9NlF',
+        link:'https://www.mexc.com/exchange/KFI_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'INSP/USDT',
+        price: 0.034698,
+        rate:'+3.39%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231205183536274ru0dfWJog4PfsC',
+        link:'https://www.mexc.com/exchange/INSP_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'JINKO/USDT',
+        price: 0.01753,
+        rate:'-3.70%',
+        operator:'-',
+        avatar:'https://www.mexc.com/api/file/download/F20231029090957481ignAQjQ4KbbhM7',
+        link:'https://www.mexc.com/exchange/JINKO_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'XRAI/USDT',
+        price: 0.00219,
+        rate:'+1.39%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231017160053344MT8WfUz6oIqza1',
+        link:'https://www.mexc.com/exchange/exchange/XRAI_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'PUFFIN/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231116105903175lXvqiyhvPO1L3f',
+        link:'https://www.mexc.com/exchange/PUFFIN_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'WRKX/USDT',
+        price: 0.010020,
+        rate:'+3.94%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F202310311814101124l0pTU8qx8RK8s',
+        link:'https://www.mexc.com/exchange/WRKX_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'DIAMOND/USDT',
+        price: 0.000003238,
+        rate:'+7.27%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231022095524070E8x78Yy69rw5fo',
+        link:'https://www.mexc.com/exchange/DIAMOND_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'SMT/USDT',
+        price: 0.034698,
+        rate:'+4.56%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F202312071926469065IWwx0cG6gXq65',
+        link:'https://www.mexc.com/exchange/SMT_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'TRBS/USDT',
+        price: 0.05978,
+        rate:'+19.00%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231213194413182Ohj4dKJP5DNvIo',
+        link:'https://www.mexc.com/exchange/TRBS_USDTT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'RBX/USDT',
+        price: 0.19610,
+        rate:'+1.39%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231122104937914zn8SSUBxvYuZwO',
+        link:'https://www.mexc.com/exchange/RBX_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'PUFFIN/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231116105903175lXvqiyhvPO1L3f',
+        link:'https://www.mexc.com/exchange/PUFFIN_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'TLT/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231211204704037Mt2sFXfL8s4a5r',
+        link:'https://www.mexc.com/exchange/TLT_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'SUC/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231203133819858QB1SoulfaXBS2l',
+        link:'https://www.mexc.com/exchange/SUC_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    }
+    ,
+    {
+        name:'MGC/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231213195011427rFqeB2B80OSmsv',
+        link:'https://www.mexc.com/exchange/MGC_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    } ,
+    {
+        name:'XRPBABY/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231212211642642gqqLwSrFRgxYmt',
+        link:'https://www.mexc.com/exchange/XRPBABY_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'MOSPACE/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F202310241329291308iSRzPue2cqoLy',
+        link:'https://www.mexc.com/exchange/MOSPACE_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'RSY/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231128175359046AvM1UWEmX4W4c1',
+        link:'https://www.mexc.com/exchange/RSY_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'PUMPKIN/USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231110132827909WxKmNzIsOd5xm6',
+        link:'https://www.mexc.com/exchange/PUMPKIN_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 2000],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
+    },
+    {
+        name:'VRD_USDT',
+        price: 0.0005348,
+        rate:'+2.70%',
+        operator:'+',
+        avatar:'https://www.mexc.com/api/file/download/F20231203125724106Sd1oB8u2pYTBq5',
+        link:'https://www.mexc.com/exchange/VRD_USDT',
+        data:[
+            ['2019-10-10', 1500],
+            ['2019-10-11', 2000],
+            ['2019-10-12', 12],
+            ['2019-10-13', 2000],
+            ['2019-10-14', 12],
+            ['2019-10-15', 12],
+            ['2019-10-16', 12],
+            ['2019-10-17', 12],
+            ['2019-10-18', 2000]
+        ]
     }
 ]
 export default function NewPinSection() {
-    const [dataHot, setDataHot] = useState([...newPinData]);
-    const [dataHot1, setDataHot1] = useState([...newPinData.reverse()]);
+    const [dataHot, setDataHot] = useState([...newPinData.map((item)=>{
+        return {
+            ...item,
+           data:item.data.map((item)=>{
+                return [item[0],Math.floor(Math.random() * 4001)]
+           })
+        }
+
+    })]);
+    const [dataHot1, setDataHot1] = useState([...newPinData.sort(() => Math.random() - 0.5).map((item)=>{
+        return {
+            ...item,
+            data:item.data.map((item)=>{
+                return [item[0],Math.floor(Math.random() * 4001)]
+            })
+        }
+
+    })]);
 
     useEffect(() => {
+
         const interval = setInterval(() => {
             setDataHot((prevDataHot) => {
                 return prevDataHot.map((item) => {
@@ -319,294 +832,8 @@ export default function NewPinSection() {
                 /div>
             <div>
                 <div className='wrapper-pin-pin'>
-                    <ReactCarousel
-                        additionalTransfrom={100}
-                        arrows={false}
-                        autoPlay={true}
-                        autoPlaySpeed={5000}
-                        centerMode={false}
-                        className=""
-                        containerClass="container-with-dots"
-                        customTransition="all 10s linear"
-                        dotListClass=""
-                        focusOnSelect={false}
-                        infinite={true}
-                        itemClass=""
-                        keyBoardControl
-                        minimumTouchDrag={0}
-                        draggable={false}
-                        pauseOnHover={true}
-                        renderArrowsWhenDisabled={false}
-                        renderButtonGroupOutside={false}
-                        renderDotsOutside={false}
-                        responsive={{
-                            desktop: {
-                                breakpoint: {
-                                    max: 3000,
-                                    min: 1600
-                                },
-                                items: 7,
-                                partialVisibilityGutter: 40,
-                            },
-                            desktop1: {
-                                breakpoint: {
-                                    max: 1599,
-                                    min: 1300
-                                },
-                                items: 5,
-                                partialVisibilityGutter: 40,
-                            },
-                            tablet: {
-                                breakpoint: {
-                                    max: 1090,
-                                    min: 800
-                                },
-                                items: 3,
-                                partialVisibilityGutter: 30
-                            },
-                            mobile: {
-                                breakpoint: {
-                                    max: 650,
-                                    min: 0
-                                },
-                                items: 1,
-                                partialVisibilityGutter: 30
-                            }
-                        }}
-                        rewind={false}
-                        rewindWithAnimation={false}
-                        rtl={false}
-                        shouldResetAutoplay
-                        showDots={false}
-                        sliderClass=""
-                        slidesToSlide={1}
-                        swipeable
-                        transitionDuration={0}
-                    >
-
-                        {dataHot && dataHot.map((item, index) => {
-                            return (
-                                <a key={index} className="home-new-item new-list-item_home-new-item__MMsS4" target="_blank"
-                                   href={item.link}>
-                                    <div className="new-list-item_new-item-title__klJ1r">
-                                        <div className="coin-cover_coin-cover__NV_PX coin-cover">
-                                            <div className="ant-image">
-                                                <img alt='' loading="lazy" className="ant-image-img" src={item.avatar}/>
-                                            </div>
-                                        </div>
-                                        <span className="new-list-item_new-item-name__DAo_z">{item.name}</span></div>
-                                    <div className="new-list-item_new-item-content__2p31j">
-                                        <div className="new-list-item_new-item-desc__hiZs1"><p
-                                            className="new-list-item_new-item-price__3wZ1V">{item.price}</p><p
-                                            className={`new-list-item_new-item-change__78_QS new-list-item_changeUp__s_DWJ ${item.operator==='+'?'down-rate':'up-rate'}`}>{item.rate}</p>
-                                        </div>
-                                        <div className="new-list-item_new-item-kline__zKLhh">
-                                            <div
-                                                className="suggestKline_kline__BsyCt new-list-item_new-item-kine__chart__Uhvs5"
-                                                _echarts_instance_="ec_1701930168657">
-                                                <div className='newnewnew'>
-                                                    {/*<img src={`./${item.img}`} alt=""/>*/}
-                                                    <ReactECharts  notMerge={true}  style={{ height: '150%' }} option={{
-                                                        globe:{
-                                                            width:'100%',
-                                                            height:'100%'
-                                                        },
-                                                        xAxis: {
-                                                            type: 'category',
-                                                            boundaryGap: false,
-                                                            show: false
-                                                        },
-                                                        yAxis: {
-                                                            type: 'value',
-                                                            boundaryGap: [0, '30%'],
-                                                            show: false
-                                                        },
-                                                        backgroundColor:'transparent',
-                                                        visualMap: {
-                                                            type: 'piecewise',
-                                                            show: false,
-                                                            dimension: 0,
-                                                            seriesIndex: 0,
-                                                            pieces: [
-                                                                {
-                                                                    gt: 1,
-                                                                    lt: 3,
-                                                                    color: 'rgba(0, 0, 180, 0.4)'
-                                                                },
-                                                                {
-                                                                    gt: 5,
-                                                                    lt: 7,
-                                                                    color: 'rgba(0, 0, 180, 0.4)'
-                                                                }
-                                                            ]
-                                                        },
-                                                        series: [
-                                                            {
-                                                                type: 'line',
-                                                                smooth: 0.6,
-                                                                symbol: 'none',
-                                                                lineStyle: {
-                                                                    color: `${item.operator==='+'?'#0aa869':'#fe445c'}`,
-                                                                    width: 1.3
-                                                                },
-                                                                data: item.data
-                                                            }
-                                                        ]
-                                                    }} />
-                                                </div>
-                                                <div className=""></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            )
-                        })}
-
-                    </ReactCarousel>
-                    <ReactCarousel
-                        additionalTransfrom={100}
-                        arrows={false}
-                        autoPlay={true}
-                        autoPlaySpeed={5000}
-                        centerMode={false}
-                        className=""
-                        containerClass="container-with-dots"
-                        customTransition="all 12s linear"
-                        dotListClass=""
-                        focusOnSelect={false}
-                        infinite={true}
-                        itemClass=""
-                        keyBoardControl
-                        minimumTouchDrag={0}
-                        draggable={false}
-                        pauseOnHover={true}
-                        renderArrowsWhenDisabled={false}
-                        renderButtonGroupOutside={false}
-                        renderDotsOutside={false}
-                        responsive={{
-                            desktop: {
-                                breakpoint: {
-                                    max: 3000,
-                                    min: 1600
-                                },
-                                items: 7,
-                                partialVisibilityGutter: 40,
-                            },
-                            desktop1: {
-                                breakpoint: {
-                                    max: 1599,
-                                    min: 1300
-                                },
-                                items: 5,
-                                partialVisibilityGutter: 40,
-                            },
-                            tablet: {
-                                breakpoint: {
-                                    max: 1090,
-                                    min: 800
-                                },
-                                items: 3,
-                                partialVisibilityGutter: 30
-                            },
-                            mobile: {
-                                breakpoint: {
-                                    max: 650,
-                                    min: 0
-                                },
-                                items: 1,
-                                partialVisibilityGutter: 30
-                            }
-                        }}
-                        rewind={true}
-                        rewindWithAnimation={true}
-                        rtl={false}
-                        shouldResetAutoplay
-                        showDots={false}
-                        sliderClass=""
-                        slidesToSlide={1}
-                        swipeable
-                        transitionDuration={0}
-                    >
-
-                        {dataHot1 && dataHot1.map((item, index) => {
-                            return (
-                                <a key={index} className="home-new-item new-list-item_home-new-item__MMsS4" target="_blank"
-                                   href={item.link}>
-                                    <div className="new-list-item_new-item-title__klJ1r">
-                                        <div className="coin-cover_coin-cover__NV_PX coin-cover">
-                                            <div className="ant-image">
-                                                <img alt='' loading="lazy" className="ant-image-img" src={item.avatar}/>
-                                            </div>
-                                        </div>
-                                        <span className="new-list-item_new-item-name__DAo_z">{item.name}</span></div>
-                                    <div className="new-list-item_new-item-content__2p31j">
-                                        <div className="new-list-item_new-item-desc__hiZs1"><p
-                                            className="new-list-item_new-item-price__3wZ1V">{item.price}</p><p
-                                            className={`new-list-item_new-item-change__78_QS new-list-item_changeUp__s_DWJ ${item.operator==='+'?'down-rate':'up-rate'}`}>{item.rate}</p>
-                                        </div>
-                                        <div className="new-list-item_new-item-kline__zKLhh">
-                                            <div
-                                                className="suggestKline_kline__BsyCt new-list-item_new-item-kine__chart__Uhvs5"
-                                                _echarts_instance_="ec_1701930168657">
-                                                <div className='newnewnew'>
-                                                    {/*<img src={`./${item.img}`} alt=""/>*/}
-                                                    <ReactECharts  notMerge={true}  style={{ height: '150%' }} option={{
-                                                        globe:{
-                                                            width:'100%',
-                                                            height:'100%'
-                                                        },
-                                                        xAxis: {
-                                                            type: 'category',
-                                                            boundaryGap: false,
-                                                            show: false
-                                                        },
-                                                        yAxis: {
-                                                            type: 'value',
-                                                            boundaryGap: [0, '30%'],
-                                                            show: false
-                                                        },
-                                                        backgroundColor:'transparent',
-                                                        visualMap: {
-                                                            type: 'piecewise',
-                                                            show: false,
-                                                            dimension: 0,
-                                                            seriesIndex: 0,
-                                                            pieces: [
-                                                                {
-                                                                    gt: 1,
-                                                                    lt: 3,
-                                                                    color: 'rgba(0, 0, 180, 0.4)'
-                                                                },
-                                                                {
-                                                                    gt: 5,
-                                                                    lt: 7,
-                                                                    color: 'rgba(0, 0, 180, 0.4)'
-                                                                }
-                                                            ]
-                                                        },
-                                                        series: [
-                                                            {
-                                                                type: 'line',
-                                                                smooth: 0.6,
-                                                                symbol: 'none',
-                                                                lineStyle: {
-                                                                    color: `${item.operator==='+'?'#0aa869':'#fe445c'}`,
-                                                                    width: 1.3
-                                                                },
-                                                                data: item.data
-                                                            }
-                                                        ]
-                                                    }} />
-                                                </div>
-                                                <div className=""></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            )
-                        })}
-
-                    </ReactCarousel>
+                    <AutoplayCarousel data={dataHot}/>
+                    <AutoplayCarousel data={dataHot1}/>
                 </div>
                 <div className='new-list_home-new-list-footer__6RXpK'>
                     <Button type="primary" className='section-main-btn'

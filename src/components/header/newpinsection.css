@@ -161,6 +161,10 @@
 }
 .wrapper-pin-pin{
     position: relative;
+    height: 271px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 .wrapper-pin-pin:before {
     --new-list-shadow-width:120px;
