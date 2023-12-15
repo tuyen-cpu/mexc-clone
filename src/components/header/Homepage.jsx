@@ -6,9 +6,9 @@ import {useEffect, useRef, useState} from "react";
 import NewPinSection from "./NewPinSection.jsx";
 import PopularCrypto from "./PopularCrypto.jsx";
 import data from '../data/activity.json';
-import AutoplayCarousel from "./AutoplayCarousel.jsx";
-
-
+import timeData from '../data/time-down.json';
+import imgData from '../data/image.json';
+import CountdownT from "./Countdown.jsx";
 
 
 const noticeData = [
@@ -225,6 +225,7 @@ export default function Homepage() {
     const [scrollTop, setScrollTop] = useState(false);
     const contacRef = useRef(null);
     const [pinTab, setPintab] = useState(false);
+    const [time, setTime] = useState(timeData);
 
     const handlePinBar = () => {
         setPintab((prevState) => !prevState)
@@ -380,6 +381,160 @@ export default function Homepage() {
 
                 </div>
             </div>
+            <div className="home_homeBonusWrapper__K3NVe" >
+                <div className="home_homeBonus__8gYnZ home-container bonus-activity_bonus-activity__iR4yP"
+                     >
+                    <div className="NoAuthorizeBonusActivity bonus-activity_NoAuthorizeBonusActivity__YFr30" >
+                        <div className="bonus-activity_bonus-activity-wrapper__OVMJC" >
+                            <div className="bonus-header_head__wcxO4" >
+                                <div className="bonus-header_headLeft__57L9X" ><h3 >Get $1000
+                                    Bonus!</h3></div>
+                                {/*<a className="bonus-header_headRight__7Nng4"*/}
+                                {/*   href="https://51.159.195.89/futures-activity/bonus?__cpo=aHR0cHM6Ly93d3cubWV4Yy5jb20"*/}
+                                {/*   ><span >All Events</span>*/}
+                                {/*    <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em" height="1em"*/}
+                                {/*         fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024"*/}
+                                {/*         data-icon="ArrowRightOutlined" >*/}
+                                {/*        <path*/}
+                                {/*            d="M128 469.333333h604.586667l-152.746667-153.173333L640 256l256 256-256 256-60.16-60.16L732.586667 554.666667H128z"*/}
+                                {/*            ></path>*/}
+                                {/*    </svg>*/}
+                                {/*</a>*/}
+                            </div>
+                            <div className="bonus-list bonus-list_bonus-list__AR5aQ" >
+
+                                <div
+                                    className="bonus-item bonus-item_bonus-item__rJRh4 bonus-item_active__94RDF bonus-activity_item-bonus-register__g01GI"
+                                    >
+                                    <div
+                                        className="bonus-item_bonus-item-aside__cerCa bonus-item_bonus-item-aside__active__mwSRr"
+                                        >
+                                        <div >
+                                            <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em"
+                                                 height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32"
+                                                 data-icon="IconBonusGift" >
+                                                <path fillRule="evenodd" clipRule="evenodd"
+                                                      d="M17.1379 4.70435C18.0363 1.62804 22.1269 1.01755 23.8844 3.69746C25.5226 6.19541 23.7306 9.51353 20.7434 9.51353H15.7334L17.1379 4.70435ZM7.58189 3.69795C9.33942 1.01804 13.43 1.62853 14.3284 4.70484L15.7329 9.51402H10.7229C7.73566 9.51402 5.9437 6.1959 7.58189 3.69795ZM6.13333 11.5146C4.95513 11.5146 4 12.4697 4 13.648V26.448C4 27.6262 4.95513 28.5813 6.13333 28.5813H25.3333C26.5116 28.5813 27.4667 27.6262 27.4667 26.448V13.648C27.4667 12.4697 26.5116 11.5146 25.3333 11.5146H6.13333ZM14.6667 25.448H16.8V14.648H14.6667V25.448Z"
+                                                      fill="currentColor" ></path>
+                                            </svg>
+                                        </div>
+                                        <div className="bonus-item_bonus-item-line__14_b9" ></div>
+                                    </div>
+                                    <div className="bonus-item_bonus-item-container__n7EHY bonus-item-container"
+                                         >
+                                        <img src={imgData.img} alt="xs"/>
+                                    </div>
+                                </div>
+                                <div
+                                    className="bonus-item bonus-item_bonus-item__rJRh4 bonus_bonus-item-no-login__pRBtW"
+                                    >
+                                    <div
+                                        className="bonus-item_bonus-item-aside__cerCa bonus-item_bonus-item-aside__active__mwSRr"
+                                        >
+                                        <div >
+                                            <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em"
+                                                 height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32"
+                                                 data-icon="IconBonusGift" >
+                                                <path fillRule="evenodd" clipRule="evenodd"
+                                                      d="M17.1379 4.70435C18.0363 1.62804 22.1269 1.01755 23.8844 3.69746C25.5226 6.19541 23.7306 9.51353 20.7434 9.51353H15.7334L17.1379 4.70435ZM7.58189 3.69795C9.33942 1.01804 13.43 1.62853 14.3284 4.70484L15.7329 9.51402H10.7229C7.73566 9.51402 5.9437 6.1959 7.58189 3.69795ZM6.13333 11.5146C4.95513 11.5146 4 12.4697 4 13.648V26.448C4 27.6262 4.95513 28.5813 6.13333 28.5813H25.3333C26.5116 28.5813 27.4667 27.6262 27.4667 26.448V13.648C27.4667 12.4697 26.5116 11.5146 25.3333 11.5146H6.13333ZM14.6667 25.448H16.8V14.648H14.6667V25.448Z"
+                                                      fill="currentColor" ></path>
+                                            </svg>
+                                        </div>
+                                        <div className="bonus-item_bonus-item-line__14_b9" ></div>
+                                    </div>
+                                    <div className="bonus-item_bonus-item-container__n7EHY bonus-item-container"
+                                         >
+                                        <div className="bonus-item-header bonus-item_bonus-item-header__1KrVr"
+                                             >
+                                            <div className="bonus-item_title__xIPIB" >
+                                                <div className="bonus-item_bonus-item__count-down__UiIf_" >
+                                                    <div className="bonus_bonusItemLabel__kOoJQ" >
+                                                        <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false"
+                                                             width="1em" height="1em" fill="currentColor"
+                                                             aria-hidden="true" viewBox="0 0 10 10"
+                                                             data-icon="IconCountDown" >
+                                                            <path fillRule="evenodd" clipRule="evenodd"
+                                                                  d="M5 10C7.76142 10 10 7.76142 10 5C10 2.23858 7.76142 0 5 0C2.23858 0 0 2.23858 0 5C0 7.76142 2.23858 10 5 10ZM4 2.5H5V5.5H7.5V6.5H4V2.5Z"
+                                                                  fill="currentColor" ></path>
+                                                        </svg>
+                                                        <CountdownT days={time.day} hours={time.hour} minutes={time.min} seconds={time.sec} />
+                                                    </div>
+                                                </div>
+                                                <h6 >Random Rewards <span >5-30 USDT</span></h6></div>
+                                            <div className="bonus-item_line__DYqVA bonus-item-line" ></div>
+                                        </div>
+                                        <div className="bonus-item-content bonus-item_bonus-item-content__RQQUe"
+                                             >
+                                            <div
+                                                className="bonus-item_bonus-item-detail__z_aUL bonus-item_bonus-item-no-login__BJaJ_"
+                                                ><span
+                                                className="bonus-item_sub-title__glwMF bonus-item-detail__title"
+                                                ></span>
+                                                <div className="bonus-item_bonus-item-detail__desc___0DDK" >
+                                                    <span >First single transfer ≥ 500 USDT, and maintain a net transfer-in of at least 500 USDT for 7 consecutive daysandTotal trading volume ≥ 10,000 USDT</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="bonus-item_bonus-item-action__6HM7p bonus-item-action bonus-item_bonus-item-no-login__BJaJ_"
+                                                >
+                                                <button type="button" className="ant-btn ant-btn-ghost" ><span
+                                                    >Trade</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    className="bonus-item bonus-item_bonus-item__rJRh4 bonus_bonus-item-no-login__pRBtW"
+                                    >
+                                    <div
+                                        className="bonus-item_bonus-item-aside__cerCa bonus-item_bonus-item-aside__active__mwSRr"
+                                        >
+                                        <div >
+                                            <svg className="sc-gEvEer hSTeNi mx-icon" focusable="false" width="1em"
+                                                 height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 32 32"
+                                                 data-icon="IconBonusGift" >
+                                                <path fillRule="evenodd" clipRule="evenodd"
+                                                      d="M17.1379 4.70435C18.0363 1.62804 22.1269 1.01755 23.8844 3.69746C25.5226 6.19541 23.7306 9.51353 20.7434 9.51353H15.7334L17.1379 4.70435ZM7.58189 3.69795C9.33942 1.01804 13.43 1.62853 14.3284 4.70484L15.7329 9.51402H10.7229C7.73566 9.51402 5.9437 6.1959 7.58189 3.69795ZM6.13333 11.5146C4.95513 11.5146 4 12.4697 4 13.648V26.448C4 27.6262 4.95513 28.5813 6.13333 28.5813H25.3333C26.5116 28.5813 27.4667 27.6262 27.4667 26.448V13.648C27.4667 12.4697 26.5116 11.5146 25.3333 11.5146H6.13333ZM14.6667 25.448H16.8V14.648H14.6667V25.448Z"
+                                                      fill="currentColor" ></path>
+                                            </svg>
+                                        </div>
+                                        <div className="bonus-item_bonus-item-line__14_b9" ></div>
+                                    </div>
+                                    <div className="bonus-item_bonus-item-container__n7EHY bonus-item-container"
+                                         >
+                                        <div className="bonus-item-header bonus-item_bonus-item-header__1KrVr"
+                                             >
+                                            <div className="bonus-item_title__xIPIB" >
+                                                <div className="bonus-item_bonus-item__count-down__UiIf_"
+                                                     ></div>
+                                                <h6 >Get <span >5 USDT</span></h6></div>
+                                            <div className="bonus-item_line__DYqVA bonus-item-line" ></div>
+                                        </div>
+                                        <div className="bonus-item-content bonus-item_bonus-item-content__RQQUe"
+                                             >
+                                            <div
+                                                className="bonus-item_bonus-item-detail__z_aUL bonus-item_bonus-item-no-login__BJaJ_"
+                                                ><span
+                                                className="bonus-item_sub-title__glwMF bonus-item-detail__title"
+                                                ></span>
+                                                <div className="bonus-item_bonus-item-detail__desc___0DDK" >
+                                                    <span >7 -days Cumulative Futures Trading Volume ≥ 100,000 USDT</span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                className="bonus-item_bonus-item-action__6HM7p bonus-item-action bonus-item_bonus-item-no-login__BJaJ_"
+                                                >
+                                                <button type="button" className="ant-btn ant-btn-ghost" ><span
+                                                    >Trade</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className='notice-wrapper'>
                 <div className='home-container'>
                     <div className='notice-content'>
@@ -490,10 +645,8 @@ export default function Homepage() {
                 </div>
 
             </div>
-           <PopularCrypto/>
-
+            <PopularCrypto/>
             <NewPinSection/>
-
             <div className="why-choose-mexc_why-choose-wrapper__ud1w8">
                 <div className="why-choose-mexc_why-choose__SUZms home-container"><h2>Why Choose MEXC?</h2>
                     <div className="why-choose-container">

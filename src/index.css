@@ -75,6 +75,9 @@ body{
     --bg-primary1:#fff ;
     --fill-card-modal:#f2f4f6;
     --fill-sidebar-selected:#f2f4f6;
+    --tint-orange-smooth:#fcf1e8;
+    --tint-orange-base:#e27319;
+    --tint-kl-orange:#f4742c;
 }
 body.dark-mode{
     --bg-secondary: #111214;
@@ -96,6 +99,7 @@ body.dark-mode{
     --title:#fff;
     --fill-card-modal:#222429;
     --fill-sidebar-selected:#18191c;
+    --tint-orange-smooth:#361b06;
 
 }
 
