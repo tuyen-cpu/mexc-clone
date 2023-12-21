@@ -1,30 +1,32 @@
 import React, { useState, useEffect } from 'react';
 
-const CountdownT = ({ days, hours, minutes, seconds }) => {
-    const calculateTotalSeconds = () => {
-        return days * 24 * 60 * 60 + hours * 60 * 60 + minutes * 60 + seconds;
-    };
+const CountdownT = ({ year, month, day, hour, minute, second }) => {
+    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-    const [totalSeconds, setTotalSeconds] = useState(calculateTotalSeconds());
+    function calculateTimeLeft() {
+        const targetDate = new Date(`${year}-${month}-${day}T${hour}:${minute}:${second}`);
+        const now = new Date();
+        let difference = targetDate.getTime() - now.getTime();
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            if (totalSeconds > 0) {
-                setTotalSeconds(totalSeconds - 1);
-            }
-        }, 1000);
+        if (difference <= 0) {
+            return {
+                days: 0,
+                hours: 0,
+                minutes: 0,
+                seconds: 0,
+            };
+        }
 
-        return () => clearTimeout(timer);
-    }, [totalSeconds]);
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        difference -= days * 1000 * 60 * 60 * 24;
 
-    const displayTime = () => {
-        let remainingSeconds = totalSeconds;
-        const days = Math.floor(remainingSeconds / (24 * 60 * 60));
-        remainingSeconds %= 24 * 60 * 60;
-        const hours = Math.floor(remainingSeconds / (60 * 60));
-        remainingSeconds %= 60 * 60;
-        const minutes = Math.floor(remainingSeconds / 60);
-        const seconds = remainingSeconds % 60;
+        const hours = Math.floor(difference / (1000 * 60 * 60));
+        difference -= hours * 1000 * 60 * 60;
+
+        const minutes = Math.floor(difference / (1000 * 60));
+        difference -= minutes * 1000 * 60;
+
+        const seconds = Math.floor(difference / 1000);
 
         return {
             days,
@@ -32,14 +34,18 @@ const CountdownT = ({ days, hours, minutes, seconds }) => {
             minutes,
             seconds,
         };
-    };
+    }
 
-    const { days: remainingDays, hours: remainingHours, minutes: remainingMinutes, seconds: remainingSeconds } =
-        displayTime();
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setTimeLeft(calculateTimeLeft());
+        }, 1000);
 
+        return () => clearInterval(timer);
+    }, []);
     return (
             <>
-                {remainingDays}d : {remainingHours}h : {remainingMinutes}m : {remainingSeconds}s
+                {timeLeft.days}d : {timeLeft.hours}h : {timeLeft.minutes}m : {timeLeft.seconds}s
             </>
 
     );

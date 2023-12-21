@@ -457,7 +457,7 @@ export default function Homepage() {
                                                                   d="M5 10C7.76142 10 10 7.76142 10 5C10 2.23858 7.76142 0 5 0C2.23858 0 0 2.23858 0 5C0 7.76142 2.23858 10 5 10ZM4 2.5H5V5.5H7.5V6.5H4V2.5Z"
                                                                   fill="currentColor" ></path>
                                                         </svg>
-                                                        <CountdownT days={time.day} hours={time.hour} minutes={time.min} seconds={time.sec} />
+                                                        <CountdownT  year={time.year} month={time.month} day={time.day} hour={time.hour} minute={time.min} second={time.sec}  />
                                                     </div>
                                                 </div>
                                                 <h6 >Random Rewards <span >5-30 USDT</span></h6></div>

@@ -110,8 +110,12 @@
 .react-multi-carousel-list{
     margin-top: 0;
 }
-.new-list_new-list-content__fenpr:before {
+
+.new-list_new-list-content__fenpr{
     --new-list-shadow-width: 120px;
+}
+.new-list_new-list-content__fenpr:before {
+
     content: " ";
     display: block;
     position: absolute;
@@ -167,7 +171,6 @@
     gap: 16px;
 }
 .wrapper-pin-pin:before {
-    --new-list-shadow-width:120px;
     left: 0;
     transform: matrix(1,0,0,-1,0,0);
     content: " ";
@@ -185,8 +188,10 @@
 .dark-mode .wrapper-pin-pin:before , .dark-mode .wrapper-pin-pin:after{
     background: linear-gradient(90.21deg,#0a0c13 .22%,rgba(8,10,17,0) 99.86%);
 }
-.wrapper-pin-pin:after{
+.wrapper-pin-pin{
     --new-list-shadow-width:120px;
+}
+.wrapper-pin-pin:after{
 
     right: 0;
     transform: rotate(180deg);
@@ -198,4 +203,12 @@
     width: var(--new-list-shadow-width);
     height: 100%;
     z-index: 1;
+}
+@media screen and (max-width: 760px){
+    .new-list_new-list-content__fenpr {
+        --new-list-shadow-width: 20px;
+    }
+    .wrapper-pin-pin{
+        --new-list-shadow-width:20px;
+    }
 }
