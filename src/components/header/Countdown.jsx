@@ -4,7 +4,12 @@ const CountdownT = ({ year, month, day, hour, minute, second }) => {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
     function calculateTimeLeft() {
-        const targetDate = new Date(`${year}-${month}-${day}T${hour}:${minute}:${second}`);
+        const formattedMonth = month < 10 ? `0${month}` : month;
+        const formattedDay = day < 10 ? `0${day}` : day;
+        const formattedHour = hour < 10 ? `0${hour}` : hour;
+        const formattedMin = minute < 10 ? `0${minute}` : minute;
+        const formattedSec = second < 10 ? `0${second}` : second;
+        const targetDate = new Date(`${year}-${formattedMonth}-${formattedDay}T${formattedHour}:${formattedMin}:${formattedSec}`);
         const now = new Date();
         let difference = targetDate.getTime() - now.getTime();
 

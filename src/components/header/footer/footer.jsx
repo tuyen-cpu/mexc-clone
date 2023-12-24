@@ -259,7 +259,6 @@ export default function FooterPage() {
         setShow((prev) => {
             const prevShow = [...prev];
             prevShow[Number(event.target.dataset.id) - 1] = !prevShow[Number(event.target.dataset.id) - 1];
-            console.log(prevShow);
             return prevShow;
         })
 

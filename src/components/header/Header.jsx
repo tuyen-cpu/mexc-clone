@@ -32,7 +32,7 @@ const rightMenuStyle = {
     alignItems: 'center',
 }
 const onChange = (key) => {
-    console.log(key);
+
 };
 
 const menuItemsData = [
@@ -498,7 +498,6 @@ export default function Header() {
     const [isDarkMode, setIsDarkMode] = useState(false);
     const handleShowMenuSideBar =(index)=>{
         setShowMenuSide((prevState) => {
-            console.log(prevState)
             const newState = [...prevState];
             newState[index] = !newState[index];
             return newState;
@@ -509,12 +508,10 @@ export default function Header() {
     };
 
     const handleOk = () => {
-        console.log('Clicked ok');
         setIsModalOpen(false);
     };
 
     const handleCancel = () => {
-        console.log('Clicked cancel button');
         setIsModalOpen(false);
     };
     const handleClick = (event) => {
@@ -541,7 +538,6 @@ export default function Header() {
         setOpenDraw(true);
     };
     const handleShowDrawContent = (content) => {
-        console.log(content)
         setDrawContent(content);
         showDrawer();
     }
@@ -652,7 +648,6 @@ export default function Header() {
                                                                     <div className="header_itemBody__U65v7">
                                                                         <div className="header_itemTitle__jicUg">
                                                                             <span onClick={()=> {
-                                                                                console.log("ddd")
                                                                                 handleShowDrawContent(item.submenu)
                                                                                 // window.location.href = item.url
                                                                             }}>{item.title}
@@ -661,7 +656,6 @@ export default function Header() {
                                                                                 {item.status === 'hot' &&  <span className='icon-hot'>HOT</span>}</span>
                                                                             {item.submenu &&
                                                                                 <svg onClick={()=>{
-                                                                                    console.log("ddd")
                                                                                     handleShowDrawContent(item.submenu)
                                                                                 }} className="sc-aXZVg ktFCMi mx-icon header_arrowIcon__PedAF" focusable="false" width="1em" height="1em" fill="currentColor" aria-hidden="true" viewBox="0 0 1024 1024" data-icon="RightOutlined"><path d="M350.08 801.92a48 48 0 0 1 0-67.84L572.16 512 350.08 289.92a48 48 0 0 1 67.84-67.84l256 256a48 48 0 0 1 0 67.84l-256 256a48 48 0 0 1-67.84 0z"></path></svg>
                                                                             }
@@ -754,7 +748,6 @@ export default function Header() {
                             <div className="">
                                 <ul className="header_menu__SBibF header_addArrow__0_Wfk header_addArrow__0_Wf" >
                                     {drawContent.map((item, index) => {
-                                        {console.log(JSON.stringify(item))}
                                         return(
                                             <li key={index} className="menu-item">
                                                 <div className="header_innerMenu__SAvVj">

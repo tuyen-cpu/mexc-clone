@@ -272,7 +272,6 @@ export default function PopularCrypto() {
         );
     }, [position]);
     const handleTabChange = key => {
-        console.log("click",key);
         setActiveTab(key);
     };
     useEffect(() => {
@@ -385,7 +384,7 @@ export default function PopularCrypto() {
             key: '5',
             label: (<div className='hot-list_makerWrapper__SOmuY special-tab-line'>
                 <span className='hot-list_toptop'>Top Gainers</span>
-                <span className="hot-list_changeBlock__K6hyV hot-list_changeUp__O_Kgh">{console.log(dataTab5)}{dataTab5[0].rate}</span>
+                <span className="hot-list_changeBlock__K6hyV hot-list_changeUp__O_Kgh">{dataTab5[0].rate}</span>
             </div>),
             children: (<div className='home-market-list '>
                 <Table columns={columns} dataSource={dataTab5.slice(0, 5)} bordered={false}/>

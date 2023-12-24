@@ -109,7 +109,6 @@ const SearchResult = ({dataHotSearch, eventsData}) => {
         return (
 
             <div>
-                {console.log('render searhc')}
                 <div className='search-dropdown-site'>
                     <Tabs defaultActiveKey="1" items={itemsTab(dataHot, eventsData)}/>
                 </div>

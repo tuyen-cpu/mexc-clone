@@ -11,7 +11,6 @@ const MenuItems = ({items, depthLevel}) => {
 
             {items.submenu ? (
                 <>
-                    {console.log(items.submenu)}
                     <a className='submenu-item__link' href={items.url}>
                         {depthLevel === 1 && items.icon ?
                             <img className='submenu-item__icon' src={`./${items.icon}`} alt=""/> : ''}
